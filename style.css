@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/* Define estilos padrão para todos os elementos */
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: 'Poppins', 'Arial';
+}
+
+/* Configurações gerais do cabeçalho */
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid red;
+    background-color: #075925;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.499);
+    height: 18vh;
+}
+
+/* Estilos da logo */
+a.logo img {
+    border: 1px solid red;
+    width: 190px;
+}
+
+a.logo {
+    padding: 0;
+}
+
+/* Estilos para a navegação */
+nav {
+    border: 1px solid red;
+}
+
+li {
+    display: inline; 
+}
+
+/* Estilos para os links dentro do cabeçalho */
+header a {
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 13px 20px;
+}
+
+ul a:hover {
+    color: #3bdd61;
+}
+
+/* Estilos para o botão Fale Conosco */
+.btnFC{
+    background-color: #28B65A;
+    border-radius: 9px;
+}
+
+.btnFC img {
+    width: 20px;
+    margin-left: 10px;
+}
+
+/* Estilos para as seções */
+section  {
+    border: 1px solid red;
+    padding: 10px;
+}
+
+/* Estilos para o rodapé */
+footer {
+    border: 1px solid red;
+}
