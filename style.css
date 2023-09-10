@@ -1,75 +1,128 @@
+/* Importar a fonte Poppins da Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 /* Define estilos padrão para todos os elementos */
 * {
     margin: 0;
     padding: 0;
-    list-style: none;
-    font-family: 'Poppins', 'Arial';
+    font-family: 'Poppins', 'Arial', sans-serif;
+    font-size: 1.1rem;
+    box-sizing: border-box;
 }
 
-/* Configurações gerais do cabeçalho */
+/* Configurações do layout principal */
+.container-grid {
+    display: grid;
+    grid-template-areas:
+        'header'
+        'main'
+        'footer';
+    grid-template-rows: 15vh auto 200px;
+    background-color: #f7ffff;
+}
+
+/* header,
+a.logo>img,
+nav,
+section,
+footer {
+    border: 1px solid red;
+} */
+
+/* Estilos do cabeçalho */
 header {
+    grid-area: header;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    border: 1px solid red;
     background-color: #075925;
     box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.499);
-    height: 18vh;
+    z-index: 1;
 }
 
 /* Estilos da logo */
-a.logo img {
-    border: 1px solid red;
+a.logo>img {
     width: 190px;
 }
 
-a.logo {
-    padding: 0;
-}
-
-/* Estilos para a navegação */
-nav {
-    border: 1px solid red;
-}
-
-li {
-    display: inline; 
-}
-
-/* Estilos para os links dentro do cabeçalho */
-header a {
+/* Estilos para links de navegação */
+li>a {
     font-weight: bold;
     text-decoration: none;
     color: white;
-    font-size: 18px;
     padding: 13px 20px;
 }
 
-ul a:hover {
-    color: #3bdd61;
+li {
+    display: inline;
+    list-style: none;
 }
 
-/* Estilos para o botão Fale Conosco */
-.btnFC{
+li>a:hover {
+    color: #6fde96;
+}
+
+/* Estilos para o botão "Fale Conosco" */
+.btnFC {
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
     background-color: #28B65A;
     border-radius: 9px;
+    padding: 13px;
 }
 
-.btnFC img {
+.btnFC>img {
     width: 20px;
     margin-left: 10px;
 }
 
-/* Estilos para as seções */
-section  {
-    border: 1px solid red;
-    padding: 10px;
+/* Estilos para a seção principal*/
+main {
+    grid-area: main;
 }
 
-/* Estilos para o rodapé */
+/* Estilo para home */
+#home {
+    background: radial-gradient(
+        50% 90% at 26.46% 60.88%, /* Posição e tamanho do gradiente radial */
+        #24A351, #075925 76.91% /* Cores do gradiente e ponto de transição */
+    );
+    height: calc(100vh - 15vh);
+}
+
+.quadrado1{
+    width: 30vw; 
+    height: 27vw;
+    background-color: rgba(217, 217, 217, 0.047); /* Cor sólida com transparência */
+    transform: rotate(10deg);
+    border-radius: 11%;
+    position: absolute;
+    top: 23%;
+    left: 6%;
+}
+
+.quadrado2{
+    width: 20vw; 
+    height: 19vw;
+    background-color: rgba(217, 217, 217, 0.047); /* Cor sólida com transparência */
+    transform: rotate(-20deg);
+    border-radius: 11%;
+    position: absolute;
+    top: 50%;
+    left: 74%;
+}
+
+#home>.txt-home>p{
+    color: #FFF;
+}
+
+#home .txt-home>p>img {
+
+}
+
+/* Estilos do rodapé */
 footer {
-    border: 1px solid red;
+    grid-area: footer;
 }
