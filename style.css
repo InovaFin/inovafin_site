@@ -126,3 +126,47 @@ main {
 footer {
     grid-area: footer;
 }
+
+/*Div resposável pelo carrossel*/
+.recursos{
+    height: 100vw;
+    border: 1px solid tomato;
+}
+.carrossel{
+    border: 2px solid tomato;
+    width: 100%;
+    min-height: 130vh;
+    display: flex;
+    justify-content:center;
+    gap: 7rem;
+}
+.imagesCarrossel{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+}
+.slider{
+    opacity: 0;
+    transition: opacity .2s;
+    position: absolute;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.on{
+    opacity: 1;
+}
+
+.btnSetaVoltar{
+    transform: rotate(180deg);
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+.btnSetaAvancar{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
