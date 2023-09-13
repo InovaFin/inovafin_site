@@ -1,6 +1,7 @@
+
 const slider = document.querySelectorAll('.slider');//Seleciona todas os objetos com a classe slider
 const btnVoltar = document.getElementById('btnVoltar');//Pegando a seta de voltar 
-const btnAvancar = document.getElementById('btnAvancar');//pegando a seta de avancar
+const btnAvancar = document.getElementById('btnAvancar');
 
 
 var currentSlide = 0;//Variável que pode ser modificada posteriormente - rastreia o numero do slide
