@@ -39,11 +39,15 @@ header {
     background-color: #075925;
     box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.499);
     z-index: 1;
+    overflow: hidden;
+    position: fixed;
+    width: 100vw;
+    height: 15%;
 }
 
 /* Estilos da logo */
 a.logo>img {
-    width: 190px;
+    width: 12vw;
 }
 
 /* Estilos para links de navegação */
@@ -52,6 +56,7 @@ li>a {
     text-decoration: none;
     color: white;
     padding: 13px 20px;
+    font-size: 1.3vw;
 }
 
 li {
@@ -66,16 +71,18 @@ li>a:hover {
 /* Estilos para o botão "Fale Conosco" */
 .btnFC {
     font-weight: bold;
+    font-size: 1.2vw;
     text-decoration: none;
     color: white;
     background-color: #28B65A;
     border-radius: 9px;
     padding: 13px;
+    width: 12.7vw;
 }
 
 .btnFC>img {
-    width: 20px;
-    margin-left: 10px;
+    width: 1.3vw;
+    margin-left: 1vw;
 }
 
 /* Estilos para a seção principal*/
@@ -89,7 +96,8 @@ main {
         50% 90% at 26.46% 60.88%, /* Posição e tamanho do gradiente radial */
         #24A351, #075925 76.91% /* Cores do gradiente e ponto de transição */
     );
-    height: calc(100vh - 15vh);
+    /*height: calc(100vh - 9vh);*/
+    height: 45vw;
 }
 
 .quadrado1{
@@ -125,28 +133,53 @@ main {
 /* Estilos do rodapé */
 footer {
     grid-area: footer;
-
 }
 
+
+/*Estilo titulo de recursos*/
+.texto-recursos
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 4vw;
+}
+.txtRecursos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f7ffff;
+    border-radius: 20px;
+    width: 90%;
+    height: 6vw;
+    margin-top: -3vw;
+    /*border: 1px solid tomato;*/
+}
+.texto-recursos>.txtRecursos>h1
+{
+    font: bold 4vw arial;
+    color: #10672F;
+}
 /*Div resposável pelo carrossel*/
 .recursos{
-    height: 40vw;
-    border: 1px solid tomato;
+    height: 45vw;
+    /*border: 1px solid tomato;*/
 }
 .carrossel{
     /*border: 2px solid tomato;*/
+    margin-top: 2vw;
     width: 100%;
-    min-height: 80vh;
+    min-height: 50vw;
     display: flex;
     justify-content:center;
-    gap: 9rem;
+    gap: 9vw;
 }
 .imagesCarrossel{
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 70%;
+    width: 60vw;
 }
 .slider{
     opacity: 0;
@@ -167,6 +200,8 @@ footer {
     cursor: pointer;
 }
 .btnSetaAvancar{
+    min-height: 2px;
+    min-width: 2px;
     border: none;
     background-color: transparent;
     cursor: pointer;
