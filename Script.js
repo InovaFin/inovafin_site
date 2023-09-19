@@ -1,7 +1,7 @@
-
 const slider = document.querySelectorAll('.slider');//Seleciona todas os objetos com a classe slider
 const btnVoltar = document.getElementById('btnVoltar');//Pegando a seta de voltar 
-const btnAvancar = document.getElementById('btnAvancar');
+const btnAvancar = document.getElementById('btnAvancar');//pegando a seta de avançar
+
 
 
 var currentSlide = 0;//Variável que pode ser modificada posteriormente - rastreia o numero do slide
@@ -43,3 +43,5 @@ function voltarSlider()//Função para voltar um slide
 
 btnAvancar.addEventListener('click', () => proximoSlider());//adicionando o evento no botão
 btnVoltar.addEventListener('click', () => voltarSlider());//adicionando o evento no botão
+
+setInterval(proximoSlider, 5000);//tempo para chamar o próximo slide automático
