@@ -17,9 +17,11 @@
         'header'
         'main'
         'footer';
-    grid-template-rows: 15vh auto 200px;
+    grid-template-rows: auto auto auto; /* 1fr para 'main' ocupando o espaço restante */
+    grid-template-columns: 1fr;
     background-color: #f7ffff;
 }
+
 
 /* header,
 a.logo>img,
@@ -40,10 +42,10 @@ header {
     box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.499);
     z-index: 1;
     overflow: hidden;
-    position: fixed;
+    position: fixed; 
     width: 100vw;
-    height: 15%;
-}
+    padding: 3vw;
+} 
 
 /* Estilos da logo */
 a.logo>img {
@@ -76,8 +78,8 @@ li>a:hover {
     color: white;
     background-color: #28B65A;
     border-radius: 9px;
-    padding: 13px;
-    width: 12.7vw;
+    padding: 1vw;
+    width: 12.8vw;
 }
 
 .btnFC>img {
@@ -96,8 +98,7 @@ main {
         50% 90% at 26.46% 60.88%, /* Posição e tamanho do gradiente radial */
         #24A351, #075925 76.91% /* Cores do gradiente e ponto de transição */
     );
-    /*height: calc(100vh - 9vh);*/
-    height: 45vw;
+    padding-top: 190px;
 }
 
 .quadrado1{
@@ -106,8 +107,9 @@ main {
     background-color: rgba(217, 217, 217, 0.047); /* Cor sólida com transparência */
     transform: rotate(10deg);
     border-radius: 11%;
-    position: absolute;
-    top: 23%;
+    position: relative;
+    z-index: 0;
+    top: 30%;
     left: 6%;
 }
 
@@ -117,13 +119,18 @@ main {
     background-color: rgba(217, 217, 217, 0.047); /* Cor sólida com transparência */
     transform: rotate(-20deg);
     border-radius: 11%;
-    position: absolute;
+    position: relative;
+    z-index: 0;
     top: 50%;
     left: 74%;
 }
 
 #home>.txt-home>p{
     color: #FFF;
+    width: 30%;
+    align-items: center;
+    text-align: center;
+    z-index: 1;
 }
 
 /*#home .txt-home>p>img {
@@ -132,7 +139,7 @@ main {
 
 /* Estilos do rodapé */
 footer {
-    grid-area: footer;
+    grid-area: footer; 
 }
 
 
@@ -206,3 +213,25 @@ footer {
     background-color: transparent;
     cursor: pointer;
 }
+
+/*Quem Somos*/
+.quemSomos
+{
+    display: flex;
+    justify-content: center;
+    margin-top: 4vw;
+}
+
+.container-quemSomos
+{
+    background-color: #EFEFEF;
+    width: 85vw;
+    height: 60vw;
+    border-radius: 20px;
+}
+.container-quemSomos>h1
+{
+    text-align: center;
+    margin-top: 5vw;
+    font: bold 3vw arial;
+} 
