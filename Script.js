@@ -3,7 +3,6 @@ const btnVoltar = document.getElementById('btnVoltar');//Pegando a seta de volta
 const btnAvancar = document.getElementById('btnAvancar');//pegando a seta de avançar
 
 
-
 var currentSlide = 0;//Variável que pode ser modificada posteriormente - rastreia o numero do slide
 
 function hideSlider()//Função ocultar slide

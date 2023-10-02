@@ -139,7 +139,7 @@ main {
 
 /* Estilos do rodapé */
 footer {
-    grid-area: footer; 
+    grid-area: footer;
 }
 
 
@@ -216,23 +216,56 @@ footer {
 }
 
 /*Quem Somos*/
-.quemSomos
+.container-quemSomos
 {
     display: flex;
     justify-content: center;
-    margin-top: 4vw;
+    margin-top: 7vw;
+    /*border: 1px solid tomato;*/
 }
-
-.container-quemSomos
+.quemSomos
 {
+    margin-top: 4vw;
     background-color: #EFEFEF;
     width: 85vw;
     height: 60vw;
     border-radius: 20px;
+    /*border: 1px solid tomato;*/
 }
-.container-quemSomos>h1
+.quemSomos>h1
 {
     text-align: center;
-    margin-top: 5vw;
+    margin-top: 2vw;
     font: bold 3vw arial;
 } 
+
+/* Estilo desenvolvedores*/
+
+#button
+{
+    width: 4.5vw;
+    height: 4.5vw;
+    margin-top: -1vw;
+    margin-left: -1vw;
+    cursor: pointer;
+    border-radius: 50%;
+    border: none;
+    background-color: rgba(46, 150, 83, 1);
+}
+#button>img
+{
+    width: 2vw;
+    height: 1.5vw;
+}
+dialog
+{
+    text-align: center;
+    margin-left: 6vw;
+    border-radius: 10px;
+    width: 60vw;
+    height: 38.5vw;
+}
+.rotacionada
+{
+    transform: rotate(180deg);
+}
