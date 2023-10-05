@@ -1,20 +1,26 @@
 document.addEventListener("DOMContentLoaded", function(){
+    const button = document.getElementById("button");
+    const modal = document.getElementById("modal");
+    const seta = document.getElementById("setaButton");
+   
 
-    const button = document.getElementById("button")
-    const modal = document.querySelector("dialog")
-    const seta = document.getElementById("setaButton")
-    
-    button.onclick = function () 
-    {
-        if (modal.open) {
-            modal.close()
-            seta.classList.add("rotacionada")
-            
-        }
-        else
+    button.onclick = function () {
+        if (modal.style.display === "block") 
         {
-            modal.show()
-            seta.classList.remove("rotacionada")
+            modal.style.display = "none";
+            button.classList.remove("radiusDev");
+            seta.classList.remove("animacaoSetaAbre");
+            seta.classList.add("animacaoSetaFecha");
+
+        } else {
+            button.classList.add("radiusDev");
+            modal.classList.add("abreModal")
+            modal.style.display = "block";
+            seta.classList.remove("animacaoSetaFecha");
+            seta.classList.add("animacaoSetaAbre");
         }
     }
 });
+
+
+

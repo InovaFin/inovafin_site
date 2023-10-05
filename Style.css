@@ -228,44 +228,483 @@ footer {
     margin-top: 4vw;
     background-color: #EFEFEF;
     width: 85vw;
-    height: 60vw;
+    height: 80vw;
     border-radius: 20px;
+    z-index: 1;
     /*border: 1px solid tomato;*/
 }
-.quemSomos>h1
+.conteudo-quemSomos
+{
+    /*border: 1px solid tomato;*/
+    z-index: 1;
+}
+/*Quem somos parte de cima*/
+.texto1
+{
+    display: flex;
+    padding: 5vw;
+    justify-content: center;
+    align-items: center;
+    
+    /*border: 1px solid tomato;*/
+}
+.texto1>p
+{
+    text-align: left;
+    font-size: 2vw;
+    margin-right: 3vw;  
+}
+.texto1>img
+{
+    height: 25vw;
+    border-radius: 10px;
+}
+
+.conteudo-quemSomos1>h1
 {
     text-align: center;
     margin-top: 2vw;
     font: bold 3vw arial;
+    font-family: 'Poppins', 'Arial', sans-serif;
 } 
 
-/* Estilo desenvolvedores*/
-
-#button
+/*Quem somos parte de baixo*/
+.texto2
 {
-    width: 4.5vw;
-    height: 4.5vw;
-    margin-top: -1vw;
-    margin-left: -1vw;
-    cursor: pointer;
-    border-radius: 50%;
-    border: none;
-    background-color: rgba(46, 150, 83, 1);
+    display: flex;
+    padding: 5vw;
+    margin-top: -4vw;
+    justify-content: center;
+    align-items: center;
+    /*border: 1px solid tomato;*/
 }
+.texto2>p
+{
+    text-align: left;
+    font-size: 2vw;
+    margin-left: 3vw;  
+}
+.texto2>img
+{
+    border-radius: 10px;
+    height: 25vw;
+}
+
+
+/* Estilo desenvolvedores*/
 #button>img
 {
     width: 2vw;
     height: 1.5vw;
 }
-dialog
+#modal
 {
+    z-index: 2;
+    position: absolute;
     text-align: center;
-    margin-left: 6vw;
+    margin-left: -1vw;
     border-radius: 10px;
     width: 60vw;
-    height: 38.5vw;
+    height: 54vw;
+    background-color: #075925;
+    display: none;
 }
-.rotacionada
+.abreModal
+{
+    animation-name: abre-modal;
+    animation-duration: 1s;
+    box-shadow: 2px 2px 10px black;
+}
+@keyframes abre-modal 
+{
+    from{height: 0vw}
+    to{height: 54vw}
+}
+#button
+{
+    border: none;
+    background-color: #075925;
+    width: 21vw;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.5s ease;
+}
+#button:hover
+{
+    
+    background-color: rgba(46, 150, 83, 1);
+}
+.voltaRadiusDev
+{
+    animation-name: voltaRadius;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes voltaRadius
+{
+    from{border-radius: 0px;}
+    to{border-radius: 10px;}   
+}
+
+.radiusDev
+{
+    animation-name: bordaAnim;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes bordaAnim 
+{
+    from{border-radius: 10px;}
+    to{border-radius: 0px;}   
+}
+#button > p
+{
+    margin-right: 1vw;
+    font-family: 'Poppins', 'Arial', sans-serif;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 1);
+}
+
+.animacaoSetaAbre
+{
+    animation-name: animacao-abre;
+    animation-duration: 1s;
+    transform: rotate(180deg);
+    
+}
+@keyframes animacao-abre
+{
+   from{transform: rotate(0deg)}
+   to{transform: rotate(180deg)}
+}
+
+.animacaoSetaFecha
+{
+    animation-name: animacao-fecha;
+    animation-duration: 1s;
+    transform: rotate(0deg);
+    
+}
+@keyframes animacao-fecha
+{
+    from{transform: rotate(180deg)}
+    to{transform: rotate(0deg)}
+}
+
+/*Conteudo do Desenvolvedores*/
+
+#containerDev {
+    display: grid;
+    place-items: center;
+    opacity: 0; 
+    animation: apareceDev 1s linear forwards; /* Executar a animação após um atraso de 2 segundos */
+}
+
+@keyframes apareceDev {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1; /* Opacidade 100% no final */
+    }
+}
+/*Vinícius*/
+.vinicius
+{
+    display: flex;
+    margin-top: 2vw;
+    justify-content: space-between;
+    align-items: center;
+    width: 54vw;
+    padding: 2vw;
+    background-color: #EFEFEF;
+    border-radius: 5px;
+}
+.fotoVinicius>p
+{
+    margin-top: -3vw;
+    font-size: 2vw;
+    font-weight: bold;
+}
+.fotoVinicius>img
+{
+    width: 10vw;
+}
+.viniciusTexto
+{
+    margin-left: 6vw;
+    text-align: left;
+
+}
+.viniciusTexto>p
+{ 
+    font-size: 1.5vw;
+}
+.viniciusTexto>h1
+{ 
+    font-size: 2vw;
+}
+.viniciusTexto>.redes>a>img
+{
+    margin-left: 1vw;
+    width: 3vw;
+}
+.redes
+{
+    margin-top: 1vw;
+    margin-left: 20vw;
+    display: flex;
+}
+/*Jean*/
+.jean
+{
+    display: flex;
+    width: 54vw;
+    background-color: #EFEFEF;
+    margin-top: 2vw;
+    justify-content: left;
+    align-items: center;
+    padding: 2vw;
+    border-radius: 5px;
+}
+.fotoJean>p
+{
+    margin-top: -3vw;
+    font-weight: bold;
+}
+.fotoJean>img
+{
+    width: 10vw;
+}
+/*Erick*/
+.erick
+{
+    display: flex;
+    justify-content: left;
+    margin-top: 2vw;
+    width: 54vw;
+    background-color: #EFEFEF;
+    align-items: center;
+    padding: 2vw;
+    border-radius: 5px;
+}
+.fotoErick>p
+{
+    margin-top: -3vw;
+    font-weight: bold;
+}
+.fotoErick>img
+{
+    width: 10vw;
+}
+
+/*perguntas frequentes*/
+.containerPerguntas
+{
+    margin-top: 5vw;
+}
+.containerPerguntas>h1
+{
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Poppins', 'Arial', sans-serif;
+    font-size: 4.5vw;
+    margin-bottom: 5vw;
+}
+.containerPerguntas>a
+{
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-family: 'Poppins', 'Arial', sans-serif;
+    color: #075925;
+    font-size: 1vw;
+    margin-bottom: 5vw;
+}
+.perguntasFrequentes
+{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    /*border: 1px solid tomato;*/
+}
+.faq
+{
+    display: inline;
+    width: 75vw;
+}
+.pergunta
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    cursor: pointer;
+    border-bottom:3px solid rgb(0, 0, 0);
+    font-family: 'Poppins', 'Arial', sans-serif;
+}
+.pergunta>h3
+{
+    font-size: 2.3vw;
+}
+.resposta
+{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1.4s ease;
+    font-family: 'Poppins', 'Arial', sans-serif;
+}
+.resposta>p
+{
+    padding-top: 1vw;
+    font-size: 1.5vw;
+}
+.faq.active .resposta
+{
+    max-height: 300px;
+}
+.faq.active #setaPerguntas
 {
     transform: rotate(180deg);
+}
+#setaPerguntas
+{
+    transition: transform .5s ease-in-out;
+}
+
+
+.faq2
+{
+    display: inline;
+    width: 75vw;
+    
+}
+.pergunta2
+{
+    margin-top: 3vw;
+    display: flex;
+    cursor: pointer;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom:3px solid rgb(0, 0, 0);
+    font-family: 'Poppins', 'Arial', sans-serif;
+}
+.pergunta2>h3
+{
+    font-size: 2.3vw;
+}
+.resposta2
+{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1.4s ease;
+    font-family: 'Poppins', 'Arial', sans-serif;
+}
+.resposta2>p
+{
+    padding-top: 1vw;
+    font-size: 1.5vw;
+}
+.faq2.active2 .resposta2
+{
+    max-height: 300px;
+}
+.faq2.active2 #setaPerguntas2
+{
+    transform: rotate(180deg);
+}
+#setaPerguntas2
+{
+    transition: transform .5s ease-in-out;
+}
+
+.faq3
+{
+    display: inline;
+    width: 75vw;
+}
+.pergunta3
+{
+    margin-top: 3vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    border-bottom:3px solid rgb(0, 0, 0);
+    font-family: 'Poppins', 'Arial', sans-serif;
+}
+.pergunta3>h3
+{
+    font-size: 2.3vw;
+}
+.resposta3
+{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1.4s ease;
+    font-family: 'Poppins', 'Arial', sans-serif;
+}
+.resposta3>p
+{
+    padding-top: 1vw;
+    font-size: 1.5vw;
+}
+.faq3.active3 .resposta3
+{
+    max-height: 300px;
+}
+.faq3.active3 #setaPerguntas3
+{
+    transform: rotate(180deg);
+}
+#setaPerguntas3
+{
+    transition: transform .5s ease-in-out;
+}
+
+.faq4
+{
+    display: inline;
+    width: 75vw;
+    margin-bottom: 5vw;
+}
+.pergunta4
+{
+    margin-top: 3vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    border-bottom:3px solid rgb(0, 0, 0);
+    font-family: 'Poppins', 'Arial', sans-serif;
+}
+.pergunta4>h3
+{
+    font-size: 2.3vw;
+}
+.resposta4
+{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1.4s ease;
+    font-family: 'Poppins', 'Arial', sans-serif;
+}
+.resposta4>p
+{
+    padding-top: 1vw;
+    font-size: 1.5vw;
+}
+.faq4.active4 .resposta4
+{
+    max-height: 300px;
+}
+.faq4.active4 #setaPerguntas4
+{
+    transform: rotate(180deg);
+}
+#setaPerguntas4
+{
+    transition: transform .5s ease-in-out;
 }

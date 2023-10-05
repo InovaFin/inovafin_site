@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="Style.css">
     <script src="script.js" defer></script>
     <script src="desenvolvedores.js"></script>
+    <script src="perguntasFrequentes.js"></script>
     <title>Inovafin</title>
 </head>
 
@@ -29,7 +30,7 @@
                 <div class="quadrado2"></div>
                 <div class="txt-home">
                     <p>Gerencie, economize, prospere</p>
-                    <p>Tudo é possivel com <img src="./img/InovafinLinha.png" alt="Inovafin"></p>  
+                    
                 </div> 
             </section>
             <section class="texto-recursos">
@@ -52,22 +53,114 @@
             <section>
                 <div class="container-quemSomos">
                     <div class="quemSomos">
-                        <button id="button"><img class="rotacionada" id="setaButton" src="img/seta.png" alt=""></button>
-                            <dialog>
-                                <h1>Desenvolvedores</h1>
-                            </dialog>
-                        <h1>Quem Somos</h1>
-                    </div>
+                        <button id="button"><p>Desenvolvedores</p><img  id="setaButton" src="img/seta.png" alt=""></button>
+                        <div id="modal">
+                            <div id="containerDev">
+                                <div class="vinicius">
+                                    <div class="fotoVinicius">
+                                        <img src="img/Vinicius.png" alt="">
+                                        <p>Vinícius V.</p>
+                                    </div>
+                                    <div class="viniciusTexto">
+                                        <h1>Front-end</h1>
+                                        <p>Desenvolvedor Front-end em busca de conhecimento e aprimoramento</p>
+                                        <div class="redes">
+                                            <a href=""><img src="img/github.png" alt=""></a>
+                                            <a href=""><img src="img/linkedin.png" alt=""></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="jean">
+                                    <div class="fotoJean">
+                                        <img src="img/jean.png" alt="">
+                                        <p>Jean C.</p>
+                                    </div>
+                                    <div class="jeantexto">
+                                
+                                    </div>
+                                </div>
+                                <div class="erick">
+                                    <div class="fotoErick">
+                                        <img src="img/erick.png" alt="">
+                                        <p>Erick B.</p>
+                                    </div>
+                                    <div class="erickTexto">
+                                        
+                                    </div>
+                                </div>
+                            </div>    
+                        </div>
+                        <div class="conteudo-quemSomos1">
+                            <h1>Quem Somos</h1>
+                            <div class="texto1">
+                                <p>Somos um grupo coeso e dedicado da ETEC Lauro Gomes, unidos por um objetivo inspirador. Nossa jornada de Trabalho de Conclusão de Curso nos levou à criação de um aplicativo inovador, desenvolvido com a missão de oferecer apoio às pessoas que enfrentam desafios financeiros.</p>
+                                <img class="imagemGrupo" src="img/fotoGrupo.jpeg" alt="">
+                            </div>
+                            <div class="conteudo-quemSomos2">
+                                <div class="texto2">
+                                    <img src="img/Etec-Lauro-Gomes.png" alt="">
+                                    <p>Com determinação, criamos uma solução abrangente que capacita indivíduos a alcançar seus sonhos e aspirações. Nossa equipe se orgulha de ter desenvolvido não só um aplicativo, mas também uma oportunidade tangível de impactar positivamente a vida daqueles que mais necessitam.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
                 </div>
-            </section>
-            <section>
+            </section> 
+            <div class="containerPerguntas">
                 <h1>Perguntas Frequentes</h1>
-            </section>
+                <section class="perguntasFrequentes">
+                    <div class="faq">
+                        <div class="pergunta">
+                            <h3>Quantas contas bancárias posso adicionar ao aplicativo?</h3>
+                            <img  id="setaPerguntas" src="img/setaPerguntas.png" alt="">
+                        </div>
+                        <div class="resposta">
+                            <p>Com nosso aplicativo, você pode adicionar quantas contas forem necessárias, o que permite visualizar o saldo de todas elas em um único lugar.</p>
+                        </div>
+                    </div>
+                </section>
+                
+                <section class="perguntasFrequentes">
+                    <div class="faq2">
+                        <div class="pergunta2">
+                            <h3>O aplicativo é gratuito ou tem alguma versão paga?</h3>
+                            <img id="setaPerguntas2" src="img/setaPerguntas.png" alt="">
+                        </div>
+                        <div class="resposta2">
+                            <p>Nosso aplicativo é totalmente gratuito e está disponível para todos os tipos de usuários, sem custos envolvidos.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="perguntasFrequentes">
+                    <div class="faq3">
+                        <div class="pergunta3">
+                            <h3>Qual é o canal de suporte para problemas ou dúvidas?</h3>
+                            <img id="setaPerguntas3" src="img/setaPerguntas.png" alt="">
+                        </div>
+                        <div class="resposta3">
+                            <p>Você pode entrar em contato com nosso suporte diretamente por meio do nosso site.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="perguntasFrequentes">
+                    <div class="faq4">
+                        <div class="pergunta4">
+                            <h3>Posso receber alertas para acompanhar minhas despesas?</h3>
+                            <img id="setaPerguntas4" src="img/setaPerguntas.png" alt="">
+                        </div>
+                        <div class="resposta4">
+                            <p>Sim, você pode configurar alertas ou notificações para monitorar suas despesas. Todos os valores que entrarem ou saírem serão notificados a partir do dia em que o prazo for cumprido.</p>
+                        </div>
+                    </div>
+                </section>
+                <a href="">Faça sua pergunta!</a>
+            </div> 
         </main>
         <footer>
             <p>Rodapé - © 2023 InovaFin</p>
         </footer>
     </div>
 </body>
-
 </html>
