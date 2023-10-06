@@ -97,7 +97,7 @@ main {
         50% 90% at 26.46% 60.88%, /* Posição e tamanho do gradiente radial */
         #24A351, #075925 76.91% /* Cores do gradiente e ponto de transição */
     );
-    padding:11vw 3vw;
+    padding:11vw 3vw 5vh;
     position: relative; /* Adicione esta linha */
 }
 
