@@ -21,15 +21,6 @@
     background-color: #f7ffff;
 }
 
-
-/* header,
-a.logo>img,
-nav,
-section,
-footer {
-    border: 1px solid red;
-} */
-
 /* Estilos do cabeçalho */
 header {
     grid-area: header;
@@ -43,7 +34,7 @@ header {
     overflow: hidden;
     position: fixed; 
     width: 100vw;
-    padding: 3vw;
+    padding: 1.3vw;
 } 
 
 /* Estilos da logo */
@@ -97,8 +88,8 @@ main {
         50% 90% at 26.46% 60.88%, /* Posição e tamanho do gradiente radial */
         #24A351, #075925 76.91% /* Cores do gradiente e ponto de transição */
     );
-    padding:11vw 3vw 5vh;
-    position: relative; /* Adicione esta linha */
+    padding:11vw 3vw;
+    position: relative; 
 }
 
 .quadrado1{
@@ -127,8 +118,25 @@ main {
 
 #home>.txt-home {
     color: #FFF;
-    width: 30%;
+    width: 51%;
     z-index: 1; /* Colocado um índice z maior para que fique na frente dos quadrados */
+    border: 1px solid tomato;
+    text-align: center;
+}
+
+.txt-home1 {
+    font-size: 3vw;
+    font-weight: bold;
+}
+
+.txt-home2 {
+    font-size: 2.3vw;
+    
+}
+
+.txt-home > img  {
+    width: 13vw;
+    margin-top: 2vw;
 }
 
 
@@ -165,8 +173,9 @@ footer {
 }
 .texto-recursos>.txtRecursos>h1
 {
-    font: bold 4vw arial;
+    font: bold 3.3vw arial;
     color: #10672F;
+    margin-top: 3vw;
 }
 /*Div resposável pelo carrossel*/
 .recursos{
@@ -175,7 +184,7 @@ footer {
 }
 .carrossel{
     /*border: 2px solid tomato;*/
-    margin-top: 2vw;
+    margin-top: 0.3vw;
     width: 100%;
     min-height: 50vw;
     display: flex;
@@ -228,7 +237,7 @@ footer {
     margin-top: 4vw;
     background-color: #EFEFEF;
     width: 85vw;
-    height: 80vw;
+    height: 70vw;
     border-radius: 20px;
     z-index: 1;
     /*border: 1px solid tomato;*/
@@ -251,12 +260,14 @@ footer {
 .texto1>p
 {
     text-align: left;
-    font-size: 2vw;
-    margin-right: 3vw;  
+    font-size: 1.58vw;
+    margin-right: 3vw;
+    text-align: justify;
 }
 .texto1>img
 {
-    height: 25vw;
+    width: 30vw;
+    height: 20vw;
     border-radius: 10px;
 }
 
@@ -281,13 +292,14 @@ footer {
 .texto2>p
 {
     text-align: left;
-    font-size: 2vw;
+    font-size: 1.58vw;
+    text-align: justify;
     margin-left: 3vw;  
 }
 .texto2>img
 {
     border-radius: 10px;
-    height: 25vw;
+    width: 30vw;
 }
 
 
@@ -511,7 +523,7 @@ footer {
     text-align: center;
     font-weight: bold;
     font-family: 'Poppins', 'Arial', sans-serif;
-    font-size: 4.5vw;
+    font-size: 3vw;
     margin-bottom: 5vw;
 }
 .containerPerguntas>a
@@ -545,10 +557,23 @@ footer {
     border-bottom:3px solid rgb(0, 0, 0);
     font-family: 'Poppins', 'Arial', sans-serif;
 }
-.pergunta>h3
-{
-    font-size: 2.3vw;
+.perguntasFrequentes
+.pergunta h3,
+.pergunta2 h3,
+.pergunta3 h3,
+.pergunta4 h3 {
+    font-size: 1.9vw;
 }
+
+.perguntasFrequentes
+.resposta p,
+.resposta2 p,
+.resposta3 p,
+.resposta4 p {
+    padding-top: 1vw;
+    font-size: 1.3vw;
+}
+
 .resposta
 {
     max-height: 0;
@@ -556,11 +581,7 @@ footer {
     transition: max-height 1.4s ease;
     font-family: 'Poppins', 'Arial', sans-serif;
 }
-.resposta>p
-{
-    padding-top: 1vw;
-    font-size: 1.5vw;
-}
+
 .faq.active .resposta
 {
     max-height: 300px;
@@ -591,10 +612,6 @@ footer {
     border-bottom:3px solid rgb(0, 0, 0);
     font-family: 'Poppins', 'Arial', sans-serif;
 }
-.pergunta2>h3
-{
-    font-size: 2.3vw;
-}
 .resposta2
 {
     max-height: 0;
@@ -602,11 +619,7 @@ footer {
     transition: max-height 1.4s ease;
     font-family: 'Poppins', 'Arial', sans-serif;
 }
-.resposta2>p
-{
-    padding-top: 1vw;
-    font-size: 1.5vw;
-}
+
 .faq2.active2 .resposta2
 {
     max-height: 300px;
@@ -635,10 +648,6 @@ footer {
     border-bottom:3px solid rgb(0, 0, 0);
     font-family: 'Poppins', 'Arial', sans-serif;
 }
-.pergunta3>h3
-{
-    font-size: 2.3vw;
-}
 .resposta3
 {
     max-height: 0;
@@ -646,11 +655,7 @@ footer {
     transition: max-height 1.4s ease;
     font-family: 'Poppins', 'Arial', sans-serif;
 }
-.resposta3>p
-{
-    padding-top: 1vw;
-    font-size: 1.5vw;
-}
+
 .faq3.active3 .resposta3
 {
     max-height: 300px;
@@ -680,10 +685,6 @@ footer {
     border-bottom:3px solid rgb(0, 0, 0);
     font-family: 'Poppins', 'Arial', sans-serif;
 }
-.pergunta4>h3
-{
-    font-size: 2.3vw;
-}
 .resposta4
 {
     max-height: 0;
@@ -691,11 +692,7 @@ footer {
     transition: max-height 1.4s ease;
     font-family: 'Poppins', 'Arial', sans-serif;
 }
-.resposta4>p
-{
-    padding-top: 1vw;
-    font-size: 1.5vw;
-}
+
 .faq4.active4 .resposta4
 {
     max-height: 300px;
