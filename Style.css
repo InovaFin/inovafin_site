@@ -21,6 +21,7 @@
     background-color: #f7ffff;
 }
 
+
 /* Estilos do cabeçalho */
 header {
     grid-area: header;
@@ -38,8 +39,13 @@ header {
 } 
 
 /* Estilos da logo */
-a.logo>img {
+.logo>img {
     width: 12vw;
+}
+
+.logo {
+    display: flex; 
+    align-items: center; 
 }
 
 /* Estilos para links de navegação */
