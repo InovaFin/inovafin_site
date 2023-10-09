@@ -5,7 +5,7 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', 'Arial', sans-serif;
+    font-family: 'Poppins';
     font-size: 2vw;
     box-sizing: border-box;
 }
@@ -41,11 +41,7 @@ header {
 /* Estilos da logo */
 .logo>img {
     width: 12vw;
-}
-
-.logo {
-    display: flex; 
-    align-items: center; 
+    vertical-align: middle;
 }
 
 /* Estilos para links de navegação */
@@ -94,63 +90,114 @@ main {
         50% 90% at 26.46% 60.88%, /* Posição e tamanho do gradiente radial */
         #24A351, #075925 76.91% /* Cores do gradiente e ponto de transição */
     );
-    padding:11vw 3vw;
+    padding:11vw 12vw 3vw 5vw;
     position: relative; 
+    display: grid;
+    grid-template-areas: 
+     'celular slogan'
+     'celular qrcode';
+    
 }
 
+.celular {
+    grid-area: celular;
+    width: 38vw;
+    z-index: 1;
+    position: relative;
+}
+
+.txt-home {
+    grid-area: slogan;
+    color: #FFF;
+    z-index: 1; /* Colocado um índice z maior para que fique na frente dos quadrados */
+    text-align: center;
+}
+
+.txt-home1 {
+    font-size: 2.6vw;
+    font-weight: bold;
+}
+
+.txt-home2 {
+    font-size: 2.1vw;
+    font-weight: 500;
+}
+
+.txt-home >p >img  {
+    width: 13vw;
+    vertical-align: middle;
+}
+
+.qrcode{
+    grid-area: qrcode;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8vw;
+}
+
+.qrcode> img {
+    width: 10vw;
+    margin: 0;
+}
+
+
+.bloco-txt{
+    background-color: #262F3F;
+    padding: 1vw 2.6vw 1vw 1.4vw ;
+    width: 12.7vw;
+    margin-right: 1vw;
+    border-radius: 0.8vw;
+    position: relative;
+    z-index: 1;
+}
+.bloco-txt>  img.setaBaixar{
+    position: absolute;
+    right: 5%;
+    top: 15%;
+    width: 1.5vw;
+}
+
+.bloco-txt>  img.android{
+    position: absolute;
+    right: 25%;
+    top: -24%;
+    width: 2.5vw;
+    z-index: 2;
+}
+
+.bloco-txt >p {
+    font-size: 0.8vw;
+    color: white;
+    font-weight: 500;
+    text-align: center;
+    line-height: 1.15;
+}
+
+
 .quadrado1{
-    width: 30vw; 
+    width:27vw; 
     height: 27vw;
     background-color: rgba(217, 217, 217, 0.047); /* Cor sólida com transparência */
     transform: rotate(10deg);
     border-radius: 11%;
     position: absolute;
-    top: calc(10% + 11vw); /* 30% + o valor de padding-top */
-    left: 6%;
+    top: calc(-2% + 11vw); /* 30% + o valor de padding-top */
+    left: 9%;
     z-index: 0; /* Agora o quadrado está acima do texto */
 }
 
 .quadrado2{
     width: 20vw; 
-    height: 19vw;
+    height: 20vw;
     background-color: rgba(217, 217, 217, 0.047); /* Cor sólida com transparência */
-    transform: rotate(-20deg);
+    transform: rotate(70deg);
     border-radius: 11%;
     position: absolute;
-    top: calc(60% + 11vw); /* 50% + o valor de padding-top */
-    left: 74%;
+    bottom: calc(-3% + 11vw); /* 50% + o valor de padding-top */
+    right: 12%;
     z-index: 0; /* Agora o quadrado está acima do texto */
 } 
-
-#home>.txt-home {
-    color: #FFF;
-    width: 51%;
-    z-index: 1; /* Colocado um índice z maior para que fique na frente dos quadrados */
-    border: 1px solid tomato;
-    text-align: center;
-}
-
-.txt-home1 {
-    font-size: 3vw;
-    font-weight: bold;
-}
-
-.txt-home2 {
-    font-size: 2.3vw;
-    
-}
-
-.txt-home > img  {
-    width: 13vw;
-    margin-top: 2vw;
-}
-
-
-
-/*#home .txt-home>p>img {
-
-}*/
-
 /* Estilos do rodapé */
 footer {
     grid-area: footer;
