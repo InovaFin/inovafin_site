@@ -33,10 +33,10 @@ header {
     box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.499);
     z-index: 2;
     overflow: hidden;
-    position: fixed; 
+    position: fixed;
     width: 100vw;
     padding: 1.3vw;
-} 
+}
 
 /* Estilos da logo */
 .logo>img {
@@ -86,17 +86,18 @@ main {
 
 /* Estilo para home */
 #home {
-    background: radial-gradient(
-        50% 90% at 26.46% 60.88%, /* Posição e tamanho do gradiente radial */
-        #24A351, #075925 76.91% /* Cores do gradiente e ponto de transição */
-    );
-    padding:11vw 12vw 3vw 5vw;
-    position: relative; 
+    background: radial-gradient(50% 90% at 26.46% 60.88%,
+            /* Posição e tamanho do gradiente radial */
+            #24A351, #075925 76.91%
+            /* Cores do gradiente e ponto de transição */
+        );
+    padding: 11vw 12vw 3vw 5vw;
+    position: relative;
     display: grid;
-    grid-template-areas: 
-     'celular slogan'
-     'celular qrcode';
-    
+    grid-template-areas:
+        'celular slogan'
+        'celular qrcode';
+
 }
 
 .celular {
@@ -109,7 +110,8 @@ main {
 .txt-home {
     grid-area: slogan;
     color: #FFF;
-    z-index: 1; /* Colocado um índice z maior para que fique na frente dos quadrados */
+    z-index: 1;
+    /* Colocado um índice z maior para que fique na frente dos quadrados */
     text-align: center;
 }
 
@@ -123,12 +125,12 @@ main {
     font-weight: 500;
 }
 
-.txt-home >p >img  {
+.txt-home>p>img {
     width: 13vw;
     vertical-align: middle;
 }
 
-.qrcode{
+.qrcode {
     grid-area: qrcode;
     display: flex;
     justify-content: center;
@@ -136,29 +138,30 @@ main {
     margin-bottom: 8vw;
 }
 
-.qrcode> img {
+.qrcode>img {
     width: 10vw;
     margin: 0;
 }
 
 
-.bloco-txt{
+.bloco-txt {
     background-color: #262F3F;
-    padding: 1vw 2.6vw 1vw 1.4vw ;
+    padding: 1vw 2.6vw 1vw 1.4vw;
     width: 12.7vw;
     margin-right: 1vw;
     border-radius: 0.8vw;
     position: relative;
     z-index: 1;
 }
-.bloco-txt>  img.setaBaixar{
+
+.bloco-txt>img.setaBaixar {
     position: absolute;
     right: 5%;
     top: 15%;
     width: 1.5vw;
 }
 
-.bloco-txt>  img.android{
+.bloco-txt>img.android {
     position: absolute;
     right: 25%;
     top: -24%;
@@ -166,7 +169,7 @@ main {
     z-index: 2;
 }
 
-.bloco-txt >p {
+.bloco-txt>p {
     font-size: 0.8vw;
     color: white;
     font-weight: 500;
@@ -175,44 +178,44 @@ main {
 }
 
 
-.quadrado1{
-    width:27vw; 
+.quadrado1 {
+    width: 27vw;
     height: 27vw;
-    background-color: rgba(217, 217, 217, 0.047); /* Cor sólida com transparência */
+    background-color: rgba(217, 217, 217, 0.047);
+    /* Cor sólida com transparência */
     transform: rotate(10deg);
     border-radius: 11%;
     position: absolute;
-    top: calc(-2% + 11vw); /* 30% + o valor de padding-top */
+    top: calc(-2% + 11vw);
+    /* 30% + o valor de padding-top */
     left: 9%;
-    z-index: 0; /* Agora o quadrado está acima do texto */
+    z-index: 0;
+    /* Agora o quadrado está acima do texto */
 }
 
-.quadrado2{
-    width: 20vw; 
+.quadrado2 {
+    width: 20vw;
     height: 20vw;
-    background-color: rgba(217, 217, 217, 0.047); /* Cor sólida com transparência */
+    background-color: rgba(217, 217, 217, 0.047);
+    /* Cor sólida com transparência */
     transform: rotate(70deg);
     border-radius: 11%;
     position: absolute;
-    bottom: calc(-3% + 11vw); /* 50% + o valor de padding-top */
+    bottom: calc(-3% + 11vw);
+    /* 50% + o valor de padding-top */
     right: 12%;
-    z-index: 0; /* Agora o quadrado está acima do texto */
-} 
-/* Estilos do rodapé */
-footer {
-    grid-area: footer;
+    z-index: 0;
+    /* Agora o quadrado está acima do texto */
 }
 
-
 /*Estilo titulo de recursos*/
-.texto-recursos
-{
+.texto-recursos {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 4vw;
 }
-.txtRecursos{
+
+.txtRecursos {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -224,29 +227,32 @@ footer {
     z-index: 1;
     /*border: 1px solid tomato;*/
 }
-.texto-recursos>.txtRecursos>h1
-{
-    font: bold 2.8vw arial;
+
+.texto-recursos>.txtRecursos>h1 {
+    font: bold 2.5vw arial;
     color: #10672F;
-    margin-top: 2vw;
+    margin-top: 1.2vw;
 }
 
-.carrossel{
+.carrossel {
     /*border: 2px solid tomato;*/
     width: 100%;
     display: flex;
-    justify-content:center;
+    justify-content: center;
     gap: 9vw;
+    margin-top: 1.5vw;
 }
-.imagesCarrossel{
+
+.imagesCarrossel {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 60vw;
-    height: 40vw;
+    height: 35vw;
 }
-.slider{
+
+.slider {
     opacity: 0;
     transition: opacity .2s;
     position: absolute;
@@ -254,17 +260,18 @@ footer {
     border-radius: 10px;
 }
 
-.on{
+.on {
     opacity: 1;
 }
 
-.btnSetaVoltar{
+.btnSetaVoltar {
     transform: rotate(180deg);
     border: none;
     background-color: transparent;
     cursor: pointer;
 }
-.btnSetaAvancar{
+
+.btnSetaAvancar {
     border: none;
     background-color: transparent;
     cursor: pointer;
@@ -276,90 +283,71 @@ footer {
 }
 
 /*Quem Somos*/
-.container-quemSomos
-{
+.container-quemSomos {
     display: flex;
     justify-content: center;
     /*border: 1px solid tomato;*/
 }
-.quemSomos
-{
+
+.quemSomos {
     margin-top: 4vw;
     background-color: #EFEFEF;
-    width: 85vw;
-    height: 70vw;
+    width: 75vw;
     border-radius: 20px;
-    z-index: 1;
+    position: relative;
     /*border: 1px solid tomato;*/
 }
-.conteudo-quemSomos
-{
-    /*border: 1px solid tomato;*/
-    z-index: 1;
-}
-/*Quem somos parte de cima*/
-.texto1
-{
+
+.texto {
     display: flex;
-    padding: 5vw;
     justify-content: center;
     align-items: center;
-    
+
     /*border: 1px solid tomato;*/
 }
-.texto1>p
-{
+
+.texto>p {
     text-align: left;
-    font-size: 1.4vw;
+    font-size: 1.2vw;
     margin-right: 3vw;
     text-align: justify;
+    padding: 0vw 2vw;
 }
-.texto1>img
-{
-    width: 30vw;
-    height: 20vw;
+
+.texto>img {
+    width: 27vw;
+    height: 17vw;
     border-radius: 10px;
 }
 
-.conteudo-quemSomos1>h1
-{
+.conteudo-quemSomos1 {
+    margin-bottom: 3vw;
+}
+
+.conteudo-quemSomos2>.texto>p {
+    margin-left: 3vw;
+    margin-right: 0;
+}
+
+.conteudo-quemSomos>h1 {
+    margin-top: -3vw;
     text-align: center;
-    margin-top: 2vw;
-    font: bold 2.7vw arial;
+    font: bold 2.2vw arial;
     font-family: 'Poppins', 'Arial', sans-serif;
-} 
-
-/*Quem somos parte de baixo*/
-.texto2
-{
-    display: flex;
-    padding: 5vw;
-    margin-top: -4vw;
-    justify-content: center;
-    align-items: center;
-    /*border: 1px solid tomato;*/
-}
-.texto2>p
-{
-    text-align: left;
-    font-size: 1.4vw;
-    text-align: justify;
-    margin-left: 3vw;  
-}
-.texto2>img
-{
-    border-radius: 10px;
-    width: 30vw;
+    margin-bottom: 3vw;
 }
 
+.conteudo-quemSomos {
+    padding: 3vw;
+}
 
 /* Estilo desenvolvedores*/
-#button>img
-{
-    width: 1.5vw;
+#button>img {
+    width: 1.1vw;
 }
+
 #modal {
-    z-index: 2;
+    z-index: 1;
     position: absolute;
     text-align: center;
     border-radius: 10px;
@@ -368,20 +356,23 @@ footer {
     display: none;
 }
 
-.abreModal
-{
+.abreModal {
     animation-name: abre-modal;
-    animation-duration: 1s;
+    animation-duration: .3s;
     box-shadow: 2px 2px 10px black;
 }
-@keyframes abre-modal 
-{
-    from{height: 0vw}
-    to{height: 52.1vw}
+
+@keyframes abre-modal {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
-#button
-{
+#button {
     border: none;
     background-color: #075925;
     border-radius: 0.6vw;
@@ -392,48 +383,55 @@ footer {
     align-items: center;
     transition: background-color 0.5s ease;
 }
-#button:hover
-{
+
+#button:hover {
     background-color: rgba(46, 150, 83, 1);
 }
 
-#button > p
-{
+#button>p {
     margin-right: 1vw;
-    font-size: 1.5vw;
+    font-size: 1.2vw;
     font-weight: bold;
     color: rgba(255, 255, 255, 1);
 }
 
-.animacaoSetaAbre
-{
+.animacaoSetaAbre {
     animation-name: animacao-abre;
     animation-duration: 1s;
     transform: rotate(180deg);
-    
-}
-@keyframes animacao-abre
-{
-   from{transform: rotate(0deg)}
-   to{transform: rotate(180deg)}
+
 }
 
-.animacaoSetaFecha
-{
+@keyframes animacao-abre {
+    from {
+        transform: rotate(0deg)
+    }
+
+    to {
+        transform: rotate(180deg)
+    }
+}
+
+.animacaoSetaFecha {
     animation-name: animacao-fecha;
     animation-duration: 1s;
     transform: rotate(0deg);
-    
+
 }
-@keyframes animacao-fecha
-{
-    from{transform: rotate(180deg)}
-    to{transform: rotate(0deg)}
+
+@keyframes animacao-fecha {
+    from {
+        transform: rotate(180deg)
+    }
+
+    to {
+        transform: rotate(0deg)
+    }
 }
 
 /*Conteudo do Desenvolvedores*/
 
-#containerDev {
+/* #containerDev {
     display: flex;
     flex-direction: column;
     opacity: 0; 
@@ -445,76 +443,78 @@ footer {
         opacity: 0;
     }
     100% {
-        opacity: 1; /* Opacidade 100% no final */
+        opacity: 1; /* Opacidade 100% no final 
     }
-}
-.desenvolvedor
-{
+} */
+.desenvolvedor {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    width: 54vw;
-    padding: 2vw 3vw;
+    width: 40vw;
+    padding: 1vw 2vw;
     background-color: #EFEFEF;
     border-radius: 5px;
     margin-bottom: 1.8vw;
 }
 
-.erick .desenvolvedor{
+.erick .desenvolvedor {
     margin: 0;
 }
 
 .fotoDev>p {
-    margin-top: -3vw;
-    font-size: 1.9vw;
-    font-weight: bold;
+    margin-top: -1.9vw;
+    font-size: 1.2vw;
+    font-weight: 500;
+    color: #ffffff;
+    background-color: #268848;
+    z-index: 1;
+    position: relative;
+    border-radius: 1vw;
 }
 
-.fotoDev>img
-{
-    width: 10vw;
+.fotoDev>img {
+    width: 7vw;
 }
-.textoDev
-{
-    margin-left: 6vw;
+
+.textoDev {
+    margin-left: 2vw;
     text-align: left;
 
 }
-.textoDev>p
-{ 
-    font-size: 1.4vw;
-}
-.textoDev>h1
-{ 
-    font-size: 1.9vw;
-}
-.textoDev>.redes>a>img
-{
-    margin-left: 0.6vw;
-    width: 3vw;
-}
-.redes{
-    margin-top: 0.6vw;
-    display: flex;
-    justify-content: end;
+
+.textoDev>p {
+    font-size: 1.1vw;
 }
 
+.textoDev>h1 {
+    font-size: 1.3vw;
+}
+
+.desenvolvedor>.redes>a>img {
+    margin-left: 0.5vw;
+    width: 2vw;
+}
+
+.redes {
+    margin-left: .25vw;
+    margin-top: auto;
+    display: flex;
+    justify-content: flex-end;
+}
 
 /*perguntas frequentes*/
-.containerPerguntas
-{
-    margin-top: 7vw;
+.containerPerguntas {
+    margin-top: 6vw;
 }
-.containerPerguntas>h1
-{
+
+.containerPerguntas>h1 {
     text-align: center;
     font-weight: bold;
     font-family: 'Poppins', 'Arial', sans-serif;
-    font-size: 2.7vw;
-    margin-bottom: 2vw;
+    font-size: 2.2vw;
+    margin-bottom: .3vw;
 }
-.containerPerguntas>a
-{
+
+.containerPerguntas>a {
     display: flex;
     justify-content: center;
     font-weight: bold;
@@ -524,59 +524,63 @@ footer {
     margin-bottom: 5vw;
     margin-top: 3vw;
 }
-.perguntasFrequentes{
-    width: 75vw;
+
+.perguntasFrequentes {
+    width: 60vw;
 }
 
-.faq
-{
+.faq {
     display: flex;
     justify-content: center;
     width: 100%;
-    /*border: 1px solid tomato;*/    
+    /*border: 1px solid tomato;*/
 }
+
 .pergunta {
     display: flex;
     justify-content: space-between;
-    align-items: center; 
+    align-items: center;
     cursor: pointer;
     border-bottom: .16vw solid rgb(0, 0, 0);
     font-family: 'Poppins', 'Arial', sans-serif;
     margin-top: 2.6vw;
 }
 
-.pergunta img{
+.pergunta img {
     width: 1.5vw;
 }
 
 .pergunta h3 {
-    font-size: 1.6vw;
-}
-
-.resposta p{
-    padding-top: 1vw;
     font-size: 1.3vw;
 }
 
-.resposta{
-
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.7s ease;
-    font-family: 'Poppins', 'Arial', sans-serif;
+.resposta p {
+    padding-top: 1vw;
+    font-size: 1.1vw;
 }
 
-.faq.active .resposta{
+.resposta {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    font-family: 'Poppins';
+}
+
+.faq.active .resposta {
 
     max-height: 300px;
 }
 
-.faq.active #setaPerguntas
-{
+.faq.active #setaPerguntas {
     transform: rotate(180deg);
 }
 
-#setaPerguntas{
+#setaPerguntas {
 
-    transition: transform .7s ease-in-out;
+    transition: transform .3s ease-in-out;
+}
+
+/* Estilos do rodapé */
+footer {
+    grid-area: footer;
 }

@@ -12,8 +12,8 @@ document.addEventListener("DOMContentLoaded", function(){
             seta.classList.add("animacaoSetaFecha");
 
         } else {
-            modal.classList.add("abreModal");
             modal.style.display = "block";
+            modal.classList.add("abreModal");
             seta.classList.remove("animacaoSetaFecha");
             seta.classList.add("animacaoSetaAbre");
         }
