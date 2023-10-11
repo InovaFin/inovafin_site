@@ -358,14 +358,12 @@ footer {
 {
     width: 1.5vw;
 }
-#modal
-{
+#modal {
     z-index: 2;
     position: absolute;
     text-align: center;
     border-radius: 10px;
     padding: 2vw;
-    height: 54vw;
     background-color: #075925;
     display: none;
 }
@@ -379,7 +377,7 @@ footer {
 @keyframes abre-modal 
 {
     from{height: 0vw}
-    to{height: 54vw}
+    to{height: 52.1vw}
 }
 
 #button
@@ -436,10 +434,10 @@ footer {
 /*Conteudo do Desenvolvedores*/
 
 #containerDev {
-    display: grid;
-    place-items: center;
+    display: flex;
+    flex-direction: column;
     opacity: 0; 
-    animation: apareceDev 1s linear forwards; /* Executar a animação após um atraso de 2 segundos */
+    animation: apareceDev 1s linear forwards; 
 }
 
 @keyframes apareceDev {
@@ -450,94 +448,57 @@ footer {
         opacity: 1; /* Opacidade 100% no final */
     }
 }
-/*Vinícius*/
-.vinicius
+.desenvolvedor
 {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 54vw;
-    padding: 2vw;
+    padding: 2vw 3vw;
     background-color: #EFEFEF;
     border-radius: 5px;
+    margin-bottom: 1.8vw;
 }
-.fotoVinicius>p
-{
+
+.erick .desenvolvedor{
+    margin: 0;
+}
+
+.fotoDev>p {
     margin-top: -3vw;
-    font-size: 2vw;
+    font-size: 1.9vw;
     font-weight: bold;
 }
-.fotoVinicius>img
+
+.fotoDev>img
 {
     width: 10vw;
 }
-.viniciusTexto
+.textoDev
 {
     margin-left: 6vw;
     text-align: left;
 
 }
-.viniciusTexto>p
+.textoDev>p
 { 
-    font-size: 1.5vw;
+    font-size: 1.4vw;
 }
-.viniciusTexto>h1
+.textoDev>h1
 { 
-    font-size: 2vw;
+    font-size: 1.9vw;
 }
-.viniciusTexto>.redes>a>img
+.textoDev>.redes>a>img
 {
-    margin-left: 1vw;
+    margin-left: 0.6vw;
     width: 3vw;
 }
-.redes
-{
-    margin-top: 1vw;
-    margin-left: 20vw;
+.redes{
+    margin-top: 0.6vw;
     display: flex;
+    justify-content: end;
 }
-/*Jean*/
-.jean
-{
-    display: flex;
-    width: 54vw;
-    background-color: #EFEFEF;
-    margin-top: 2vw;
-    justify-content: left;
-    align-items: center;
-    padding: 2vw;
-    border-radius: 5px;
-}
-.fotoJean>p
-{
-    margin-top: -3vw;
-    font-weight: bold;
-}
-.fotoJean>img
-{
-    width: 10vw;
-}
-/*Erick*/
-.erick
-{
-    display: flex;
-    justify-content: left;
-    margin-top: 2vw;
-    width: 54vw;
-    background-color: #EFEFEF;
-    align-items: center;
-    padding: 2vw;
-    border-radius: 5px;
-}
-.fotoErick>p
-{
-    margin-top: -3vw;
-    font-weight: bold;
-}
-.fotoErick>img
-{
-    width: 10vw;
-}
+
 
 /*perguntas frequentes*/
 .containerPerguntas
@@ -579,7 +540,7 @@ footer {
     justify-content: space-between;
     align-items: center; 
     cursor: pointer;
-    border-bottom:3px solid rgb(0, 0, 0);
+    border-bottom: .16vw solid rgb(0, 0, 0);
     font-family: 'Poppins', 'Arial', sans-serif;
     margin-top: 2.6vw;
 }
@@ -601,7 +562,7 @@ footer {
 
     max-height: 0;
     overflow: hidden;
-    transition: max-height 1.4s ease;
+    transition: max-height 0.7s ease;
     font-family: 'Poppins', 'Arial', sans-serif;
 }
 
@@ -617,5 +578,5 @@ footer {
 
 #setaPerguntas{
 
-    transition: transform .5s ease-in-out;
+    transition: transform .7s ease-in-out;
 }
