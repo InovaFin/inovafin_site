@@ -122,12 +122,14 @@ main {
 
 .txt-home2 {
     font-size: 2.1vw;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .txt-home>p>img {
     width: 13vw;
     vertical-align: middle;
+    margin-top: .23vw;
+    margin-left: -1vw;
 }
 
 .qrcode {
@@ -209,6 +211,11 @@ main {
 }
 
 /*Estilo titulo de recursos*/
+#recursos {
+    margin-top: -2vw;
+    margin-bottom: 3vw;
+}
+
 .texto-recursos {
     display: flex;
     justify-content: center;
@@ -216,20 +223,16 @@ main {
 }
 
 .txtRecursos {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #f7ffff;
+    
+    background-color: #F7FFFF;
     border-radius: 20px;
-    width: 90%;
-    height: 6vw;
-    margin-top: -3vw;
+    padding: 1vw 20vw;
     z-index: 1;
     /*border: 1px solid tomato;*/
 }
 
 .texto-recursos>.txtRecursos>h1 {
-    font: bold 2.5vw arial;
+    font: bold 1.2rem arial;
     color: #10672F;
     margin-top: 1.2vw;
 }
@@ -286,11 +289,11 @@ main {
 .container-quemSomos {
     display: flex;
     justify-content: center;
+    margin-bottom: 4vw;
     /*border: 1px solid tomato;*/
 }
 
 .quemSomos {
-    margin-top: 4vw;
     background-color: #EFEFEF;
     width: 75vw;
     border-radius: 20px;
@@ -502,10 +505,6 @@ main {
 }
 
 /*perguntas frequentes*/
-.containerPerguntas {
-    margin-top: 6vw;
-}
-
 .containerPerguntas>h1 {
     text-align: center;
     font-weight: bold;
