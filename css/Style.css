@@ -577,15 +577,12 @@ main {
     transition: transform .3s ease-in-out;
 }
 
-
-
 /* Estilos do rodapé */
 footer {
     grid-area: footer;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 14vw;
     background-color: #262F3F;
     padding: 2vw;
     color: white;
