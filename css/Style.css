@@ -308,7 +308,7 @@ main {
 }
 
 .quemSomos {
-    background-color: #EFEFEF;
+    background-color: #f3f3f3;
     width: 75vw;
     border-radius: 20px;
     position: relative;
@@ -431,7 +431,7 @@ main {
 }
 
 #button>p {
-    margin-right: 1vw;
+    margin-left: 1vw;
     font-size: 1.2vw;
     font-weight: bold;
     color: rgba(255, 255, 255, 1);
@@ -716,8 +716,8 @@ textarea:focus {
 
     background: url(/img/iconTxtNome.png) no-repeat right;
     background-size: 20px;
-    padding-right: 25px;
-    background-position: calc(100% - 1px);
+    padding-right: 30px;
+    background-position: calc(100% - 3px);
 }
 
 .formulario .txtEmail {
@@ -727,12 +727,13 @@ textarea:focus {
     background: url(/img/iconTxtEmail.png) no-repeat right;
     background-size: 20px;
     padding-right: 30px;
-    background-position: calc(100% - 2px);
+    background-position: calc(100% - 4px);
 }
 
 .formulario .txtMsg {
     height: 100px;
     resize: none;
+    background-color: #F7FFFF;
 }
 
 .formulario .botao {
