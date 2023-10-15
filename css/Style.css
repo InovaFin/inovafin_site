@@ -1,11 +1,12 @@
 /* Importar a fonte Poppins da Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
 
 /* Define estilos padrão para todos os elementos */
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Poppins';
+    font-family: 'Poppins', 'Arial', sans-serif;
     font-size: 1rem;
     box-sizing: border-box;
 }
@@ -19,7 +20,7 @@
         'footer';
     grid-template-columns: 1fr;
     background-color: #f7ffff;
-}   
+}
 
 /* Estilos do cabeçalho */
 header {
@@ -71,6 +72,10 @@ li>a:hover {
     border-radius: 9px;
     padding: 1vw;
     width: 12.8vw;
+}
+
+.btnFC:hover {
+    background-color: rgba(58, 207, 110, 0.907);
 }
 
 .btnFC>img {
@@ -370,9 +375,9 @@ main {
     height: 21vw;
     background-color: rgba(45, 147, 74, 0.070);
     border-radius: 11%;
-    transform: rotate(81deg);
+    transform: rotate(11deg);
     position: absolute;
-    bottom: -19%;
+    bottom: -14%;
     left: -8%;
     z-index: -1;
 }
@@ -549,7 +554,6 @@ main {
 
 .container-Perguntas>h1 {
     font-weight: bold;
-    font-family: 'Poppins';
     font-size: 2.2vw;
     margin-bottom: .3vw;
 }
@@ -557,11 +561,10 @@ main {
 .container-Perguntas>a {
     justify-content: center;
     font-weight: bold;
-    font-family: 'Poppins', 'Arial', sans-serif;
     color: #075925;
     font-size: 1vw;
     margin-bottom: 5vw;
-    margin-top: 3vw;
+    margin-top: 2vw;
 }
 
 .perguntasFrequentes {
@@ -581,7 +584,6 @@ main {
     align-items: center;
     cursor: pointer;
     border-bottom: .16vw solid rgb(0, 0, 0);
-    font-family: 'Poppins', 'Arial', sans-serif;
     margin-top: 2vw;
 }
 
@@ -602,7 +604,6 @@ main {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.4s ease;
-    font-family: 'Poppins';
 }
 
 .faq.active .resposta {
@@ -624,7 +625,7 @@ main {
     height: 23vw;
     background-color: rgba(45, 147, 74, 0.070);
     border-radius: 11%;
-    transform: rotate(20deg);
+    transform: rotate(70deg);
     position: absolute;
     bottom: -3%;
     right: 8%;
@@ -644,14 +645,113 @@ footer {
 }
 
 .footer-cima {
-    padding:0 3vw;
-    border-bottom: .1vw solid ;
+    padding: 0 3vw;
+    border-bottom: .1vw solid;
 }
 
 .footer-cima>img {
     width: 12vw;
 }
 
-.footer-baixo> p{
-    font-size: .9vw ;
+.footer-baixo>p {
+    font-size: .9vw;
+}
+
+/*Fale Conosco*/
+.fundoFaleConosco {
+    background: radial-gradient(60.1% 60.83% at 50% 50%, #24A351 0%, #075925 83.98%);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.faleConosco {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.formulario label {
+    font-family: 'Inter', sans-serif;
+    color: #191919;
+    font-size: 0.87rem;
+    line-height: 1.4;
+    font-weight: bo;
+}
+
+.formulario {
+    background-color: #F7FFFF;
+    padding: 20px;
+    border-radius: 13px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+.formulario input,
+textarea {
+    border: 1px solid #676767;
+    border-radius: 2px;
+    padding: 0px 4px;
+    font-size: 0.83rem;
+    outline: none;
+    width: 360px;
+}
+
+.formulario input:focus,
+textarea:focus {
+    border: 2px solid #3bba53b8;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.742);
+    outline: none;
+}
+
+.formulario p {
+    font-size: 0.64rem;
+    margin-top: -4px;
+    color: rgb(82, 80, 80);
+    font-family: 'Inter', sans-serif;
+}
+
+.formulario .txtNome {
+    height: 26px;
+    margin-bottom: 20px;
+
+    background: url(/img/iconTxtNome.png) no-repeat right;
+    background-size: 20px;
+    padding-right: 25px;
+    background-position: calc(100% - 1px);
+}
+
+.formulario .txtEmail {
+    height: 26px;
+    margin-bottom: 20px;
+
+    background: url(/img/iconTxtEmail.png) no-repeat right;
+    background-size: 20px;
+    padding-right: 30px;
+    background-position: calc(100% - 2px);
+}
+
+.formulario .txtMsg {
+    height: 100px;
+    resize: none;
+}
+
+.formulario .botao {
+    background-color: #28B65A;
+    box-shadow: 0px 5px 0px 0px #49db7c;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    width: 100px;
+    height: 33px;
+    margin: 5px 0 0 0;
+    float: right;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: all ease 0.1s;
+
+}
+
+.formulario .botao:active {
+    transform: translateY(5px);
 }

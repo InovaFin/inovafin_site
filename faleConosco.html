@@ -1,25 +1,37 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fale Conoco</title>
+    <link rel="stylesheet" href="css/Style.css">
+    <link rel="shortcut icon" href="img/favicon-inovafin.png" type="image/x-icon">
+    <title>Fale Conosco - inovaFin</title>
 </head>
-<body>
-    <form action="php/envioFaleConosco.php" method="post">
-        <label for="nome">Nome:</label>
-        <input type="text" name="nome" required>
-        <br>
 
-        <label for="email">Email:</label>
-        <input type="email" name="email" required>
-        <br>
+<body class="fundoFaleConosco">
+    <section class="faleConosco">
+        <div class="formulario">
+            <form action="" method="post">
 
-        <label for="mensagem">Mensagem:</label>
-        <textarea name="mensagem" required></textarea>
-        <br>
+                <label for="nome">Nome:</label><br>
+                <input type="text" name="nome" class="txtNome" required>
+                <br>
 
-        <input type="submit" name="enviar">
-    </form>
+                <label for="email">Email:</label><br>
+                <input type="email" name="email" class="txtEmail" required>
+                <br>
+
+                <label for="mensagem">Deixe sua mensagem:</label><br>
+                <textarea name="mensagem" class="txtMsg" required></textarea>
+
+
+                <p>Aguarde sua resposta!</p>
+
+                <input type="submit" name="enviar" class="botao">
+        </div>
+        </form>
+    </section>
 </body>
+
 </html>
