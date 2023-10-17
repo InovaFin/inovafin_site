@@ -1,0 +1,87 @@
+@media (max-width : 1120px) {
+
+    header li>a {
+        padding: 13px 15px;
+    }
+
+    .celular {
+        width: 500px;
+        height: 540px;
+    }
+
+    .txt-home1 {
+        font-size: 2rem;
+    }
+    
+    .txt-home2 {
+        font-size: 1.6rem;
+    }
+
+    .txt-home>p>img {
+        width: 160px;
+        margin-top: 3px;
+    }
+
+    .qrcode>img {
+        width: 130px;
+    }
+
+    .bloco-txt {
+        width: 170px;
+        padding: 10px 30px 10px 14px;
+
+    }
+    
+    .bloco-txt>img.setaBaixar {
+        width: 20px
+    }
+    
+    .bloco-txt>img.android {
+        width: 32px;
+        margin-top: -23px;
+    }
+    
+    .bloco-txt>p ,span {
+        font-size: 0.64rem;
+    }
+
+}
+
+@media (max-width : 910px) {
+
+    .home {
+        background: radial-gradient(60.1% 60.83% at 50% 50%, #219349 0%, #075925 83.98%);
+        padding: 140px 20px 100px 20px;
+    }
+
+    .celular {
+        display: none;
+    }
+
+    .conteudoHome {
+        margin: 0;
+    }
+
+    .txt-home {
+        margin-bottom: 80px;
+    }
+
+    .qrcode {
+        margin: 0;
+    }
+}
+
+@media (max-width : 555px) {
+    .txt-home1 {
+        font-size: 1.7rem;
+    }
+
+    .txt-home2 {
+        font-size: 1.3rem;
+    }
+
+    .txt-home>p>img {
+        width: 140px;
+        margin-top: 2px;
+    }
+}
