@@ -204,7 +204,7 @@ main {
     transform: rotate(86deg);
     border-radius: 35px;
     position: absolute;
-    bottom: calc(10% + 60px);
+    bottom: calc(-3% + 160px);
     right: 11%;
     z-index: 0;
 }
