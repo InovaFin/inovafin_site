@@ -1,4 +1,4 @@
-@media (max-width : 1120px) {
+@media screen and (max-width : 1120px) {
 
     header li>a {
         padding: 13px 15px;
@@ -47,7 +47,7 @@
 
 }
 
-@media (max-width : 910px) {
+@media screen and (max-width: 930px) {
 
     .home {
         background: radial-gradient(60.1% 60.83% at 50% 50%, #219349 0%, #075925 83.98%);
@@ -56,6 +56,10 @@
 
     .celular {
         display: none;
+    }
+
+    .logo img {
+        width: 140px;
     }
 
     .conteudoHome {
@@ -69,9 +73,60 @@
     .qrcode {
         margin: 0;
     }
+
+    .nav-item {
+        display: none;
+    }
+
+    .btnFC {
+        display: none;
+    }
+
+    .mobile-menu { 
+        box-shadow: 0 1px 2px -5px rgba(0, 0, 0, 0.775);
+    }
+
+    .mobile-menu-icon {
+        display: block;
+    }
+
+    .mobile-menu-icon button img {
+        vertical-align: middle;
+    }
+
+    .mobile-menu-icon button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+
+    .mobile-menu ul {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 1rem;
+    }
+
+    .mobile-menu .nav-item {
+        display: block;
+        padding: 0.7rem 0 0.7rem 0;
+    }
+
+    .mobile-menu .btnFC {
+        display: block;
+        padding: 0 2rem 1rem 2rem;
+    }
+
+    .mobile-menu .btnFC button {
+        width: 100%;
+    }
+
+    .open {
+        display: block;
+    }
 }
 
-@media (max-width : 555px) {
+@media screen and (max-width : 555px) {
     .txt-home1 {
         font-size: 1.7rem;
     }

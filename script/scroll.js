@@ -1,6 +1,6 @@
 $(document).ready(function() {
     // Adiciona animação de rolagem suave aos links do menu
-    $('.menu a , .logo').click(function(e) {
+    $('.nav-link, .logo a').click(function(e) {
         e.preventDefault();
 
         const targetId = $(this).attr('href');

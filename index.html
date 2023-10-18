@@ -11,21 +11,44 @@
     <script src="script/desenvolvedores.js"></script>
     <script src="script/perguntasFrequentes.js"></script>
     <script src="script/scroll.js"></script>
+    <script src="script/menuNav.js"></script>
     <title>InovaFin</title>
 </head>
 
 <body>
     <section class="container-grid">    
         <header>
-            <a href="#home" class="logo" ><img src="./img/InovaFin.png" alt="logoInovafin"></a>
-            <nav class="menu">
+            <nav class="nav-bar">
+                <div class="logo">
+                    <a href="#home"><img src="./img/InovaFin.png" alt="logoInovafin"></a>
+                </div>
+
+                <div class="nav-list">
+                    <ul>
+                        <li class="nav-item"><a href="#recursos" class="nav-link">Recursos</a></li>
+                        <li class="nav-item"><a href="#quemSomos" class="nav-link">Quem somos</a></li>
+                        <li class="nav-item"><a href="#perguntas" class="nav-link">Perguntas ?</a></li>
+                    </ul>
+                </div>
+
+                <div class="btnFC">
+                    <button><a href="faleConosco.html">Fale Conosco <img src="./img/iconFC.png" alt="menuNAV"></a></button>
+                </div>
+
+                <div class="mobile-menu-icon">
+                    <button onclick="menuShow()"><img class="icon" src="/img/menu_white_36dp.svg" alt=""></button>
+                </div>
+            </nav>     
+            <div class="mobile-menu">
                 <ul>
-                    <li><a href="#recursos">Recursos</a></li>
-                    <li><a href="#quemSomos">Quem somos</a></li>
-                    <li><a href="#perguntas">Perguntas ?</a></li>
+                    <li class="nav-item"><a href="#recursos" class="nav-link">Recursos</a></li>
+                    <li class="nav-item"><a href="#quemSomos" class="nav-link">Quem somos</a></li>
+                    <li class="nav-item"><a href="#perguntas" class="nav-link">Perguntas ?</a></li>
                 </ul>
-            </nav>
-            <a class="btnFC" href="faleConosco.html">Fale Conosco <img src="./img/iconFC.png" alt=""></a>
+                <div class="btnFC">
+                    <button><a href="faleConosco.html">Fale Conosco <img src="./img/iconFC.png" alt="menuNAV"></a></button>
+                </div>
+            </div>
         </header>
         <main>
             <section id="home" class="home">
@@ -196,7 +219,7 @@
                             </div>
                             <div class="resposta">
                                 <p>Você pode entrar em contato com nosso suporte diretamente por meio do nosso site.</p>
-                            </div>
+                            </div>  
                         </div>
                     </div>
                 </div>
