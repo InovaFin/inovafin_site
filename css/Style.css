@@ -752,14 +752,14 @@ textarea:focus {
 }
 
 .formulario .txtNome {
-    background: url(/img/iconTxtNome.png) no-repeat right;
+    background: url(img/iconTxtNome.png) no-repeat right;
     background-size: 26px;
     padding-right: 40px;
     background-position: calc(100% - 3px);
 }
 
 .formulario .txtEmail {
-    background: url(/img/iconTxtEmail.png) no-repeat right;
+    background: url(img/iconTxtEmail.png) no-repeat right;
     background-size: 26px;
     padding-right: 40px;
     background-position: calc(100% - 4px);
