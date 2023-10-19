@@ -4,7 +4,7 @@
         padding: 13px 15px;
     }
 
-    .celular {
+    .celular1 img {
         width: 500px;
         height: 540px;
     }
@@ -51,15 +51,25 @@
 
     .home {
         background: radial-gradient(60.1% 60.83% at 50% 50%, #219349 0%, #075925 83.98%);
-        padding: 140px 20px 100px 20px;
+        padding: 110px 15px 50px 15px;
+        flex-direction: column;
+        align-items: center;
     }
 
-    .celular {
+    .celular1 img {
         display: none;
     }
 
+    .qrcode {
+        display: none;
+    }
+
+    .celular2 {
+        display: block;
+    }
+
     .logo img {
-        width: 140px;
+        width: 130px;
     }
 
     .conteudoHome {
@@ -126,17 +136,36 @@
     }
 }
 
-@media screen and (max-width : 555px) {
+@media screen and (max-width : 550px) {
+
+    .home {
+        padding: 110px 20px 30px 20px;
+    }
+
+    .logo img {
+        width: 110px;
+    }
+
+    .txt-home {
+        margin-bottom: 40px;
+    }
+
     .txt-home1 {
-        font-size: 1.7rem;
+        font-size: 1.4rem;
     }
 
     .txt-home2 {
-        font-size: 1.3rem;
+        font-size: 1.1rem;
     }
 
     .txt-home>p>img {
-        width: 140px;
-        margin-top: 2px;
+        width: 100px;
+        margin-top: 4px;
+        margin-left: -10px;
+    }
+
+    .celular2 img {
+        width: 260px;
+        height: 190px;
     }
 }

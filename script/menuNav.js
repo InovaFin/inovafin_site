@@ -7,4 +7,14 @@ function menuShow() {
         menuMobile.classList.add('open');
         document.querySelector('.icon').src = "img/close_white_36dp.svg";
     }
+
+    const closeLink = document.querySelectorAll('.mobile-menu, .logo');
+
+    closeLink.forEach(link => {
+    link.addEventListener('click', () => {
+        // Fecha o menu
+        menuShow();
+    });
+});
+
 }
