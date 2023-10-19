@@ -139,7 +139,7 @@
 @media screen and (max-width : 550px) {
 
     .home {
-        padding: 110px 20px 30px 20px;
+        padding: 100px 10px 30px 10px;
     }
 
     .logo img {
@@ -165,7 +165,7 @@
     }
 
     .celular2 img {
-        width: 260px;
-        height: 190px;
+        width: 310px;
+        height: 290px;
     }
 }
