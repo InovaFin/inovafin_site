@@ -10,16 +10,17 @@
     }
 
     .txt-home1 {
-        font-size: 2rem;
+        font-size: 2rem;       
     }
     
     .txt-home2 {
-        font-size: 1.6rem;
+        font-size: 1.75rem;
     }
-
+    
     .txt-home>p>img {
-        width: 160px;
+        width: 170px;
         margin-top: 3px;
+        margin-left: -18px;
     }
 
     .qrcode>img {
@@ -51,7 +52,7 @@
 
     .home {
         background: radial-gradient(60.1% 60.83% at 50% 50%, #219349 0%, #075925 83.98%);
-        padding: 110px 15px 50px 15px;
+        padding: 110px 5px 10px 5px;
         flex-direction: column;
         align-items: center;
     }
@@ -76,8 +77,24 @@
         margin: 0;
     }
 
-    .txt-home {
-        margin-bottom: 80px;
+    .txt-home1 {
+        font-size: 2rem;      
+    }
+    
+    .txt-home2 {
+        font-size: 1.75rem;
+    }
+    
+    .txt-home>p>img {
+        width:165px;
+        margin-top: 3px;
+        margin-left: -18px;
+    }
+
+    .celular2 img {
+        width: 380px;
+        height: 380px;
+        margin-top: 60px;
     }
 
     .qrcode {
@@ -139,19 +156,57 @@
 @media screen and (max-width : 550px) {
 
     .home {
-        padding: 100px 10px 30px 10px;
+        padding: 100px 0px 10px 5px;
+    }
+
+    .nav-link {
+        font-size: 0.9rem;
+    }
+
+    .nav-item {
+        margin-bottom: 3px;
+    }
+
+    .btnFC button a {
+        font-size: 0.9rem ;
+    }
+
+    .mobile-menu-icon .icon {
+        width: 30px;
     }
 
     .logo img {
-        width: 110px;
-    }
-
-    .txt-home {
-        margin-bottom: 40px;
+        width: 100px;
     }
 
     .txt-home1 {
-        font-size: 1.4rem;
+        font-size: 1.45rem;      
+    }
+    
+    .txt-home2 {
+        font-size: 1.25rem;
+    }
+    
+    .txt-home>p>img {
+        width:120px;
+        margin-top: 2px;
+        margin-left: -12px;
+    }
+
+    .celular2 img {
+        width: 300px;
+        height: 300px;
+        margin-top: 30px;
+    }
+}
+
+@media screen and (max-width: 415px) {
+    .logo img {
+        width: 90px;
+    }
+
+    .txt-home1 {
+        font-size: 1.2rem;
     }
 
     .txt-home2 {
@@ -160,12 +215,13 @@
 
     .txt-home>p>img {
         width: 100px;
-        margin-top: 4px;
+        margin-top: 2px;
         margin-left: -10px;
     }
 
     .celular2 img {
-        width: 310px;
-        height: 290px;
+        width: 220px;
+        height: 220px;
     }
+
 }

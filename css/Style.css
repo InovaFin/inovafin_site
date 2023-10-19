@@ -43,7 +43,7 @@ header {
 
 /* Estilos da logo */
 .logo img {
-    width: 180px;
+    width: 157px;
     vertical-align: middle;
 }
 
@@ -53,12 +53,12 @@ header {
 }
 
 .nav-item {
-    margin: 0 15px;
+    margin-bottom: 5px;
 }
 
 .nav-link {
     text-decoration: none;
-    font-size: 1.049rem;
+    font-size: 1.04rem;
     padding: 13px 20px;
     color: #FFF;
     font-weight: 600;
@@ -71,7 +71,7 @@ header {
 .btnFC button {
     border: none;
     background-color: #28B65A;
-    padding: 10px 15px;
+    padding: 10px 20px;
     border-radius: 7px;
 }
 
@@ -79,13 +79,11 @@ header {
     text-decoration: none;
     color: #FFF;
     font-weight: 600;
-    font-size: 1.049rem;
+    font-size: 1.04rem;
+    padding: 13px 20px;
 }
 
-
-
-
-.btnFC:hover {
+.btnFC button:hover {
     background-color: rgba(46, 150, 83, 1);    
     transition: 0.4s;
 }
@@ -140,11 +138,6 @@ main {
     display: none;
 }
 
-.celular2 img {
-    width: 470px;
-    height: 450px;
-}
-
 .txt-home {
     color: #FFF;
     z-index: 1;
@@ -158,16 +151,16 @@ main {
 }
 
 .txt-home2 {
-    font-size: 2rem;
+    font-size: 2.1rem;
     font-weight: 600;
-    margin-right: -13px;
+    margin-right: -20px;
 }
 
 .txt-home>p>img {
     width: 200px;
     vertical-align: middle;
-    margin-top: 4px;
-    margin-left: -15px;
+    margin-top: 3px;
+    margin-left: -18px;
 }
 
 .qrcode {
