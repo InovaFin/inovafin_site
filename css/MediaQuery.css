@@ -161,7 +161,7 @@
     }
 }
 
-@media screen and (max-width : 400px) {
+@media screen and (max-width : 435px) {
 
     .home {
         padding: 100px 5px 10px 5px;
@@ -207,30 +207,4 @@
         height: 300px;
         margin-top: 30px;
     }
-}
-
-@media screen and (max-width: 0px) {
-    .logo img {
-        width: 90px;
-    }
-
-    .txt-home1 {
-        font-size: 1.2rem;
-    }
-
-    .txt-home2 {
-        font-size: 1.1rem;
-    }
-
-    .txt-home>p>img {
-        width: 100px;
-        margin-top: 2px;
-        margin-left: -10px;
-    }
-
-    .celular2 img {
-        width: 220px;
-        height: 220px;
-    }
-
-}
+}   
