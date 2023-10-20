@@ -28,7 +28,7 @@ header {
     grid-area: header;
     background-color: #075925;
     box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.499);
-    z-index: 2;
+    z-index: 4;
     width: 100%;
     overflow: hidden;
     position: fixed; 
@@ -71,7 +71,7 @@ header {
 .btnFC button {
     border: none;
     background-color: #28B65A;
-    padding: 10px 20px;
+    padding: 10px 0px;
     border-radius: 7px;
 }
 
@@ -130,7 +130,8 @@ main {
 .celular1 img {
     width: 600px;
     height: 640px;
-    z-index: 1;
+    position: relative;
+    z-index: 2;
     margin-left: -18%;
 }
 
@@ -214,10 +215,10 @@ main {
     height: 30vw;
     background-color: rgba(217, 217, 217, 0.047);
     transform: rotate(5deg);
-    border-radius: 40px;
+    border-radius: 3vw;
     position: absolute;
-    top: calc(-1% + 160px);
-    left: 9%;
+    top: calc(-2vw + 160px);
+    left: 10vw;
     z-index: 0;
 }
 
@@ -226,10 +227,10 @@ main {
     height: 20vw;
     background-color: rgba(217, 217, 217, 0.047);
     transform: rotate(86deg);
-    border-radius: 35px;
+    border-radius: 3vw;
     position: absolute;
-    bottom: calc(-3% + 160px);
-    right: 11%;
+    bottom: calc(-3vw + 160px);
+    right: 11vw;
     z-index: 0;
 }
 
@@ -442,7 +443,7 @@ main {
 
 #button {
     border: none;
-    background-color: #28B65A;    
+    background-color: #075925;    
     border-radius: 0.6vw;
     padding: 0.4vw 1vw;
     cursor: pointer;

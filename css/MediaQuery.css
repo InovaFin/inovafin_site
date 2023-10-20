@@ -83,6 +83,7 @@
     
     .txt-home2 {
         font-size: 1.75rem;
+        margin: 0;
     }
     
     .txt-home>p>img {
@@ -94,11 +95,19 @@
     .celular2 img {
         width: 380px;
         height: 380px;
-        margin-top: 60px;
+        margin-top: 40px;
     }
 
     .qrcode {
         margin: 0;
+    }
+
+     .quadrado1 {
+        display: none;
+    }
+    
+    .quadrado2 {
+        display: none;
     }
 
     .nav-item {
@@ -153,10 +162,11 @@
     }
 }
 
-@media screen and (max-width : 550px) {
+@media screen and (max-width : 400px) {
 
     .home {
-        padding: 100px 0px 10px 5px;
+        padding: 100px 5px 10px 5px;
+
     }
 
     .nav-link {
@@ -180,16 +190,16 @@
     }
 
     .txt-home1 {
-        font-size: 1.45rem;      
+        font-size: 1.68rem;      
     }
     
     .txt-home2 {
-        font-size: 1.25rem;
+        font-size: 1.57rem;
     }
     
     .txt-home>p>img {
-        width:120px;
-        margin-top: 2px;
+        width:140px;
+        margin-top: 3px;
         margin-left: -12px;
     }
 
@@ -200,7 +210,7 @@
     }
 }
 
-@media screen and (max-width: 415px) {
+@media screen and (max-width: 0px) {
     .logo img {
         width: 90px;
     }
