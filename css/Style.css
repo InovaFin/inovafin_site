@@ -245,24 +245,26 @@ main {
     align-items: center;
 }
 
-.texto-recursos {
+.box-txtRecursos {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
-    z-index: 0;
+    background-color: #F7FFFF;
+    width: 90%;
+    border-radius: 20px;
+    padding: 25px 0 40px 0;
+    z-index: -1;
 }
 
 .txtRecursos {
-    background-color: #F7FFFF;
-    border-radius: 20px;
-    padding: 1vw 20vw 4vw 20vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.texto-recursos>.txtRecursos>h1 {
-    font: bold 2.2vw arial;
+.box-txtRecursos>.txtRecursos>h1 {
+    font: bold 2.1rem arial;
     color: #10672F;
-    margin-top: 1.2vw;
 }
 
 .quadrado3 {

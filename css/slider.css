@@ -1,6 +1,6 @@
 .slider {
-    margin: 0 10px;
-    width: 780px;
+    margin: 0 15px;
+    width: 840px;
     height: 570px;
     overflow: hidden;
 }
@@ -28,8 +28,8 @@
 
 .manual-navigation {
     position: absolute;
-    width: 780px;
-    margin-top: 80px;
+    width: 840px;
+    margin-top: 100px;
     display: flex;
     justify-content: center;
 }
@@ -76,8 +76,8 @@
 
 .navigation-auto {
     position: absolute;
-    width: 780px;
-    margin-top: 480px;
+    width: 840px;
+    margin-top: 500px;
     display: flex;
     justify-content: center;
 }
