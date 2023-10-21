@@ -240,6 +240,9 @@ main {
     margin-bottom: 3vw;
     position: relative;
     z-index: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .texto-recursos {
@@ -251,65 +254,15 @@ main {
 }
 
 .txtRecursos {
-
     background-color: #F7FFFF;
     border-radius: 20px;
-    padding: 1vw 20vw;
-    /*border: 1px solid tomato;*/
+    padding: 1vw 20vw 3vw 20vw;
 }
 
 .texto-recursos>.txtRecursos>h1 {
     font: bold 2.2vw arial;
     color: #10672F;
     margin-top: 1.2vw;
-}
-
-.carrossel {
-    /*border: 2px solid tomato;*/
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    gap: 9vw;
-    margin-top: 1.5vw;
-}
-
-.imagesCarrossel {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 60vw;
-    height: 35vw;
-}
-
-.slider {
-    opacity: 0;
-    transition: opacity .2s;
-    position: absolute;
-    width: 100%;
-    border-radius: 10px;
-}
-
-.on {
-    opacity: 1;
-}
-
-.btnSetaVoltar {
-    transform: rotate(180deg);
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-}
-
-.btnSetaAvancar {
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-}
-
-.btnSetaAvancar img,
-.btnSetaVoltar img {
-    width: 1.7vw;
 }
 
 .quadrado3 {
