@@ -113,6 +113,10 @@
         display: none;
     }
 
+    .nav-link {
+        padding: 13px 10%;
+    }
+
     .btnFC {
         display: none;
     }
@@ -151,6 +155,11 @@
         display: block;
         padding: 0 2rem 1rem 2rem;
     }
+
+    .mobile-menu .btnFC a { 
+        padding: 13px 10%;
+    }
+
 
     .mobile-menu .btnFC button {
         width: 100%;
