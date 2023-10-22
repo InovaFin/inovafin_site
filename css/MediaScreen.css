@@ -95,14 +95,6 @@
     .conteudoHome {
         margin: 0;
     }
-
-    .txt-home1 {
-        font-size: 2rem;      
-    }
-    
-    .txt-home2 {
-        font-size: 1.75rem;
-    }
     
     .txt-home>p>img {
         width:165px;
@@ -111,8 +103,8 @@
     }
 
     .celular2 img {
-        width: 380px;
-        height: 380px;
+        width: 400px;
+        height: 400px;
         margin-top: 40px;
     }
 
@@ -194,7 +186,7 @@
     }
 
     .box-txtRecursos>.txtRecursos>h1 {
-        font-size: 1.5rem;
+        font-size: 1.6rem;
     }   
     
     .slider {
@@ -228,11 +220,7 @@
     }
 
     .txtRecursos {
-        margin: 0 10vw;
-    }
-
-    .box-txtRecursos>.txtRecursos>h1 {
-        font-size: 1.5rem;
+        width: 300px;
     }
 
     .topic-mobile {
@@ -256,27 +244,25 @@
     }
 
     .topic-mobile img{
-        width: 240px;   
-        height: 280px;
+        width: 40vw;   
+        height: auto;
     }
   
     .slider {
-        width: 210px;
-        height: 410px;
+        width: 37vw;
+        height: 73vw;
     }
 
 }
 
-@media screen and (max-width : 510px) {
-
+@media screen and (max-width: 530px) {
     .topic-mobile img{
-        width: 200px;   
-        height: 240px;
+        width: 42vw;   
     }
   
     .slider {
-        width: 170px;
-        height: 330px;
+        width: 45vw;
+        height: 89vw;
     }
 }
 
@@ -299,31 +285,23 @@
         font-size: 0.9rem ;
     }
 
-    .mobile-menu-icon .icon {
-        width: 30px;
-    }
-
     .logo img {
-        width: 100px;
+        width: 120px;
     }
 
     .txt-home1 {
-        font-size: 1.68rem;      
+        font-size: 1.85rem;      
     }
     
     .txt-home2 {
-        font-size: 1.57rem;
+        font-size: 1.65rem;
     }
     
-    .txt-home>p>img {
-        width:140px;
-        margin-top: 3px;
-        margin-left: -12px;
-    }
-
     .celular2 img {
-        width: 300px;
-        height: 300px;
+        min-width: 270px;
+        min-height: 270px;
+        width: 80vw;
+        height: 80vw;
         margin-top: 30px;
     }
 
@@ -331,33 +309,21 @@
         padding: 10px 0 15px 0 ;
     }
 
-    .txtRecursos {
-        margin: 0 9vw;
-    }
-  
     .box-txtRecursos>.txtRecursos>h1 {
-        font-size: 1.2rem;
-    }
-
-    .topic-mobile img{
-        width: 185px;   
-        height: 225px;
-    }
-  
-    .slider {
-        width: 155px;
-        height: 300px;
+        font-size: 1.3rem;
     }
 }
 
-@media screen and (max-width : 390px ){
+@media screen and (max-width : 390px) {
     .topic-mobile img{
-        width: 160px;   
-        height: 200px;
+        width: 40vw;   
+        min-width: 120px;
     }
   
     .slider {
-        width: 130px;
-        height: 250px;
+        min-width: 110px;
+        min-height: 220px;
+        width: 40vw;
+        height: 79vw;
     }
-}
+}   
