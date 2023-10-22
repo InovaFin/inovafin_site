@@ -71,7 +71,7 @@
 
     .home {
         background: radial-gradient(60.1% 60.83% at 50% 50%, #219349 0%, #075925 83.98%);
-        padding: 110px 5px 10px 5px;
+        padding: 100px 5px 35px 5px;
         flex-direction: column;
         align-items: center;
     }
@@ -256,6 +256,7 @@
 }
 
 @media screen and (max-width: 530px) {
+    
     .topic-mobile img{
         width: 42vw;   
     }
@@ -267,11 +268,6 @@
 }
 
 @media screen and (max-width : 435px) {
-
-    .home {
-        padding: 100px 5px 10px 5px;
-
-    }
 
     .nav-link {
         font-size: 0.9rem;
