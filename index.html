@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/Style.css">
     <link rel="stylesheet" href="css/slider.css">
-    <link rel="stylesheet" href="css/MediaQuery.css">
+    <link rel="stylesheet" href="css/MediaScreen.css">
     <link rel="shortcut icon" href="img/favicon-inovafin.png" type="image/x-icon">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="script/desenvolvedores.js" defer></script>
@@ -89,41 +89,48 @@
                     </div>
                 </div>
 
-                <div class="slider">
-                    <div class="slides">
-                        <input type="radio" name="btn-radio" id="radio1">
-                        <input type="radio" name="btn-radio" id="radio2">
-                        <input type="radio" name="btn-radio" id="radio3">
-                        <input type="radio" name="btn-radio" id="radio4">
-            
-                        <div class="slide first">
-                            <img src="img/slider-1.png" alt="Principais Recursos">
+                <div class="container-slider">
+                    <div class="slider">
+                        <div class="slides">
+                            <input type="radio" name="btn-radio" id="radio1">
+                            <input type="radio" name="btn-radio" id="radio2">
+                            <input type="radio" name="btn-radio" id="radio3">
+                            <input type="radio" name="btn-radio" id="radio4">
+                            <div class="slide first">
+                                <img class="img-desk" src="img/slide-1.png" alt="Principais Recursos">
+                                <img class="img-mob" src="img/slide-1-mob.png" alt="Splash-InovaFin">
+                            </div>
+                            <div class="slide">
+                                <img class="img-desk" src="img/slide-2.png" alt="Gerencie seu saldo">
+                                <img class="img-mob" src="img/slide-2-mob.png" alt="Gerencie seu saldo">
+                            </div>
+                            <div class="slide">
+                                <img class="img-desk" src="img/slide-3.png" alt="Organize suas dispesas">
+                                <img class="img-mob" src="img/slide-3-mob.png" alt="Organize suas dispesas">
+                            </div>
+                            <div class="slide">
+                                <img class="img-desk" src="img/slide-4.png" alt="Centralize suas contas">
+                                <img class="img-mob" src="img/slide-4-mob.png" alt="Centralize suas contas">
+                            </div>
+                            <div class="navigation-auto">
+                                <div class="auto-btn1"></div>
+                                <div class="auto-btn2"></div>
+                                <div class="auto-btn3"></div>
+                                <div class="auto-btn4"></div>
+                            </div>
                         </div>
-                        <div class="slide">
-                            <img src="img/slider-2.png" alt="Principais Recursos">
-                        </div>
-                        <div class="slide">
-                            <img src="img/slider-3.png" alt="Principais Recursos">
-                        </div>
-                        <div class="slide">
-                            <img src="img/slider-4.png" alt="Principais Recursos">
-                        </div>
-            
-                        <div class="navigation-auto">
-                            <div class="auto-btn1"></div>
-                            <div class="auto-btn2"></div>
-                            <div class="auto-btn3"></div>
-                            <div class="auto-btn4"></div>
+                        <div class="manual-navigation">
+                            <label for="radio1" class="manual-btn"></label>
+                            <label for="radio2" class="manual-btn"></label>
+                            <label for="radio3" class="manual-btn"></label>
+                            <label for="radio4" class="manual-btn"></label>
                         </div>
                     </div>
-            
-                    <div class="manual-navigation">
-                        <label for="radio1" class="manual-btn"></label>
-                        <label for="radio2" class="manual-btn"></label>
-                        <label for="radio3" class="manual-btn"></label>
-                        <label for="radio4" class="manual-btn"></label>
+
+                    <div class="topic-mobile">
+                        <img src="img/topic-mobile.png" alt="">
                     </div>
-            
+
                 </div>
                 <div class="quadrado3"class="quadrado"></div>
                 <div class="quadrado4"class="quadrado"></div>

@@ -115,7 +115,7 @@ main {
             #24A351, #075925 76.91%
             /* Cores do gradiente e ponto de transição  */
         );
-    padding: 160px 0px 0px 0px;
+    padding: 150px 0px 0px 0px;
     display: flex;
     justify-content: center;
 }
@@ -236,7 +236,7 @@ main {
 
 /*Estilo titulo de recursos*/
 #recursos {
-    margin-top: -2vw;
+    margin-top: -25px;
     margin-bottom: 3vw;
     position: relative;
     z-index: 0;
@@ -250,16 +250,16 @@ main {
     justify-content: center;
     align-items: center;
     background-color: #F7FFFF;
-    width: 90%;
-    border-radius: 20px;
+    width: 85%;
+    border-radius: 30px;
     padding: 25px 0 40px 0;
-    z-index: -1;
 }
 
 .txtRecursos {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 .box-txtRecursos>.txtRecursos>h1 {
@@ -701,14 +701,14 @@ textarea:focus {
 }
 
 .formulario .txtNome {
-    background: url(img/iconTxtNome.png) no-repeat right;
+    background: url(/img/iconTxtNome.png) no-repeat right;
     background-size: 26px;
     padding-right: 40px;
     background-position: calc(100% - 3px);
 }
 
 .formulario .txtEmail {
-    background: url(img/iconTxtEmail.png) no-repeat right;
+    background: url(/img/iconTxtEmail.png) no-repeat right;
     background-size: 26px;
     padding-right: 40px;
     background-position: calc(100% - 4px);
