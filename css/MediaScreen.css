@@ -265,6 +265,10 @@
         width: 45vw;
         height: 89vw;
     }
+
+    .footer-baixo p {
+        font-size: 0.7rem;
+    }
 }
 
 @media screen and (max-width : 435px) {
