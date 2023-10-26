@@ -1,51 +1,67 @@
 <?php
-//verifica se ja existe uma session iniciada
 if (!isset($_SESSION)) {
     session_start();
 }
 
-$usuario = $_POST['usuario_login'];
-$senha = $_POST['senha_login'];
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST["botao"]) && $_POST["botao"] == "Logar") {
+    $usuario = $_POST['usuario_login'];
+    $senha = $_POST['senha_login'];
 
-// Verifique se algum dos campos está vazio
-if (empty($usuario) || empty($senha)) {
-    echo "<script> alert('Por favor, preencha tanto o e-mail quanto a senha.')</script>";
-    echo '<script>window.location.href = "/inovafin-jean/loginAdm.html";</script>';
-} else {
-    include "conexao.php";
-
-    $query = "SELECT * FROM TB_CADASTRO_ADM WHERE EMAIL_ADM = '$usuario' AND SENHA_ADM = '$senha'";
-    $result = $conexao->query($query);
-
-    if ($result) {
-        if ($result->num_rows > 0) {
-
-            $_SESSION["controleAdm"] = "logado";
-
-            while ($row = $result->fetch_assoc()) {
-
-                $id_adm = $row['ID_ADM'];
-                $_SESSION['IdAdm'] = $id_adm;
-
-                $nome_adm = $row['NOME_ADM'];
-                $_SESSION['nomeAdm'] = $nome_adm;
-
-                $email_adm = $row['EMAIL_ADM'];
-                $_SESSION['emailAdm'] = $email_adm;
-
-                $senha_adm = $row['SENHA_ADM'];
-                $_SESSION['senhaAdm'] = $senha_adm;
-
-                header("Location: /inovafin-jean/php/painelAdm.php");
-            }
-        } else {
-            echo "<script> alert('Usuário e/ou senha não confere!')</script>";
-            echo '<script>window.location.href = "/inovafin-jean/loginAdm.html";</script>';
-        }
+    // Verifique se algum dos campos está vazio
+    if (empty($usuario) || empty($senha)) {
+        echo "<script>alert('Por favor, preencha tanto o e-mail quanto a senha.')</script>";
+        echo '<script>window.location.href = "/inovafin-jean/php/loginAdm.php";</script>';
     } else {
-        echo "Erro na execução da consulta: " . $conexao->error;
-    }
 
-    $conexao->close();
+        include "conexao.php";
+
+        if ($conexao) {
+            $query = "SELECT * FROM TB_CADASTRO_ADM WHERE EMAIL_ADM = ? AND SENHA_ADM = ?";
+            $stmt = $conexao->prepare($query);
+
+            if ($stmt) {
+                // Verifique se a consulta preparada foi bem-sucedida
+                $stmt->bind_param("ss", $usuario, $senha);
+
+                if ($stmt->execute()) {
+                    $result = $stmt->get_result();
+
+                    if ($result) {
+                        if ($result->num_rows > 0) {
+                            // Iniciar a sessão do usuário logado
+                            $_SESSION["controleAdm"] = "logado";
+
+                            while ($row = $result->fetch_assoc()) {
+                                // Armazenar informações do usuário na sessão
+                                $_SESSION['IdAdm'] = $row['ID_ADM'];
+                                $_SESSION['nomeAdm'] = $row['NOME_ADM'];
+                                $_SESSION['emailAdm'] = $row['EMAIL_ADM'];
+                                $_SESSION['senhaAdm'] = $row['SENHA_ADM'];
+                            }
+
+                            header("Location: /inovafin-jean/php/painelAdm.php");
+                            exit();
+                        } else {
+                            echo "<script>alert('Usuário e/ou senha não confere!')</script>";
+                            echo '<script>window.location.href = "/inovafin-jean/php/loginAdm.php";</script>';
+                        }
+                    } else {
+                        echo "<script>alert('Erro na execução da consulta.')</script>";
+                    }
+                } else {
+                    echo "<script>alert('Erro na execução da consulta.')</script>";
+                }
+
+                $stmt->close();
+            } else {
+                echo "<script>alert('Erro na preparação da instrução.')</script>";
+            }
+
+            $conexao->close();
+
+        } else {
+            echo "<script>alert('Erro na conexão com o banco de dados.')</script>";
+        }
+    }
 }
 ?>

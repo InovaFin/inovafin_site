@@ -1,53 +1,43 @@
 <?php
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {    // Verifica se a solicitação HTTP é do tipo POST.
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['enviar'])) {
 
-    if (isset($_POST["nome"]) && isset($_POST["email"]) && isset($_POST["mensagem"])) { // Verifica se os campos "nome", "email" e "mensagem" estão definidos na solicitação.
+    $nome = $_POST['nome'];
+    $email = $_POST['email'];
+    $mensagem = $_POST['mensagem'];
 
-        // Atribui os valores dos campos POST a variáveis locais.
-        $nome = $_POST["nome"];
-        $email = $_POST["email"];
-        $msg = $_POST["mensagem"];
+    if (empty($nome) || empty($email) || empty($mensagem)) {
+        echo "<script>alert('Por favor, preencha todos os campos.')</script>";
+    } else {
 
-        include("conexao.php");  // Inclui o arquivo de conexão com o banco de dados.
+        include "conexao.php";
 
         if ($conexao) {
-            $comando = "INSERT INTO TB_FALECONOSCO (NOME_CONTATO, EMAIL_CONTATO, MSG_CONTATO) VALUES (?, ?, ?)";
-            
-            try {
-                $stmt = mysqli_prepare($conexao, $comando);  // Tenta preparar a instrução SQL.
+            $query = "INSERT INTO TB_FALECONOSCO (NOME_CONTATO, EMAIL_CONTATO, MSG_CONTATO) VALUES (?, ?, ?)";
+            $stmt = $conexao->prepare($query);
 
-                if ($stmt) {
-                    mysqli_stmt_bind_param($stmt, "sss", $nome, $email, $msg);  // Vincula os parâmetros à instrução preparada.
-                    $resultado = mysqli_stmt_execute($stmt);  // Tenta executar a instrução preparada.
+            if ($stmt) {
+                $stmt->bind_param("sss", $nome, $email, $mensagem);
 
-                    if ($resultado) {
-                        $dados = array("status" => "ok");  // Se a inserção for bem-sucedida, define um status "ok".
-                    } else {
-                        $dados = array("status" => "erro");  
-                    }
+                if ($stmt->execute()) {
+                    echo "<script>alert('Mensagem enviada com sucesso!')</script>";
+                    echo '<script>window.location.href = "/inovafin-jean/index.html";</script>';
 
-                    mysqli_stmt_close($stmt);  // Fecha a instrução preparada.
                 } else {
-                    $dados = array("status" => "erro_preparacao");  
+                    echo "<script>alert('Ocorreu um erro ao enviar a mensagem.')</script>";
                 }
 
-                $close = mysqli_close($conexao);  // Tenta fechar a conexão com o banco de dados.
+                $stmt->close();
+            } else {
+                echo "<script>alert('Erro na preparação da instrução.')</script>";
+            }
 
-                if (!$close) {
-                    $dados = array("status" => "erro_fechamento_conexao");  
-                }
-            } catch (Exception) {
-                $dados = array("status" => "erro_exception");  
+            $close = $conexao->close();
+            if (!$close) {
+                echo "<script>alert('Erro no fechamento da conexão com o banco de dados.')</script>";
             }
         } else {
-            $dados = array("status" => "erro_conexao");  
+            echo "<script>alert('Erro na conexão com o banco de dados.')</script>";
         }
-    } else {
-        $dados = array("status" => "parametros_faltando");  
     }
-} else {
-    $dados = array("status" => "metodo_invalido");  
 }
-
-echo json_encode($dados);  // Converte a resposta em formato JSON e a envia de volta ao cliente.
 ?>
