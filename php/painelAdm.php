@@ -1,17 +1,76 @@
 <?php
-    include "protectAdm.php";
+include "protectAdm.php";
 ?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Painel ADM - InovaFin</title>
-</head>
-<body>
-    <p>Bem Vindo <?php echo $_SESSION['nomeAdm'] ?> ao Painel ADM </p>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
 
-    <p><a href="logout.php">Sair</a></p>
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<p>Bem Vindo <?php echo $_SESSION['nomeAdm'] ?> ao Painel ADM</p>
+<p><a href="logout.php">Sair</a></p>
+
+<h1>Painel ADM</h1>
+
+<table>
+    <tr>
+        <th>Nome</th>
+        <th>Email</th>
+        <th>Mensagem</th>
+    </tr>
+
+    <?php
+        include "conexao.php";
+
+        try {
+            $query = "SELECT * FROM TB_FALECONOSCO";
+            $stmt = mysqli_prepare($conexao, $query);
+
+            if ($stmt) {
+                mysqli_stmt_execute($stmt);
+                $result = mysqli_stmt_get_result($stmt);
+
+                if ($result) {
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        echo "<tr>";
+                        echo "<td>" . $row['NOME_CONTATO'] . "</td>";
+                        echo "<td>" . $row['EMAIL_CONTATO'] . "</td>";
+                        echo "<td>" . $row['MSG_CONTATO'] . "</td>";
+                        echo '<td><button>Responder</button></td>';
+                        echo "</tr>";
+                    }
+                } else {
+                    throw new Exception("Erro na consulta SQL.");
+                }
+                mysqli_stmt_close($stmt);
+            } else {
+                throw new Exception("Erro na preparação da consulta SQL.");
+            }
+        } catch (Exception $e) {
+            echo '<script>alert("Erro: ' . $e->getMessage() . '");</script>';
+        }
+        mysqli_close($conexao);
+    ?>
+</table>
 </body>
 </html>
