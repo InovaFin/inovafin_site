@@ -9,52 +9,66 @@ include "protectAdm.php";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Painel ADM - InovaFin</title>
-    <link rel="stylesheet" href="/inovafin-jean/css/styleFC.css">
-</head>
-<p>Bem Vindo <?php echo $_SESSION['nomeAdm'] ?> ao Painel ADM</p>
-<p><a href="logout.php">Sair</a></p>
+    <link rel="stylesheet" href="/inovafin_site/css/styleFC.css">
+</head> 
 
-<h1>Painel ADM</h1>
+<header>
+    <div class="logo">
+        <a href="/inovafin_site/index.html"><img src="/inovafin_site/img/InovaFin.png" alt="logoInovafin"></a>
+    </div>
+    <div class="painelAdm">
+        <img src="/inovafin_site/img/iconPainelAdm.png" alt="">
+        <p>Painel ADM</p>
+    </div>
+    <div class="btnSair">
+        <button>
+            <a href="logout.php"><img src="/inovafin_site/img/iconBtnSair.png" alt="logout">Sair</a>
+        </button>
+    </div>
+</header>
+<p>Bem Vindo <?php echo $_SESSION['nomeAdm'] ?></p>
 
-<table>
-    <tr>
-        <th>Nome</th>
-        <th>Email</th>
-        <th>Mensagem</th>
-    </tr>
-
-    <?php
-        include "conexao.php";
-
-        try {
-            $query = "SELECT * FROM TB_FALECONOSCO";
-            $stmt = mysqli_prepare($conexao, $query);
-        
-            if ($stmt) {
-                mysqli_stmt_execute($stmt);
-                $result = mysqli_stmt_get_result($stmt);
-        
-                if ($result) {
-                    while ($row = mysqli_fetch_assoc($result)) {
-                        echo "<tr>";
-                        echo "<td>" . $row['NOME_CONTATO'] . "</td>";
-                        echo "<td>" . $row['EMAIL_CONTATO'] . "</td>";
-                        echo "<td>" . $row['MSG_CONTATO'] . "</td>";
-                        echo '<td><button>Responder</button></td>';
-                        echo "</tr>";
+<div class="container-table">
+    <table>
+        <tr>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Mensagem</th>
+        </tr>
+    
+        <?php
+            include "conexao.php";
+    
+            try {
+                $query = "SELECT * FROM TB_FALECONOSCO";
+                $stmt = mysqli_prepare($conexao, $query);
+    
+                if ($stmt) {
+                    mysqli_stmt_execute($stmt);
+                    $result = mysqli_stmt_get_result($stmt);
+    
+                    if ($result) {
+                        while ($row = mysqli_fetch_assoc($result)) {
+                            echo "<tr>";
+                            echo "<td>" . $row['NOME_CONTATO'] . "</td>";
+                            echo "<td>" . $row['EMAIL_CONTATO'] . "</td>";
+                            echo "<td>" . $row['MSG_CONTATO'] . "</td>";
+                            echo '<td><button>Responder</button></td>';
+                            echo "</tr>";
+                        }
+                    } else {
+                        echo '<script>alert("Erro na consulta SQL.");</script>';
                     }
+                    mysqli_stmt_close($stmt);
                 } else {
-                    echo '<script>alert("Erro na consulta SQL.");</script>';
+                    echo '<script>alert("Erro na preparação da consulta SQL.");</script>';
                 }
-                mysqli_stmt_close($stmt);
-            } else {
-                echo '<script>alert("Erro na preparação da consulta SQL.");</script>';
+            } catch (Exception $e) {
+                echo '<script>alert("Erro: ' . $e->getMessage() . '");</script>';
             }
-        } catch (Exception $e) {
-            echo '<script>alert("Erro: ' . $e->getMessage() . '");</script>';
-        }
-        mysqli_close($conexao);        
-    ?>
-</table>
+            mysqli_close($conexao);
+        ?>
+    </table>
+</div>
 </body>
 </html>

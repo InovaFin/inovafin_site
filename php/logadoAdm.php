@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST["botao"]) && $_POST["b
     // Verifique se algum dos campos está vazio
     if (empty($usuario) || empty($senha)) {
         echo "<script>alert('Por favor, preencha tanto o e-mail quanto a senha.')</script>";
-        echo '<script>window.location.href = "/inovafin-jean/php/loginAdm.php";</script>';
+        echo '<script>window.location.href = "/inovafin_site/php/loginAdm.php";</script>';
     } else {
 
         include "conexao.php";
@@ -39,11 +39,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST["botao"]) && $_POST["b
                                 $_SESSION['senhaAdm'] = $row['SENHA_ADM'];
                             }
 
-                            header("Location: /inovafin-jean/php/painelAdm.php");
+                            header("Location: /inovafin_site/php/painelAdm.php");
                             exit();
                         } else {
                             echo "<script>alert('Usuário e/ou senha não confere!')</script>";
-                            echo '<script>window.location.href = "/inovafin-jean/php/loginAdm.php";</script>';
+                            echo '<script>window.location.href = "/inovafin_site/php/loginAdm.php";</script>';
                         }
                     } else {
                         echo "<script>alert('Erro na execução da consulta.')</script>";

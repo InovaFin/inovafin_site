@@ -1,3 +1,81 @@
+/* Importar a fontes da Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;    
+    font-weight: 500;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #075925;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.499);
+    width: 100%;
+    padding: 0.8rem;      
+    display: flex;   
+    align-items: center;
+    justify-content: space-around;
+}
+
+.logo img {
+    width: 157px;
+    vertical-align: middle;
+}
+
+.painelAdm {
+    display: flex;
+    align-items: center;
+}
+
+.painelAdm img {
+    width: 40px;
+}
+
+.painelAdm p {
+    font-size: 1.7rem;
+    color: #FFF;
+    margin-left: 10px;
+}
+
+.btnSair {
+    width: 157px;
+    text-align: center;
+}
+
+.btnSair button {
+    border: none;
+    background-color: #28B65A;
+    padding: 10px 0px;
+    border-radius: 7px;
+}
+
+.btnSair button a {
+    text-decoration: none;
+    color: #FFF;
+    font-weight: 600;
+    font-size: 1.04rem;
+    padding: 13px 20px;
+}
+
+.btnSair button:hover {
+    background-color: rgba(46, 150, 83, 1);    
+    transition: 0.4s;
+}
+
+.btnSair a>img {
+    width: 20px;
+    margin: 0 5px -4px 0;
+}
+
+.container-table {
+    margin:0 10%;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;

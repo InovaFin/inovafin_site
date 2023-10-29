@@ -4,7 +4,7 @@ if (!isset($_SESSION)) {
 }
 
 if (isset($_SESSION["controleAdm"]) && $_SESSION["controleAdm"] == "logado") {
-    header("Location: /inovafin-jean/php/painelAdm.php");
+    header("Location: /inovafin_site/php/painelAdm.php");
     exit();
 }
 ?>

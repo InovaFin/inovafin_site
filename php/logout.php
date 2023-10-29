@@ -5,6 +5,6 @@ if (!isset($_SESSION)) {
 
 session_destroy();
 
-header("Location: /inovafin-jean/index.html");
+header("Location: /inovafin_site/index.html");
 exit();
 ?>
