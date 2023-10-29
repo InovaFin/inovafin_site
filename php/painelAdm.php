@@ -9,23 +9,7 @@ include "protectAdm.php";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Painel ADM - InovaFin</title>
-    <style>
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        th,
-        td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: left;
-        }
-
-        th {
-            background-color: #f2f2f2;
-        }
-    </style>
+    <link rel="stylesheet" href="/inovafin-jean/css/styleFC.css">
 </head>
 <p>Bem Vindo <?php echo $_SESSION['nomeAdm'] ?> ao Painel ADM</p>
 <p><a href="logout.php">Sair</a></p>
@@ -45,11 +29,11 @@ include "protectAdm.php";
         try {
             $query = "SELECT * FROM TB_FALECONOSCO";
             $stmt = mysqli_prepare($conexao, $query);
-
+        
             if ($stmt) {
                 mysqli_stmt_execute($stmt);
                 $result = mysqli_stmt_get_result($stmt);
-
+        
                 if ($result) {
                     while ($row = mysqli_fetch_assoc($result)) {
                         echo "<tr>";
@@ -60,16 +44,16 @@ include "protectAdm.php";
                         echo "</tr>";
                     }
                 } else {
-                    throw new Exception("Erro na consulta SQL.");
+                    echo '<script>alert("Erro na consulta SQL.");</script>';
                 }
                 mysqli_stmt_close($stmt);
             } else {
-                throw new Exception("Erro na preparação da consulta SQL.");
+                echo '<script>alert("Erro na preparação da consulta SQL.");</script>';
             }
         } catch (Exception $e) {
             echo '<script>alert("Erro: ' . $e->getMessage() . '");</script>';
         }
-        mysqli_close($conexao);
+        mysqli_close($conexao);        
     ?>
 </table>
 </body>
