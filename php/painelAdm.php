@@ -26,49 +26,59 @@ include "protectAdm.php";
         </button>
     </div>
 </header>
-<p>Bem Vindo <?php echo $_SESSION['nomeAdm'] ?></p>
+<body class="fundoPainelAdm">    
+<section class="main-painelAdm">
 
-<div class="container-table">
-    <table>
-        <tr>
-            <th>Nome</th>
-            <th>Email</th>
-            <th>Mensagem</th>
-        </tr>
-    
-        <?php
-            include "conexao.php";
-    
-            try {
-                $query = "SELECT * FROM TB_FALECONOSCO";
-                $stmt = mysqli_prepare($conexao, $query);
-    
-                if ($stmt) {
-                    mysqli_stmt_execute($stmt);
-                    $result = mysqli_stmt_get_result($stmt);
-    
-                    if ($result) {
-                        while ($row = mysqli_fetch_assoc($result)) {
-                            echo "<tr>";
-                            echo "<td>" . $row['NOME_CONTATO'] . "</td>";
-                            echo "<td>" . $row['EMAIL_CONTATO'] . "</td>";
-                            echo "<td>" . $row['MSG_CONTATO'] . "</td>";
-                            echo '<td><button>Responder</button></td>';
-                            echo "</tr>";
+    <div class="container-adm">
+        <div class="container-menuAdm">
+            <p>Bem Vindo <?php echo $_SESSION['nomeAdm'] ?></p>
+            <div class="iconRespAdm">icon</div>
+        </div>
+        
+        <div class="container-table">
+            <p>Mensagens a serem respondidas</p>
+            <table>
+                <tr>
+                    <th>Nome</th>
+                    <th>Email</th>
+                    <th>Mensagem</th>
+                </tr>
+        
+                <?php
+                    include "conexao.php";
+        
+                    try {
+                        $query = "SELECT * FROM TB_FALECONOSCO";
+                        $stmt = mysqli_prepare($conexao, $query);
+        
+                        if ($stmt) {
+                            mysqli_stmt_execute($stmt);
+                            $result = mysqli_stmt_get_result($stmt);
+        
+                            if ($result) {
+                                while ($row = mysqli_fetch_assoc($result)) {
+                                    echo "<tr>";
+                                    echo "<td class=\"nome\">" . $row['NOME_CONTATO'] . "</td>";
+                                    echo "<td class=\"email\">" . $row['EMAIL_CONTATO'] . "</td>";
+                                    echo "<td class=\"mensagem\">" . $row['MSG_CONTATO'] . "</td>";
+                                    echo "<td class=\"responder\"><button>Responder</button></td>";
+                                    echo "</tr>";
+                                }
+                            } else {
+                                echo '<script>alert("Erro na consulta SQL.");</script>';
+                            }
+                            mysqli_stmt_close($stmt);
+                        } else {
+                            echo '<script>alert("Erro na preparação da consulta SQL.");</script>';
                         }
-                    } else {
-                        echo '<script>alert("Erro na consulta SQL.");</script>';
+                    } catch (Exception $e) {
+                        echo '<script>alert("Erro: ' . $e->getMessage() . '");</script>';
                     }
-                    mysqli_stmt_close($stmt);
-                } else {
-                    echo '<script>alert("Erro na preparação da consulta SQL.");</script>';
-                }
-            } catch (Exception $e) {
-                echo '<script>alert("Erro: ' . $e->getMessage() . '");</script>';
-            }
-            mysqli_close($conexao);
-        ?>
-    </table>
-</div>
+                    mysqli_close($conexao);
+                ?>
+            </table>
+        </div>
+    </div>
+</section>
 </body>
 </html>
