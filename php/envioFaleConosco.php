@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['enviar'])) {
 
                 if ($stmt->execute()) {
                     echo "<script>alert('Mensagem enviada com sucesso!')</script>";
-                    echo '<script>window.location.href = "/inovafin_site/index.html";</script>';
+                    echo '<script>window.location.href = "/inovafin_site/faleConosco.html";</script>';
 
                 } else {
                     echo "<script>alert('Ocorreu um erro ao enviar a mensagem.')</script>";
