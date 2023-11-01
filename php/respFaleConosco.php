@@ -1,6 +1,7 @@
 <?php
 include "protectAdm.php";
 include "conexao.php";
+include "secret.php";
 
 // Inclui as bibliotecas do PHPMailer.
 use PHPMailer\PHPMailer\PHPMailer;
@@ -14,8 +15,8 @@ if (!isset($_SESSION)) {
     session_start();
 }
 
-// Verifica se o formulário foi enviado (o botão "enviar" foi clicado).
-if (isset($_POST['enviar'])) {
+if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['enviar'])) {
+    
     // Obtém os valores dos campos do formulário.
     $nome = $_SESSION['nome_contato'];
     $email = $_SESSION['email_contato'];
@@ -28,13 +29,13 @@ if (isset($_POST['enviar'])) {
 
     try {
         // Configurações do servidor SMTP para envio de e-mails.
-        $mail->SMTPDebug = 0;                                       // Habilita a depuração do servidor SMTP para fins de teste.
+        $mail->SMTPDebug = 0;                                        // SMTP::DEBUG_SERVER. Achar erro DEBUG  
         $mail->isSMTP();                                            // Define que o envio de e-mails será via SMTP.
         $mail->CharSet = "UTF-8";
         $mail->SMTPAuth = true;                                     // Ativa a autenticação SMTP.
         $mail->Host = 'smtp.office365.com';                         // Especifica o servidor SMTP do Gmail.
         $mail->Username = 'inovafin@outlook.com';                   // Define o nome de usuário do e-mail remetente.
-        $mail->Password = 'Papaga!olistrado7';                      // Define a senha do e-mail remetente 
+        $mail->Password = $senhaEmail;                      // Define a senha do e-mail remetente 
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         // Define o tipo de criptografia para SMTP seguro.
         $mail->Port = 587;                                          // Define a porta de conexão SMTP.
 
@@ -42,12 +43,12 @@ if (isset($_POST['enviar'])) {
         $mail->addAddress($email, $nome);                           // Destinatário
 
         $mail->isHTML(true);                                        // Define que o e-mail é em formato HTML.
-        $mail->Subject = 'Inovafin - Resposta Fale Conosco';        // Assunto do e-mail.
+        $mail->Subject = 'Resposta Fale Conosco';        // Assunto do e-mail.
         $mail->Body = $resposta;                                    // Corpo do e-mail.
 
         // Envia o e-mail.
         if ($mail->send()) {
-            echo '<script>alert("Mensagem enviada com sucesso");</script>';
+            include "atualizarContato.php";
         } else {
             echo '<script>alert("Erro ao enviar a mensagem ' . $mail->ErrorInfo . '");</script>';
         }

@@ -2,11 +2,11 @@
 include "protectAdm.php";
 include "conexao.php";
 
-$id_contato = $_POST['id_contato'];
+$_SESSION['id_contato'] = $_POST['id_contato'];
 
 $query = "SELECT * FROM TB_FALECONOSCO WHERE ID_CONTATO = ?";
 $stmt = $conexao->prepare($query);
-$stmt->bind_param("s", $id_contato);
+$stmt->bind_param("s", $_SESSION['id_contato']);
 
 if ($stmt->execute()) {
     $result = $stmt->get_result();
