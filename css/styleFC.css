@@ -94,19 +94,49 @@ header {
 
 .container-adm {
     margin-top: 50px;
-    width: 70%;
+    min-width: 70%;
 }
 
 .container-menuAdm {
     display: flex;
     justify-content: space-between;
-    padding: 0 40px;
+    align-items: center;
+    padding: 0 40px 5px 40px;
 }
 
-.container-adm p {
+.container-menuAdm p {
+    height: 20px;
     font-size: 1.3rem;
     font-weight: 600;
     color: #FFF;
+}
+
+.btnMsg {  
+    background-color: #043014;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3px;
+}
+
+.btnMsg:hover {
+    background-color:rgba(46, 150, 83, 1); 
+}
+
+.btnMsg img {
+    width: 23px;
+    height: 19px;
+    margin: 3px 0 0 1.5px;
+}
+
+.btnMsg .msgNo {
+    width: 29px;
+    height: 17px;
+    margin: 0 1px 2px 0 ;
 }
 
 .container-table {
@@ -125,6 +155,7 @@ header {
 /* Define a largura da barra de rolagem */
 .content-table::-webkit-scrollbar {
     width: 8px;
+    height: 8px;
 }
 
 /* Estiliza a área da barra de rolagem (track) */
@@ -144,10 +175,8 @@ header {
     background: #1f773f; 
 }
 
-
-
 .content-table {
-    padding: 0 30px;
+    padding: 0 15px;
     overflow-x: auto; 
     width: 100%;
 }
@@ -175,62 +204,57 @@ header {
 }
 
 table {
-    width: 100%;    
+    width: 100%;
     border-collapse: collapse;
-}
+}   
 
-td {
+td, th {
     border-bottom: 1px solid #ddd;
-    padding: 5px 8px;
-    text-align: left;
-    white-space: nowrap; /* Impede a quebra de texto */
-    overflow: hidden; /* Oculta o texto que ultrapassa a largura máxima */
-    text-overflow: ellipsis; /* Adiciona reticências (...) para indicar texto truncado */
-}
-
-td.nome {
-    max-width: 50px;
-}
-
-td.nome {
-    max-width: 120px;
-}
-
-td.email {
-    max-width: 200px; 
-}
-
-td.mensagem {
-    max-width: 250px; 
-}
-
-td.responder {
-    width: 5%;
+    padding: 4px 10px;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;   
+    text-overflow: ellipsis;
 }
 
 th {
+    padding: 4px;
     background-color: #f2f2f2;
+    border: none;
 }
 
-#modalAdm {
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.603);
-    z-index: 10;
+tr:hover {
+    background-color: #0df05c18;
 }
 
-.modalAdm-content {
-    background-color: #075925;
+th.responder {
+    border-radius:0 15px 0 0;
 }
 
-.modal-hidden {
-    display: none;
+th.id {
+    border-radius: 15px 0 0 0;
 }
+
+td.id, th.id {
+    max-width: 50px;
+}
+
+td.nome, th.nome {
+    max-width: 175px;
+}
+
+td.email, th.email {
+    max-width: 250px;
+}
+
+td.mensagem, th.mensagem {
+    max-width: 255px;
+}
+
+td.responder, th.responder {
+    max-width: 100px;
+}
+
 
 .modalAdm-content p {
     color: #FFF;
@@ -240,20 +264,21 @@ th {
     border: none;
     background-color: #043014;
     border-radius: 50%;
-    width: 45px;
-    height: 45px;
+    width: 40px;
+    height: 40px;
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: background-color 0.2s ease;
+    margin: 0 auto;
 }
 
 .btnRespFC:hover {
-    background-color:rgba(46, 150, 83, 1);
+    background-color:rgba(46, 150, 83, 1);    
 }
 
 .btnRespFC img {
-    width: 35px;
-    height: 20px;
+    width: 30px;
+    height: 18px;
 }

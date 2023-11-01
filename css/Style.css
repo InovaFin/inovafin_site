@@ -658,7 +658,7 @@ footer {
 
 .formulario label {
     font-family: 'Inter', sans-serif;
-    color: rgb(53, 53, 53);
+    color: rgb(20, 20, 20);
     font-size: 1.03rem;
     line-height: 1.4;
     font-weight: bold;
@@ -695,19 +695,19 @@ textarea:focus {
 .formulario p {
     font-size: 0.7rem;
     margin-top: -4px;
-    color: rgb(82, 80, 80);
+    color: rgb(18, 18, 18);
     font-family: 'Inter', sans-serif;
 }
 
 .formulario .txtNome {
-    background: url(/img/iconTxtNome.png) no-repeat right;
+    background: url(/inovafin_site/img/iconTxtNome.png) no-repeat right;
     background-size: 26px;
     padding-right: 40px;
     background-position: calc(100% - 3px);
 }
 
 .formulario .txtEmail {
-    background: url(/img/iconTxtEmail.png) no-repeat right;
+    background: url(/inovafin_site/img/iconTxtEmail.png) no-repeat right;
     background-size: 26px;
     padding-right: 40px;
     background-position: calc(100% - 4px);
