@@ -81,7 +81,7 @@ mysqli_close($conexao);
 			</div>
 
 			<div class="container-table">
-				<p><?php echo $paragrafoText; ?></p> <!-- texto do paragrafo baseado no modo de exibição -->
+				<p><?php echo $paragrafoText; ?></p>
 				<div class="content-table">
 					<?php if (empty($contatos)) { ?>
 						<div class='sem-mensagem'>
@@ -97,13 +97,12 @@ mysqli_close($conexao);
 									<th class='email'>Email</th>
 									<th class='mensagem'>Mensagem</th>
 									<?php if ($modoExibicao === 'respondidas') { ?>
-										<th class='resp_contato'>Resposta</th>
-									<?php } else { ?>
+										<th class='responder'>Resposta</th>
+									<?php } else {?>
 										<th class='responder'>Responder</th>
-									<?php } ?>
+									<?php }?>
 								</tr>
 							</thead>
-
 							<tbody>
 								<?php foreach ($contatos as $contato) { ?>
 									<tr>
@@ -116,20 +115,21 @@ mysqli_close($conexao);
 												<?php echo $contato['RESP_CONTATO']; ?>
 											</td>
 										<?php } ?>
-										<td class='responder'>
-											<?php if ($modoExibicao === 'naoRespondidas') { ?>
+										<?php if ($modoExibicao === 'naoRespondidas') { ?>
+											<td class='responder'>
 												<form method="post" action="painelAdmResp.php">
 													<input type="hidden" name="id_contato" value="<?php echo $contato['ID_CONTATO']; ?>">
 													<button type="submit" class='btnRespFC'>
 														<img src='/inovafin_site/img/iconRespFC.png' alt='Responder'>
 													</button>
 												</form>
-											<?php } ?>
-										</td>
+											</td>
+										<?php } ?>
 									</tr>
 								<?php } ?>
 							</tbody>
 						</table>
+
 					<?php } ?>
 				</div>
 			</div>

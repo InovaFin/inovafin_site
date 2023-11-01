@@ -34,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['enviar'])) {
         $mail->CharSet = "UTF-8";
         $mail->SMTPAuth = true;                                     // Ativa a autenticação SMTP.
         $mail->Host = 'smtp.office365.com';                         // Especifica o servidor SMTP do Gmail.
-        $mail->Username = 'inovafin@outlook.com';                   // Define o nome de usuário do e-mail remetente.
+        $mail->Username = 'inovafin@outlbdbdwhbdqook.com';                   // Define o nome de usuário do e-mail remetente.
         $mail->Password = $senhaEmail;                      // Define a senha do e-mail remetente 
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         // Define o tipo de criptografia para SMTP seguro.
         $mail->Port = 587;                                          // Define a porta de conexão SMTP.

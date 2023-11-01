@@ -208,13 +208,15 @@ table {
     border-collapse: collapse;
 }   
 
-td, th {
+td{
     border-bottom: 1px solid #ddd;
     padding: 4px 10px;
     text-align: center;
     white-space: nowrap;
     overflow: hidden;   
     text-overflow: ellipsis;
+        height: 50px;
+
 }
 
 th {
@@ -224,7 +226,7 @@ th {
 }
 
 tr:hover {
-    background-color: #0df05c18;
+    background-color: #0eb84a0e;
 }
 
 th.responder {
