@@ -24,6 +24,22 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['enviar'])) {
 
     $resposta = $_POST['resposta_contato'];
 
+    $body = "
+    <html>
+        <body>
+            <p>Prezado(a) $nome,</p>
+            <p><strong>Esta mensagem é referente ao seu contato:</strong></p>
+            <p>$mensagem</p> 
+            <hr style='border: 1px solid #ccc;'>
+            <p><strong>Resposta:</strong><br>$resposta</p>
+            <hr style='border: 1px solid #ccc;'>
+            <p>Estamos à disposição para fornecer qualquer assistência adicional que você possa necessitar.</p>
+            <p>Atenciosamente, Inovafin</p>
+        </body>
+    </html>";
+
+
+
     // Cria uma instância do PHPMailer.
     $mail = new PHPMailer(true);
 
@@ -34,7 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['enviar'])) {
         $mail->CharSet = "UTF-8";
         $mail->SMTPAuth = true;                                     // Ativa a autenticação SMTP.
         $mail->Host = 'smtp.office365.com';                         // Especifica o servidor SMTP do Gmail.
-        $mail->Username = 'inovafin@outlbdbdwhbdqook.com';                   // Define o nome de usuário do e-mail remetente.
+        $mail->Username = 'inovafin@outlook.com';                   // Define o nome de usuário do e-mail remetente.
         $mail->Password = $senhaEmail;                      // Define a senha do e-mail remetente 
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         // Define o tipo de criptografia para SMTP seguro.
         $mail->Port = 587;                                          // Define a porta de conexão SMTP.
@@ -44,7 +60,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['enviar'])) {
 
         $mail->isHTML(true);                                        // Define que o e-mail é em formato HTML.
         $mail->Subject = 'Resposta Fale Conosco';        // Assunto do e-mail.
-        $mail->Body = $resposta;                                    // Corpo do e-mail.
+        $mail->Body = $body;                                    // Corpo do e-mail.
 
         // Envia o e-mail.
         if ($mail->send()) {

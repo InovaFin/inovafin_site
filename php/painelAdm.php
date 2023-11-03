@@ -46,22 +46,22 @@ mysqli_close($conexao);
 	<link rel="stylesheet" href="/inovafin_site/css/styleFC.css">
 </head>
 
-<header>
-	<div class="logo">
-		<a href="/inovafin_site/index.html"><img src="/inovafin_site/img/InovaFin.png" alt="logoInovafin"></a>
-	</div>
-	<div class="painelAdm">
-		<img src="/inovafin_site/img/iconPainelAdm.png" alt="">
-		<p>Painel ADM</p>
-	</div>
-	<div class="btnSair">
-		<button>
-			<a href="logout.php"><img src="/inovafin_site/img/iconBtnSair.png" alt="logout">Sair</a>
-		</button>
-	</div>
-</header>
-
 <body class="fundoPainelAdm">
+	<header>
+		<div class="logo">
+			<a href="/inovafin_site/index.html"><img src="/inovafin_site/img/InovaFin.png" alt="logoInovafin"></a>
+		</div>
+		<div class="painelAdm">
+			<img src="/inovafin_site/img/iconPainelAdm.png" alt="">
+			<p>Painel ADM</p>
+		</div>
+		<div class="btnSair">
+			<button>
+				<a href="logout.php"><img src="/inovafin_site/img/iconBtnSair.png" alt="logout">Sair</a>
+			</button>
+		</div>
+	</header>
+
 	<section class="main-painelAdm">
 		<div class="container-adm">
 			<div class="container-menuAdm">
@@ -98,9 +98,9 @@ mysqli_close($conexao);
 									<th class='mensagem'>Mensagem</th>
 									<?php if ($modoExibicao === 'respondidas') { ?>
 										<th class='responder'>Resposta</th>
-									<?php } else {?>
+									<?php } else { ?>
 										<th class='responder'>Responder</th>
-									<?php }?>
+									<?php } ?>
 								</tr>
 							</thead>
 							<tbody>

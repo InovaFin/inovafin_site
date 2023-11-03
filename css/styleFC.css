@@ -147,7 +147,7 @@ header {
     text-align: center;
     border-radius: 30px;
     padding: 20px;
-    height: 68vh;
+    height: 65vh;
     position: relative;
     box-shadow: 0 15px 20px rgba(0, 0, 0, 0.423); 
 }
@@ -226,7 +226,7 @@ th {
 }
 
 tr:hover {
-    background-color: #0eb84a0e;
+    background-color: #68da9060;
 }
 
 th.responder {
