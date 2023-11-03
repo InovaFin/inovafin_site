@@ -29,12 +29,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['enviar'])) {
         <body>
             <p>Prezado(a) $nome,</p>
             <p><strong>Esta mensagem é referente ao seu contato:</strong></p>
-            <p>$mensagem</p> 
-            <hr style='border: 1px solid #ccc;'>
+            <p>$mensagem</p>
             <p><strong>Resposta:</strong><br>$resposta</p>
             <hr style='border: 1px solid #ccc;'>
             <p>Estamos à disposição para fornecer qualquer assistência adicional que você possa necessitar.</p>
-            <p>Atenciosamente, Inovafin</p>
+            <p>Atenciosamente, Inovafin.</p>
         </body>
     </html>";
 

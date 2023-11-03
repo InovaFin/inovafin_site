@@ -6,7 +6,7 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;    
+    font-family: 'Poppins', sans-serif;
     font-weight: 500;
     font-size: 1rem;
     box-sizing: border-box;
@@ -22,8 +22,8 @@ header {
     background-color: #075925;
     box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.499);
     width: 100%;
-    padding: 0.8rem;      
-    display: flex;   
+    padding: 0.8rem;
+    display: flex;
     align-items: center;
     justify-content: space-around;
 }
@@ -76,7 +76,7 @@ header {
 }
 
 .btnSair button:hover {
-    background-color: rgba(46, 150, 83, 1);    
+    background-color: rgba(46, 150, 83, 1);
     transition: 0.4s;
 }
 
@@ -111,7 +111,7 @@ header {
     color: #FFF;
 }
 
-.btnMsg {  
+.btnMsg {
     background-color: #043014;
     border-radius: 50%;
     width: 40px;
@@ -124,7 +124,7 @@ header {
 }
 
 .btnMsg:hover {
-    background-color:rgba(46, 150, 83, 1); 
+    background-color: rgba(46, 150, 83, 1);
 }
 
 .btnMsg img {
@@ -136,7 +136,7 @@ header {
 .btnMsg .msgNo {
     width: 29px;
     height: 17px;
-    margin: 0 1px 2px 0 ;
+    margin: 0 1px 2px 0;
 }
 
 .container-table {
@@ -144,12 +144,11 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
     border-radius: 30px;
     padding: 20px;
     height: 65vh;
     position: relative;
-    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.423); 
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.423);
 }
 
 /* Define a largura da barra de rolagem */
@@ -160,24 +159,24 @@ header {
 
 /* Estiliza a área da barra de rolagem (track) */
 .content-table::-webkit-scrollbar-track {
-    background: #53535339; 
-    border-radius: 10px; 
+    background: #53535339;
+    border-radius: 10px;
 }
 
 /* Estiliza o botão de rolagem (thumb) */
 .content-table::-webkit-scrollbar-thumb {
-    background: #2ba859; 
-    border-radius: 10px; 
+    background: #2ba859;
+    border-radius: 10px;
 }
 
 /* Estiliza o botão de rolagem (thumb) quando o mouse passa por cima */
 .content-table::-webkit-scrollbar-thumb:hover {
-    background: #1f773f; 
+    background: #1f773f;
 }
 
 .content-table {
     padding: 0 15px;
-    overflow-x: auto; 
+    overflow-x: auto;
     width: 100%;
 }
 
@@ -206,16 +205,16 @@ header {
 table {
     width: 100%;
     border-collapse: collapse;
-}   
+}
 
-td{
+td {
     border-bottom: 1px solid #ddd;
     padding: 4px 10px;
     text-align: center;
     white-space: nowrap;
-    overflow: hidden;   
+    overflow: hidden;
     text-overflow: ellipsis;
-        height: 50px;
+    height: 50px;
 
 }
 
@@ -230,30 +229,35 @@ tr:hover {
 }
 
 th.responder {
-    border-radius:0 15px 0 0;
+    border-radius: 0 15px 0 0;
 }
 
 th.id {
     border-radius: 15px 0 0 0;
 }
 
-td.id, th.id {
+td.id,
+th.id {
     max-width: 50px;
 }
 
-td.nome, th.nome {
+td.nome,
+th.nome {
     max-width: 175px;
 }
 
-td.email, th.email {
+td.email,
+th.email {
     max-width: 250px;
 }
 
-td.mensagem, th.mensagem {
+td.mensagem,
+th.mensagem {
     max-width: 255px;
 }
 
-td.responder, th.responder {
+td.responder,
+th.responder {
     max-width: 100px;
 }
 
@@ -277,10 +281,81 @@ td.responder, th.responder {
 }
 
 .btnRespFC:hover {
-    background-color:rgba(46, 150, 83, 1);    
+    background-color: rgba(46, 150, 83, 1);
 }
 
 .btnRespFC img {
     width: 30px;
     height: 18px;
+}
+
+/*Estilo Painel Adm Resp*/
+.content-tableResp {
+    position: relative;
+}
+
+.btnVoltarResp {
+    position: absolute;
+    top: 20px;
+    left: 35px;
+}
+
+.content-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.content-form .tituloForm {
+    font-size: 1.1rem;
+}
+
+.content-form p {
+    word-wrap: break-word;
+}
+
+.content-form1 {
+    display: flex;
+    justify-content: center;
+}
+
+.content-form2 {
+    display: flex;
+    justify-content: center;
+}
+
+form .campoForm {
+    max-width: 330px;
+    width: 330px;
+    border: 1px solid #043014;
+    padding: 4px 8px;
+}
+
+.formResp-nome,
+.formResp-mensagem {
+    margin-right: 30px;
+}
+
+.content-form2 .campoForm {
+    height: 150px;
+}
+
+button.enviarResp {
+    background-color: #28B65A;
+    box-shadow: 0px 5px 0px 0px #49db7c;
+    color: white;
+    font-weight: 600;
+    border-radius: 5px;
+    width: 160px;
+    height: 40px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: all ease 0.1s;
+}
+
+button.enviarResp:active {
+    transform: translateY(5px);
+    box-shadow: 0px 0px 0px 0px #a29bfe;
 }

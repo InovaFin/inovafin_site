@@ -56,20 +56,42 @@ mysqli_close($conexao);
         <div class="container-adm">
             <div class="container-menuAdm">
                 <p>Bem Vindo <?php echo $_SESSION['nomeAdm'] ?></p>
+
             </div>
 
             <div class="container-table">
-                <form method="post" action="respFaleConosco.php">
-                    <p>Nome: <?php echo $_SESSION['nome_contato']; ?></p>
-                    <p>Email: <?php echo $_SESSION['email_contato']; ?></p>
-                    <p>Mensagem: <?php echo $_SESSION['msg_contato']; ?></p>
+                <a class="btnVoltarResp" href="painelAdm.php">Voltar</a>
 
-                    <textarea name="resposta_contato"></textarea>
-                    <button type="submit" name="enviar">Enviar Resposta</button>
-                </form>
+                <p>Responder Mensagem</p>
+                <div class="content-form">
+                    <form method="post" action="respFaleConosco.php">
+                        <div class="content-form1">
+                            <div class="formResp-nome">
+                                <p class="tituloForm">Nome:</p>
+                                <p class="campoForm"><?php echo $_SESSION['nome_contato']; ?></p>
+                            </div>
+                            <div class="formResp-email">
+                                <p class="tituloForm">Email:</p>
+                                <p class="campoForm"><?php echo $_SESSION['email_contato']; ?></p>
+                            </div>  
+                        </div>
+                        <div class="content-form2">
+                            <div class="formResp-mensagem">
+                                <p class="tituloForm">Mensagem:</p>
+                                <p class="campoForm"><?php echo $_SESSION['msg_contato']; ?></p>
+                            </div>
+                            <div class="formResp-resposta">
+                                <p class="tituloForm">Resposta:</p>
+                                <textarea class="campoForm" name="resposta_contato"></textarea>
+                            </div>
+                        </div>
+                        <button class="enviarResp" type="submit" name="enviar">Enviar Resposta</button>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
+
 </body>
 
 </html>
