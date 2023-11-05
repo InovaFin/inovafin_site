@@ -101,7 +101,8 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 40px 5px 40px;
+    height: 50px;
+    padding: 0 40px;
 }
 
 .container-menuAdm p {
@@ -225,7 +226,7 @@ th {
 }
 
 tr:hover {
-    background-color: #68da9060;
+    background-color: #b5f0ca47;
 }
 
 th.responder {
@@ -294,20 +295,30 @@ th.responder {
     position: relative;
 }
 
-.btnVoltarResp {
+.btnVoltarResp a {
     position: absolute;
-    top: 20px;
+    top: 25px;
     left: 35px;
+    width: 25px;
+    height: 25px;
+    background-image: url('/inovafin_site/img/iconBtnVoltarResp.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
+
 
 .content-form form {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
+    margin-top: 25px;
 }
 
 .content-form .tituloForm {
+    line-height: 1.4;
+    font-weight: 500;
     font-size: 1.1rem;
 }
 
@@ -326,15 +337,44 @@ th.responder {
 }
 
 form .campoForm {
+    display: flex;
+    align-items: center;
     max-width: 330px;
     width: 330px;
-    border: 1px solid #043014;
+    height: 40px;
+    border: 2px solid #1f773f;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.742);
+    border-radius: 2px;
     padding: 4px 8px;
+    outline: none;
+}
+
+.formResp-nome .campoForm p,
+.formResp-email .campoForm p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.formResp-mensagem .campoForm p {
+    overflow-y: auto; 
+    resize: vertical;
+    word-wrap: break-word;
+    resize: none;
 }
 
 .formResp-nome,
 .formResp-mensagem {
     margin-right: 30px;
+}
+
+.formResp-mensagem .campoForm {
+    align-items: flex-start;
+    overflow-y: auto;
+}
+
+.formResp-resposta .campoForm {
+    resize: none;
 }
 
 .content-form2 .campoForm {
@@ -353,6 +393,8 @@ button.enviarResp {
     border: none;
     outline: none;
     transition: all ease 0.1s;
+    margin-left: auto;
+
 }
 
 button.enviarResp:active {

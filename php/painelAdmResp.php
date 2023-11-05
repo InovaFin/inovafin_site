@@ -60,7 +60,9 @@ mysqli_close($conexao);
             </div>
 
             <div class="container-table">
-                <a class="btnVoltarResp" href="painelAdm.php">Voltar</a>
+                <div class="btnVoltarResp">
+                    <a href="painelAdm.php"></a>
+                </div>
 
                 <p>Responder Mensagem</p>
                 <div class="content-form">
@@ -68,17 +70,23 @@ mysqli_close($conexao);
                         <div class="content-form1">
                             <div class="formResp-nome">
                                 <p class="tituloForm">Nome:</p>
-                                <p class="campoForm"><?php echo $_SESSION['nome_contato']; ?></p>
+                                <div class="campoForm">
+                                    <p><?php echo $_SESSION['nome_contato']; ?></p>
+                                </div>
                             </div>
                             <div class="formResp-email">
                                 <p class="tituloForm">Email:</p>
-                                <p class="campoForm"><?php echo $_SESSION['email_contato']; ?></p>
+                                <div class="campoForm">
+                                    <p ><?php echo $_SESSION['email_contato']; ?></p>
+                                </div>
                             </div>  
                         </div>
                         <div class="content-form2">
                             <div class="formResp-mensagem">
                                 <p class="tituloForm">Mensagem:</p>
-                                <p class="campoForm"><?php echo $_SESSION['msg_contato']; ?></p>
+                                <div class="campoForm">
+                                    <p><?php echo $_SESSION['msg_contato']; ?></p>
+                                </div>
                             </div>
                             <div class="formResp-resposta">
                                 <p class="tituloForm">Resposta:</p>
