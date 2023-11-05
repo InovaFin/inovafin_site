@@ -176,6 +176,7 @@ header {
 }
 
 .content-table {
+    text-align: center;
     padding: 0 15px;
     overflow-x: auto;
     width: 100%;
@@ -186,6 +187,7 @@ header {
     font-weight: 700;
     color: #043014;
     padding-bottom: 10px;
+    text-align: center;
 }
 
 .sem-mensagem {
@@ -239,27 +241,27 @@ th.id {
 
 td.id,
 th.id {
-    max-width: 50px;
+    max-width: 60px;
 }
 
 td.nome,
 th.nome {
-    max-width: 175px;
+    max-width: 220px;
 }
 
 td.email,
 th.email {
-    max-width: 250px;
+    max-width: 275px;
 }
 
 td.mensagem,
 th.mensagem {
-    max-width: 255px;
+    max-width: 240px;
 }
 
 td.responder,
 th.responder {
-    max-width: 100px;
+    max-width: 240px;
 }
 
 
@@ -342,8 +344,7 @@ form .campoForm {
     max-width: 330px;
     width: 330px;
     height: 40px;
-    border: 2px solid #1f773f;
-    box-shadow: 0 0 2px rgba(0, 0, 0, 0.742);
+    border: 2px solid #043014;
     border-radius: 2px;
     padding: 4px 8px;
     outline: none;
