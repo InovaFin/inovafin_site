@@ -2,7 +2,7 @@
 include "protectAdm.php";
 include "conexao.php";
 
-if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['enviar'])) {
+if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['enviarResp'])) {
 
     $id_contato = $_SESSION['id_contato'];
     $resposta = $_POST["resposta_contato"];

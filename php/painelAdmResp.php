@@ -90,10 +90,10 @@ mysqli_close($conexao);
                             </div>
                             <div class="formResp-resposta">
                                 <p class="tituloForm">Resposta:</p>
-                                <textarea class="campoForm" name="resposta_contato"></textarea>
+                                <textarea class="campoForm" name="resposta_contato" required></textarea>
                             </div>
                         </div>
-                        <button class="enviarResp" type="submit" name="enviar">Enviar Resposta</button>
+                        <button class="enviarResp" type="submit" name="enviarResp">Enviar Resposta</button>
                     </form>
                 </div>
             </div>
