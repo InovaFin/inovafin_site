@@ -1,9 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.9.0/dist/sweetalert2.min.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.9.0/dist/sweetalert2.all.min.js"></script>
+    <title>Fale Conosco - Inovafin</title>
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
@@ -19,10 +22,6 @@
             background-size: cover;
             background-attachment: fixed;
         }
-
-        .swal2-confirm.btn-modal-msg {
-            background-color: #28B65A;
-        }
     </style>
 </head>
 
@@ -35,7 +34,16 @@
         $mensagem = $_POST['mensagem'];
 
         if (empty($nome) || empty($email) || empty($mensagem)) {
-            echo "<script>alert('Por favor, preencha todos os campos.')</script>";
+            echo "<script>
+                Swal.fire({
+                    title: 'Erro',
+                    text: 'Por favor, preencha todos os campos.',
+                    icon: 'error',
+                    confirmButtonColor: '#db3c3c'
+                }).then(function () {
+                    window.location.href = '/inovafin_site/faleConosco.html';
+                });
+            </script>";
         } else {
 
             include "conexao.php";
@@ -54,30 +62,64 @@
                                 text: 'Mensagem enviada com sucesso !!',
                                 icon: 'success',
                                 confirmButtonColor: '#28B65A'
-                                }).then(function() {
+                            }).then(function () {
                                 window.location.href = '/inovafin_site/faleConosco.html';
                             });
                         </script>";
                     } else {
-                        echo "<script>alert('Ocorreu um erro ao enviar a mensagem.')</script>";
+                        echo "<script>
+                            Swal.fire({
+                                title: 'Erro',
+                                text: 'Ocorreu um erro ao enviar a mensagem.',
+                                icon: 'error',
+                                confirmButtonColor: '#db3c3c'
+                            }).then(function () {
+                                window.location.href = '/inovafin_site/faleConosco.html';
+                            });
+                        </script>";
                     }
-
                     $stmt->close();
                 } else {
-                    echo "<script>alert('Erro na preparação da instrução.')</script>";
+                    echo "<script>
+                        Swal.fire({
+                            title: 'Erro',
+                            text: 'Erro na preparação da instrução.',
+                            icon: 'error',
+                            confirmButtonColor: '#db3c3c'
+                        }).then(function () {
+                            window.location.href = '/inovafin_site/faleConosco.html';
+                        });
+                    </script>";
                 }
 
                 $close = $conexao->close();
                 if (!$close) {
-                    echo "<script>alert('Erro no fechamento da conexão com o banco de dados.')</script>";
+                    echo "<script>
+                        Swal.fire({
+                            title: 'Erro',
+                            text: 'Erro no fechamento da conexão com o banco de dados.',
+                            icon: 'error',
+                            confirmButtonColor: '#db3c3c'
+                        }).then(function () {
+                            window.location.href = '/inovafin_site/faleConosco.html';
+                        });
+                    </script>";
                 }
             } else {
-                echo "<script>alert('Erro na conexão com o banco de dados.')</script>";
+                echo "<script>
+                    Swal.fire({
+                        title: 'Erro',
+                        text: 'Erro na conexão com o banco de dados.',
+                        icon: 'error',
+                        confirmButtonColor: '#db3c3c'
+                    }).then(function () {
+                        window.location.href = '/inovafin_site/faleConosco.html';
+                    });
+                </script>";
             }
         }
     }
     ?>
-
 </body>
 
 </html>

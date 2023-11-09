@@ -21,7 +21,7 @@
         'main'
         'footer';
     grid-template-columns: 1fr;
-    background-color: #f7ffff;
+    background-color: #fff7f7;
 }
 
 header {
