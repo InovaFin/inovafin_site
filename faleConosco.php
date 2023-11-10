@@ -54,7 +54,7 @@ if (!isset($_SESSION['formFC']) || $_SESSION['formFC'] === 'enviado') {
                     </div>
                     
                     <div class="baixoForm">
-                        <div class="imgBaixoForm"></div>
+                        <div class="imgBaixoForm"><img src="img/InovafinTrans.png" alt=""></div>
                         <input type="submit" name="enviarContato" class="botao">
                     </div>
 
