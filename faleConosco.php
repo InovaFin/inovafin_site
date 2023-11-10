@@ -1,4 +1,3 @@
-
 <?php
 if (!isset($_SESSION)) {
     session_start();
@@ -24,29 +23,45 @@ if (!isset($_SESSION['formFC']) || $_SESSION['formFC'] === 'enviado') {
 <body class="fundoFaleConosco">
 
     <section class="faleConosco">
-        <div class="formulario">
+        <div class="content-FC">
 
-            <form action="php/envioFaleConosco.php" method="post">
+            <div class="menu-FC">
+                <div class="btnVoltarIndex">a</div>
+                <div class="irPainelAdm">
+                    <a href="php/loginAdm.php">Painel Adm</a>
+                </div>
+            </div>
 
-                <label for="nome">Nome:</label><br>
-                <input type="text" name="nome" class="txtNome" maxlength="50">
-                <br>
+            <div class="formulario">
+                <form action="php/envioFaleConosco.php" method="post">
 
-                <label for="email">Email:</label><br>
-                <input type="email" name="email" class="txtEmail" maxlength="75">
-                <br>
+                    <p class="tituloFormFC">Fale Conosco</p>
 
-                <label for="mensagem">Deixe sua mensagem:</label><br>
-                <textarea name="mensagem" class="txtMsg" maxlength="200"></textarea>
+                    <div>
+                        <label for="nome">Nome:</label><br>
+                        <input type="text" name="nome" class="txtNome" maxlength="50">
+                    </div>
 
-                <p>Aguarde sua resposta!</p>
+                    <div>
+                        <label for="email">Email:</label><br>
+                        <input type="email" name="email" class="txtEmail" maxlength="75">
+                    </div>
 
-                <input type="submit" name="enviarContato" class="botao">
+                    <div>
+                        <label for="mensagem">Deixe sua mensagem:</label><br>
+                        <textarea name="mensagem" class="txtMsg" maxlength="200"></textarea>
+                        <p class="txtAguarde">Aguarde sua resposta!</p>
+                    </div>
+                    
+                    <div class="baixoForm">
+                        <div class="imgBaixoForm"></div>
+                        <input type="submit" name="enviarContato" class="botao">
+                    </div>
 
-                <a href="php/loginAdm.php">Responder fale conosco</a>
-            </form>
-            <div class="barra-central"></div>
-            <img src="img/imagemFC.png" alt="imagem personagem inovafin">
+                </form>
+                <div class="barra-central"></div>
+                <img src="img/imagemFC.png" alt="imagem personagem inovafin">
+            </div>
         </div>
 
     </section>
