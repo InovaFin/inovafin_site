@@ -654,6 +654,7 @@ footer {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    border: 1px solid tomato;
 }
 
 .formulario label {
@@ -665,13 +666,14 @@ footer {
 .formulario {
     display: flex;
     justify-content: center;
+    align-items: center;
+    gap: 60px;
     background-color: #F7FFFF;
-    padding: 20px;
+    padding: 70px;
     border-radius: 13px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
-    width: 50%;
-    height: 60vh;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);  
     margin: 0px 20px;
+    border: 2px solid tomato;
 }
 
 .formulario input,
@@ -741,15 +743,17 @@ textarea:focus {
     box-shadow: 0px 0px 0px 0px #a29bfe;
 }
 
-.formulario > form{
-    margin-top: 50px;
-    margin-left: -50%;
-}
+
 
 .formulario .barra-central{
     height: 50vh;
     width: 0px;
-    margin-left: 50px;
-    margin-top: 30px;
+
     border: solid 1px black;
+}
+.formulario > img{
+    width: 28vw;
+    min-width: 420px;
+    height: auto;
+    
 }

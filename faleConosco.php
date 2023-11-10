@@ -46,6 +46,7 @@ if (!isset($_SESSION['formFC']) || $_SESSION['formFC'] === 'enviado') {
                 <a href="php/loginAdm.php">Responder fale conosco</a>
             </form>
             <div class="barra-central"></div>
+            <img src="img/imagemFC.png" alt="imagem personagem inovafin">
         </div>
 
     </section>
