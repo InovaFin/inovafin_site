@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -7,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.9.0/dist/sweetalert2.min.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.9.0/dist/sweetalert2.all.min.js"></script>
+    <script src="/inovafin_site/script/alerta.js"></script>
     <title>Painel ADM - Inovafin</title>
 
     <style>
@@ -27,46 +27,39 @@
 </head>
 
 <body>
-<?php
-if (!isset($_SESSION)) {
-    session_start();
-}
+    <?php
+    if (!isset($_SESSION)) {
+        session_start();
+    }
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST["botao"]) && $_POST["botao"] == "Logar") {
-    $usuario = $_POST['usuario_login'];
-    $senha = $_POST['senha_login'];
+    if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST["botao"]) && $_POST["botao"] == "Logar") {
+        $usuario = $_POST['usuario_login'];
+        $senha = $_POST['senha_login'];
 
-    // Verifique se algum dos campos está vazio
-    if (empty($usuario) || empty($senha)) {
-        echo "<script>
-                Swal.fire({
-                    title: 'Erro',
-                    text: 'Por favor, preencha tanto o e-mail quanto a senha.',
-                    icon: 'error',
-                    confirmButtonColor: '#db3c3c'
-                }).then(function () {
-                    window.location.href = '/inovafin_site/php/loginAdm.php';
-                });
-            </script>";
-    } else {
+        // Verifique se algum dos campos está vazio
+        if (empty($usuario) || empty($senha)) {
+            echo "<script>exibirAlerta('Erro', 'Por favor, preencha tanto o e-mail quanto a senha.',
+             'error', '#db3c3c', '/inovafin_site/php/loginAdm.php');</script>";
+        } else {
 
-        include "conexao.php";
+            include "conexao.php";
 
-        if ($conexao) {
-            $query = "SELECT * FROM TB_CADASTRO_ADM WHERE EMAIL_ADM = ? AND SENHA_ADM = ?";
-            $stmt = $conexao->prepare($query);
+            if ($conexao) {
+                $query = "SELECT * FROM TB_CADASTRO_ADM WHERE EMAIL_ADM = ? AND SENHA_ADM = ?";
+                $stmt = $conexao->prepare($query);
 
-            if ($stmt) {
-                // Verifique se a consulta preparada foi bem-sucedida
-                $stmt->bind_param("ss", $usuario, $senha);
+                if ($stmt) {
+                    // Verifique se a consulta preparada foi bem-sucedida
+                    $stmt->bind_param("ss", $usuario, $senha);
 
-                if ($stmt->execute()) {
-                    $result = $stmt->get_result();
+                    if ($stmt->execute()) {
+                        $result = $stmt->get_result();
 
-                    if ($result) {
                         if ($result->num_rows > 0) {
                             // Iniciar a sessão do usuário logado
                             $_SESSION["controleAdm"] = "logado";
+                            $_SESSION["alertaADM"] = "bemVindo";
+
 
                             while ($row = $result->fetch_assoc()) {
                                 // Armazenar informações do usuário na sessão
@@ -76,85 +69,32 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST["botao"]) && $_POST["b
                                 $_SESSION['senhaAdm'] = $row['SENHA_ADM'];
                             }
 
-                            echo "<script>
-                                    Swal.fire({
-                                        title: 'Sucesso',
-                                        text: 'Login realizado com sucesso!',
-                                        icon: 'success',
-                                        confirmButtonColor: '#28B65A'
-                                    }).then(function () {
-                                        window.location.href = '/inovafin_site/php/painelAdm.php';
-                                    });
-                                </script>";
-                            exit();
+                            header("Location: /inovafin_site/php/painelAdm.php");
+                            exit();                            
+
                         } else {
-                            echo "<script>
-                                    Swal.fire({
-                                        title: 'Erro',
-                                        text: 'Usuário e/ou senha não confere!',
-                                        icon: 'error',
-                                        confirmButtonColor: '#db3c3c'
-                                    }).then(function () {
-                                        window.location.href = '/inovafin_site/php/loginAdm.php';
-                                    });
-                                </script>";
+                            echo "<script>exibirAlerta('Erro', 'Usuário e/ou senha não confere!',
+                             'error', '#db3c3c', '/inovafin_site/php/loginAdm.php');</script>";
                         }
                     } else {
-                        echo "<script>
-                                Swal.fire({
-                                    title: 'Erro',
-                                    text: 'Erro na execução da consulta.',
-                                    icon: 'error',
-                                    confirmButtonColor: '#db3c3c'
-                                }).then(function () {
-                                    window.location.href = '/inovafin_site/php/loginAdm.php';
-                                });
-                            </script>";
+                        echo "<script>exibirAlerta('Erro', 'Erro na execução da consulta.',
+                         'error', '#db3c3c', '/inovafin_site/php/loginAdm.php');</script>";
                     }
+
+                    $stmt->close();
                 } else {
-                    echo "<script>
-                            Swal.fire({
-                                title: 'Erro',
-                                text: 'Erro na execução da consulta.',
-                                icon: 'error',
-                                confirmButtonColor: '#db3c3c'
-                            }).then(function () {
-                                window.location.href = '/inovafin_site/php/loginAdm.php';
-                            });
-                        </script>";
+                    echo "<script>exibirAlerta('Erro', 'Erro na preparação da instrução.',
+                     'error', '#db3c3c', '/inovafin_site/php/loginAdm.php');</script>";
                 }
 
-                $stmt->close();
+                $conexao->close();
             } else {
-                echo "<script>
-                        Swal.fire({
-                            title: 'Erro',
-                            text: 'Erro na preparação da instrução.',
-                            icon: 'error',
-                            confirmButtonColor: '#db3c3c'
-                        }).then(function () {
-                            window.location.href = '/inovafin_site/php/loginAdm.php';
-                        });
-                    </script>";
+                echo "<script>exibirAlerta('Erro', 'Erro na conexão com o banco de dados.',
+                 'error', '#db3c3c', '/inovafin_site/php/loginAdm.php');</script>";
             }
-
-            $conexao->close();
-
-        } else {
-            echo "<script>
-                    Swal.fire({
-                        title: 'Erro',
-                        text: 'Erro na conexão com o banco de dados.',
-                        icon: 'error',
-                        confirmButtonColor: '#db3c3c'
-                    }).then(function () {
-                        window.location.href = '/inovafin_site/php/loginAdm.php';
-                    });
-                </script>";
         }
     }
-}
-?>
+    ?>
 </body>
 
 </html>

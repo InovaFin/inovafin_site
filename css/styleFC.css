@@ -147,7 +147,7 @@ header {
     align-items: center;
     border-radius: 30px;
     padding: 20px;
-    height: 65vh;
+    height: 64vh;
     position: relative;
     box-shadow: 0 15px 20px rgba(0, 0, 0, 0.423);
 }
@@ -201,7 +201,7 @@ header {
 }
 
 .sem-mensagem img {
-    width: 100px;
+    width: 140px;
     margin-top: 20px;
 }
 
@@ -309,31 +309,38 @@ th.responder {
     background-repeat: no-repeat;
 }
 
+.content-form-resp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
 
-.content-form form {
+
+.content-form-resp form {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
-    margin-top: 25px;
 }
 
-.content-form .tituloForm {
+.content-form-resp .tituloForm {
     line-height: 1.4;
     font-weight: 500;
     font-size: 1.1rem;
 }
 
-.content-form p {
+.content-form-resp p {
     word-wrap: break-word;
 }
 
-.content-form1 {
+.content-form-resp1 {
     display: flex;
     justify-content: center;
 }
 
-.content-form2 {
+.content-form-resp2 {
     display: flex;
     justify-content: center;
 }
@@ -378,7 +385,7 @@ form .campoForm {
     resize: none;
 }
 
-.content-form2 .campoForm {
+.content-form-resp2 .campoForm {
     height: 150px;
 }
 

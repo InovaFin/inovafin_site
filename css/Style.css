@@ -21,7 +21,7 @@
         'main'
         'footer';
     grid-template-columns: 1fr;
-    background-color: #fff7f7;
+    background-color: #F7FFFF;
 }
 
 header {
@@ -228,7 +228,7 @@ main {
     height: 20vw;
     background-color: rgba(217, 217, 217, 0.047);
     transform: rotate(86deg);
-    border-radius: 3vw;
+    border-radius: 2.3vw;
     position: absolute;
     bottom: calc(3vw + 160px);    
     right: 11vw;

@@ -1,3 +1,15 @@
+
+<?php
+if (!isset($_SESSION)) {
+    session_start();
+}
+
+if (!isset($_SESSION['formFC']) || $_SESSION['formFC'] === 'enviado') {
+    $_SESSION['formFC'] = 'nao-enviado';
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -10,6 +22,7 @@
 </head>
 
 <body class="fundoFaleConosco">
+
     <section class="faleConosco">
         <div class="formulario">
 
@@ -34,7 +47,8 @@
             </form>
             <div class="barra-central"></div>
         </div>
-        
+
     </section>
 </body>
+
 </html>

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.9.0/dist/sweetalert2.min.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.9.0/dist/sweetalert2.all.min.js"></script>
+    <script src="/inovafin_site/script/alerta.js"></script>
     <title>Responder Fale Conosco - Inovafin</title>
 
     <style>
@@ -87,54 +88,21 @@
                 // Envia o e-mail.
                 if ($mail->send()) {
                     include "atualizarContato.php";
-
+                    
                 } else {
-                    echo "<script>
-                        Swal.fire({
-                            title: 'Erro',
-                            text: 'Erro ao enviar a mensagem: " . $mail->ErrorInfo . "',
-                            icon: 'error',
-                            confirmButtonColor: '#db3c3c'
-                        }).then(function () {
-                            window.location.href = '/inovafin_site/php/painelAdmResp.php';
-                        });
-                    </script>";
+                    echo "<script>exibirAlerta('Erro', 'Erro ao enviar a mensagem: " . $mail->ErrorInfo . "',
+                     'error', '#db3c3c', '/inovafin_site/php/painelAdmResp.php');</script>";
                 }
             } catch (Exception $e) {
-                echo "<script>
-                    Swal.fire({
-                        title: 'Erro',
-                        text: 'Erro ao enviar a mensagem: " . $e->getMessage() . "',
-                        icon: 'error',
-                        confirmButtonColor: '#db3c3c'
-                    }).then(function () {
-                        window.location.href = '/inovafin_site/php/painelAdmResp.php';
-                    });
-                </script>";
+                echo "<script>exibirAlerta('Erro', 'Erro ao enviar a mensagem: " . $e->getMessage() . "',
+                 'error', '#db3c3c', '/inovafin_site/php/painelAdmResp.php');</script>";
             }
         } else {
-            echo "<script>
-                Swal.fire({
-                    title: 'Erro',
-                    text: 'O campo resposta está vazio. Por favor, insira uma resposta antes de enviar o e-mail.',
-                    icon: 'error',
-                    confirmButtonColor: '#db3c3c'
-                }).then(function () {
-                    window.location.href = '/inovafin_site/php/painelAdmResp.php';
-                });
-            </script>";
+            echo "<script>exibirAlerta('Erro', 'O campo resposta está vazio. Por favor, insira uma resposta antes de enviar o e-mail.', 'error', '#db3c3c', '/inovafin_site/php/painelAdmResp.php');</script>";
         }
     } else {
-        echo "<script>
-            Swal.fire({
-                title: 'Erro',
-                text: 'Erro ao enviar email, acesso não foi via formulário.',
-                icon: 'error',
-                confirmButtonColor: '#db3c3c'
-            }).then(function () {
-                window.location.href = '/inovafin_site/php/painelAdmResp.php';
-            });
-        </script>";
+        echo "<script>exibirAlerta('Erro', 'Erro ao enviar email, acesso não foi via formulário.',
+         'error', '#db3c3c', '/inovafin_site/php/painelAdmResp.php');</script>";
     }
     ?>
 </body>

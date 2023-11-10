@@ -2,88 +2,84 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.9.0/dist/sweetalert2.min.css">
-    <link rel="stylesheet" href="/inovafin_site/css/styleFC.css">
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.9.0/dist/sweetalert2.all.min.js"></script>
-    <title>Painel ADM - Inovafin</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.9.0/dist/sweetalert2.min.css">
+	<link rel="stylesheet" href="/inovafin_site/css/styleFC.css">
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.9.0/dist/sweetalert2.all.min.js"></script>
+	<script src="/inovafin_site/script/alerta.js"></script>
+	<title>Painel ADM - Inovafin</title>
 
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
-        * {
-            margin: 0;
-            padding: 0;
-            font-family: 'Poppins', sans-serif;
-        }
+		* {
+			margin: 0;
+			padding: 0;
+			font-family: 'Poppins', sans-serif;
+		}
 
-        body {
-            background: radial-gradient(70% 65% at 50% 50%, #3ac069 0%, #075925 83.98%);
-            background-size: cover;
-            background-attachment: fixed;
-        }
-    </style>
+		body {
+			background: radial-gradient(70% 65% at 50% 50%, #3ac069 0%, #075925 83.98%);
+			background-size: cover;
+			background-attachment: fixed;
+		}
+	</style>
 </head>
 
 <body>
-	
-<?php
-include "protectAdm.php";
-include "conexao.php";
+	<?php
+	include "protectAdm.php";
+	include "conexao.php";
 
-$contatos = array();
-
-$modoExibicao = isset($_GET['mode']) ? $_GET['mode'] : 'naoRespondidas';
-
-$paragrafoText = ($modoExibicao === 'respondidas') ? 'Mensagens Respondidas' : 'Mensagens a serem respondidas';
-
-try {
-	// Atualize a consulta SQL com base no modo de exibição selecionado
-	if ($modoExibicao === 'naoRespondidas') {
-		$query = "SELECT * FROM TB_FALECONOSCO WHERE RESP_CONTATO IS NULL OR RESP_CONTATO = ''";
-	} else {
-		$query = "SELECT * FROM TB_FALECONOSCO WHERE RESP_CONTATO IS NOT NULL AND RESP_CONTATO != '';";
+	if (isset($_SESSION["alertaADM"]) && $_SESSION["alertaADM"] === "bemVindo") { 
+	echo "<script>
+        Swal.fire({
+            icon: 'success',
+            title: 'Sucesso',
+			text:'Bem-Vindo ao Painel ADM',
+            showConfirmButton: false,
+            timer: 2200
+        });
+    </script>";
+	unset( $_SESSION["alertaADM"] );
 	}
 
-	$stmt = $conexao->prepare($query);
+	$modoExibicao = isset($_GET['mode']) ? $_GET['mode'] : 'naoRespondidas';
 
-	if ($stmt->execute()) {
-		$result = $stmt->get_result();
+	$paragrafoText = ($modoExibicao === 'respondidas') ? 'Mensagens Respondidas' : 'Mensagens a serem respondidas';
 
-		while ($row = $result->fetch_assoc()) {
-			$contatos[] = $row;
+	$contatos = array();
+
+	try {
+		// Atualize a consulta SQL com base no modo de exibição selecionado
+		if ($modoExibicao === 'naoRespondidas') {
+			$query = "SELECT * FROM TB_FALECONOSCO WHERE RESP_CONTATO IS NULL OR RESP_CONTATO = ''";
+		} else {
+			$query = "SELECT * FROM TB_FALECONOSCO WHERE RESP_CONTATO IS NOT NULL AND RESP_CONTATO != '';";
 		}
-	} else {
-		echo "<script>
-            Swal.fire({
-                title: 'Erro',
-                text: 'Erro na prepareção da consulta SQL.',
-                icon: 'error',
-                confirmButtonColor: '#db3c3c'
-            }).then(function () {
-                window.location.href = '/inovafin_site/faleConosco.html';
-            });
-        </script>";
+
+		$stmt = $conexao->prepare($query);
+
+		if ($stmt->execute()) {
+			$result = $stmt->get_result();
+
+			while ($row = $result->fetch_assoc()) {
+				$contatos[] = $row;
+			}
+		} else {
+			echo "<script>exibirAlerta('Erro', 'Erro na preparação da consulta SQL.',
+			 'error', '#db3c3c', '/inovafin_site/faleConosco.php');</script>";
+		}
+
+		$stmt->close();
+	} catch (Exception $e) {
+		echo "<script>exibirAlerta('Erro', 'Erro: " . $e->getMessage() . "',
+		 'error', '#db3c3c', '/inovafin_site/php/painelAdmResp.php');</script>";
 	}
 
-	$stmt->close();
-} catch (Exception $e) {
-		echo "<script>
-		Swal.fire({
-			title: 'Erro',
-			text: 'Erro: " . $e->getMessage() . "',
-			icon: 'error',
-			confirmButtonColor: '#db3c3c'
-		}).then(function () {
-			window.location.href = '/inovafin_site/php/painelAdmResp.php';
-		});
-	</script>";
-}
-
-mysqli_close($conexao);
-?>
-
+	mysqli_close($conexao);
+	?>
 
 	<header>
 		<div class="logo">

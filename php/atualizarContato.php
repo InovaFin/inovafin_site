@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.9.0/dist/sweetalert2.min.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.9.0/dist/sweetalert2.all.min.js"></script>
+    <script src="/inovafin_site/script/alerta.js"></script>
+
     <title>Painel ADM - Inovafin</title>
 
     <style>
@@ -42,47 +44,23 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['enviarResp'])) {
     $stmt->bind_param("ss", $resposta, $id_contato);
     
     if ($stmt->execute()) {
-        echo "<script>
-            Swal.fire({
-                title: 'Sucesso',
-                text: 'Mensagem respondida com sucesso !!',
-                icon: 'success',
-                confirmButtonColor: '#28B65A'
-            }).then(function () {
-                window.location.href = '/inovafin_site/php/painelAdm.php?mode=respondidas';
-            });
-        </script>";
+        echo "<script>exibirAlerta('Sucesso', 'Mensagem respondida com sucesso !!',
+         'success', '#28B65A', '/inovafin_site/php/painelAdm.php?mode=respondidas');</script>";
 
     } else {
-        echo "<script>
-            Swal.fire({
-                title: 'Erro',
-                text: 'Erro ao atualizar a resposta: " . $stmt->error . "',
-                icon: 'error',
-                confirmButtonColor: '#db3c3c'
-            }).then(function () {
-                window.location.href = '/inovafin_site/php/painelAdmResp.php';
-            });
-        </script>";
+        echo "<script>exibirAlerta('Erro', 'Erro ao atualizar a resposta: " . $stmt->error . "', 'error',
+         '#db3c3c', '/inovafin_site/php/painelAdmResp.php');</script>";
 
     }
     $stmt->close();
 } else {
-    echo "<script>
-    Swal.fire({
-        title: 'Erro',
-        text: 'Dados de formilário ausentes ou método de solicitação inválido',
-        icon: 'error',
-        confirmButtonColor: '#db3c3c'
-    }).then(function () {
-        window.location.href = '/inovafin_site/php/painelAdmResp.php';
-    });
-</script>";
+    echo "<script>exibirAlerta('Erro', 'Dados de formilário ausentes ou método de solicitação inválido',
+     'error', '#db3c3c', '/inovafin_site/php/painelAdmResp.php');</script>";
 
 }
 
 mysqli_close($conexao);
 ?>
 
-</html>
 </body>
+</html>

@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.9.0/dist/sweetalert2.min.css">
     <link rel="stylesheet" href="/inovafin_site/css/styleFC.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.9.0/dist/sweetalert2.all.min.js"></script>
+    <script src="/inovafin_site/script/alerta.js"></script>
     <title>Painel ADM - Inovafin</title>
 
     <style>
@@ -48,28 +49,12 @@
                 $_SESSION['email_contato'] = $contato['EMAIL_CONTATO'];
                 $_SESSION['msg_contato'] = $contato['MSG_CONTATO'];
             } else {
-                echo "<script>
-                Swal.fire({
-                    title: 'Erro',
-                    text: 'Mensagem não encontrada.',
-                    icon: 'error',
-                    confirmButtonColor: '#db3c3c'
-                }).then(function () {
-                    window.location.href = '/inovafin_site/faleConosco.html';
-                });
-            </script>";
+                echo "<script>exibirAlerta('Erro', 'Mensagem não encontrada.',
+                 'error', '#db3c3c', '/inovafin_site/faleConosco.php');</script>";
             }
         } else {
-            echo "<script>
-            Swal.fire({
-                title: 'Erro',
-                text: 'Erro na consulta SQL.',
-                icon: 'error',
-                confirmButtonColor: '#db3c3c'
-            }).then(function () {
-                window.location.href = '/inovafin_site/faleConosco.html';
-            });
-        </script>";
+            echo "<script>exibirAlerta('Erro', 'Erro na consulta SQL.',
+             'error', '#db3c3c', '/inovafin_site/faleConosco.php');</script>";
         }
 
         $stmt->close();
@@ -96,7 +81,6 @@
         <div class="container-adm">
             <div class="container-menuAdm">
                 <p>Bem Vindo <?php echo $_SESSION['nomeAdm'] ?></p>
-
             </div>
 
             <div class="container-table">
@@ -105,9 +89,9 @@
                 </div>
 
                 <p>Responder Mensagem</p>
-                <div class="content-form">
+                <div class="content-form-resp">
                     <form method="post" action="respFaleConosco.php">
-                        <div class="content-form1">
+                        <div class="content-form-resp1">
                             <div class="formResp-nome">
                                 <p class="tituloForm">Nome:</p>
                                 <div class="campoForm">
@@ -121,7 +105,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="content-form2">
+                        <div class="content-form-resp2">
                             <div class="formResp-mensagem">
                                 <p class="tituloForm">Mensagem:</p>
                                 <div class="campoForm">
