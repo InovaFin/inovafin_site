@@ -14,7 +14,8 @@ if (isset($_SESSION["controleAdm"]) && $_SESSION["controleAdm"] == "logado") {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login ADM</title>
+	<link rel="shortcut icon" href="/inovafin_site/img/favicon-inovafin.png" type="image/x-icon">
+    <title>Login ADM - Inovafin</title>
 </head>
 <body>
     <form action="logadoAdm.php" method="POST">

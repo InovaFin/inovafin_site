@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="/inovafin_site/img/favicon-inovafin.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.9.0/dist/sweetalert2.min.css">
     <link rel="stylesheet" href="/inovafin_site/css/styleFC.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.9.0/dist/sweetalert2.all.min.js"></script>
@@ -32,6 +33,14 @@
     <?php
     include "protectAdm.php";
     include "conexao.php";
+
+    if (!isset($_SESSION)) {
+        session_start();
+    }
+
+    if (!isset($_SESSION['formFC']) || $_SESSION['formFC'] === 'enviado') {
+        $_SESSION['formFC'] = 'nao-enviado';
+    }
 
     if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['responderFC'])) {
         $_SESSION['id_contato'] = $_POST['id_contato'];

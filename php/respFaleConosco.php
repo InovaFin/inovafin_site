@@ -4,10 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="/inovafin_site/img/favicon-inovafin.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.9.0/dist/sweetalert2.min.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.9.0/dist/sweetalert2.all.min.js"></script>
     <script src="/inovafin_site/script/alerta.js"></script>
-    <title>Responder Fale Conosco - Inovafin</title>
+    <title>Painel ADM - Inovafin</title>
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
@@ -53,7 +54,10 @@
         $resposta = $_POST['resposta_contato'];
 
         if (!empty($resposta)) {
-            $body = "
+
+            if ($_SESSION['formFC'] === 'nao-enviado') {
+
+                $body = "
                 <p>Prezado(a) $nome,</p>
                 <p><strong>Esta mensagem é referente ao seu contato:</strong></p>
                 <p>$mensagem</p>
@@ -63,39 +67,42 @@
                 <p>Atenciosamente, Inovafin.</p>
             ";
 
-            // Cria uma instância do PHPMailer.
-            $mail = new PHPMailer(true);
+                // Cria uma instância do PHPMailer.
+                $mail = new PHPMailer(true);
 
-            try {
-                // Configurações do servidor SMTP para envio de e-mails.
-                $mail->SMTPDebug = 0;                                        // SMTP::DEBUG_SERVER. Achar erro DEBUG  
-                $mail->isSMTP();                                            // Define que o envio de e-mails será via SMTP.
-                $mail->CharSet = "UTF-8";
-                $mail->SMTPAuth = true;                                     // Ativa a autenticação SMTP.
-                $mail->Host = 'smtp.office365.com';                         // Especifica o servidor SMTP do Gmail.
-                $mail->Username = 'inovafin@outlook.com';                   // Define o nome de usuário do e-mail remetente.
-                $mail->Password = $senhaEmail;                               // Define a senha do e-mail remetente 
-                $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         // Define o tipo de criptografia para SMTP seguro.
-                $mail->Port = 587;                                          // Define a porta de conexão SMTP.
+                try {
+                    // Configurações do servidor SMTP para envio de e-mails.
+                    $mail->SMTPDebug = 0;                                        // SMTP::DEBUG_SERVER. Achar erro DEBUG  
+                    $mail->isSMTP();                                            // Define que o envio de e-mails será via SMTP.
+                    $mail->CharSet = "UTF-8";
+                    $mail->SMTPAuth = true;                                     // Ativa a autenticação SMTP.
+                    $mail->Host = 'smtp.office365.com';                         // Especifica o servidor SMTP do Gmail.
+                    $mail->Username = 'inovafin@outlook.com';                   // Define o nome de usuário do e-mail remetente.
+                    $mail->Password = $senhaEmail;                               // Define a senha do e-mail remetente 
+                    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         // Define o tipo de criptografia para SMTP seguro.
+                    $mail->Port = 587;                                          // Define a porta de conexão SMTP.
 
-                $mail->setFrom('inovafin@outlook.com', 'Inovafin');         // Remetente
-                $mail->addAddress($email, $nome);                           // Destinatário
+                    $mail->setFrom('inovafin@outlook.com', 'Inovafin');         // Remetente
+                    $mail->addAddress($email, $nome);                           // Destinatário
 
-                $mail->isHTML(true);                                        // Define que o e-mail é em formato HTML.
-                $mail->Subject = 'Resposta Fale Conosco';                     // Assunto do e-mail.
-                $mail->Body = $body;                                          // Corpo do e-mail.
+                    $mail->isHTML(true);                                        // Define que o e-mail é em formato HTML.
+                    $mail->Subject = 'Resposta Fale Conosco';                     // Assunto do e-mail.
+                    $mail->Body = $body;                                          // Corpo do e-mail.
 
-                // Envia o e-mail.
-                if ($mail->send()) {
-                    include "atualizarContato.php";
-                    
-                } else {
-                    echo "<script>exibirAlerta('Erro', 'Erro ao enviar a mensagem: " . $mail->ErrorInfo . "',
+                    // Envia o e-mail.
+                    if ($mail->send()) {
+                        include "atualizarContato.php";
+                    } else {
+                        echo "<script>exibirAlerta('Erro', 'Erro ao enviar a mensagem: " . $mail->ErrorInfo . "',
                      'error', '#db3c3c', '/inovafin_site/php/painelAdmResp.php');</script>";
-                }
-            } catch (Exception $e) {
-                echo "<script>exibirAlerta('Erro', 'Erro ao enviar a mensagem: " . $e->getMessage() . "',
+                    }
+                } catch (Exception $e) {
+                    echo "<script>exibirAlerta('Erro', 'Erro ao enviar a mensagem: " . $e->getMessage() . "',
                  'error', '#db3c3c', '/inovafin_site/php/painelAdmResp.php');</script>";
+                }
+            } else {
+                echo "<script>exibirAlerta('Erro', 'Você já respondeu esta mensagem.',
+                'error', '#db3c3c', '/inovafin_site/php/painelAdmResp.php');</script>";
             }
         } else {
             echo "<script>exibirAlerta('Erro', 'O campo resposta está vazio. Por favor, insira uma resposta antes de enviar o e-mail.', 'error', '#db3c3c', '/inovafin_site/php/painelAdmResp.php');</script>";
@@ -106,4 +113,5 @@
     }
     ?>
 </body>
+
 </html>

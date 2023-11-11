@@ -15,7 +15,7 @@ if (!isset($_SESSION['formFC']) || $_SESSION['formFC'] === 'enviado') {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/Style.css">
+    <link rel="stylesheet" href="css/styleFC.css">
     <link rel="shortcut icon" href="img/favicon-inovafin.png" type="image/x-icon">
     <title>Fale Conosco - InovaFin</title>
 </head>
