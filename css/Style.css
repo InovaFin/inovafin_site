@@ -279,7 +279,7 @@ span {
     height: 21vw;
     background-color: rgba(45, 147, 74, 0.070);
     border-radius: 11%;
-    transform: rotate(18deg);
+    transform: rotate(8deg);
     position: absolute;
     top: 32%;
     left: 7%;
@@ -297,7 +297,6 @@ span {
 }
 
 .quemSomos {
-    background-color: #F7FFFF;
     width: 75vw;
     border-radius: 20px;
     position: relative;
@@ -349,11 +348,11 @@ span {
 }
 
 .quadrado4 {
-    width: 19vw;
-    height: 19vw;
+    width: 21vw;
+    height: 21vw;
     background-color: rgba(45, 147, 74, 0.070);
     border-radius: 11%;
-    transform: rotate(81deg);
+    transform: rotate(84deg);
     position: absolute;
     bottom: -38%;
     right: 6%;
@@ -367,7 +366,7 @@ span {
     border-radius: 11%;
     transform: rotate(11deg);
     position: absolute;
-    bottom: -14%;
+    bottom: 3%;
     left: -8%;
     z-index: -1;
 }
@@ -535,7 +534,7 @@ span {
 
 .container-Perguntas>a {
     justify-content: center;
-    font-weight: 600;
+    font-weight: 500;
     color: #075925;
     font-size: 1vw;
     margin-bottom: 5vw;
@@ -550,7 +549,6 @@ span {
     display: flex;
     justify-content: center;
     width: 100%;
-    /*border: 1px solid tomato;*/
 }
 
 .pergunta {
@@ -558,8 +556,8 @@ span {
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
-    border-bottom: .16vw solid #043014 ;
-    margin-top: 2vw;
+    border-bottom: 2px solid #043014 ;
+    margin-top: 30px;
     color: #38754D;
 
 }
@@ -570,7 +568,6 @@ span {
 
 .pergunta h3 {
     font-size: 1.3vw;
-    font-weight: 600;
     color: #043014;
 }
 
@@ -601,13 +598,13 @@ span {
 }
 
 .quadrado6 {
-    width: 23vw;
-    height: 23vw;
+    width: 21vw;
+    height: 21vw;
     background-color: rgba(45, 147, 74, 0.070);
     border-radius: 11%;
-    transform: rotate(70deg);
+    transform: rotate(85deg);
     position: absolute;
-    bottom: -3%;
+    bottom: 1%;
     right: 8%;
     z-index: -1;
 }
@@ -617,17 +614,14 @@ footer {
     grid-area: footer;
     display: flex;
     flex-direction: column;
-    background: radial-gradient(70% 65% at 50% 50%, #3ac069 0%, #075925 83.98%);
-    background-size: cover;
-    background-attachment: fixed;   
-    padding: 15px;
-    color: white;
+    padding: 15px 60px;
     z-index: 0;
+    color: rgb(79, 79, 79);
 }
 
 .footer-cima {
     padding: 0 50px;
-    border-bottom: 1px solid;
+    border-bottom: 2px solid rgb(193, 193, 193);
 }
 
 .footer-cima>img {
@@ -640,6 +634,12 @@ footer {
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 15px;
+    padding: 0 40px;
+}
+
+.footer-b2 {
+    border-left: 2px solid rgb(193, 193, 193);
+    padding-left: 15px;
 }
 
 .footer-b1,
@@ -668,18 +668,18 @@ footer {
 .formulario label {
     line-height: 1.4;
     font-weight: 500;
-    font-size: 1.1rem;
+    font-size: 1.05rem;
 }
 
 .content-FC {
     display: flex;
     flex-direction: column;
-    gap: 20px;
     background-color: #F7FFFF;
-    padding: 50px 60px;
+    padding: 30px 50px 30px 65px;
     border-radius: 13px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
     margin: 0px 20px;
+    position: relative;
 }
 
 .tituloFormFC {
@@ -695,11 +695,40 @@ footer {
     justify-content: space-between;
 }
 
+.btnVoltarIndex a {
+    margin-left: -40px;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-image: url('/inovafin_site/img/iconBtnVoltarResp.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.irPainelAdm {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    text-decoration: none;
+}
+
+.irPainelAdm img {
+    width: 20px;
+}
+
+.irPainelAdm p {
+    color: #043014;
+    font-weight: 600;
+    font-size: 1.05rem;
+    display: inline;
+}
+
 .formulario {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 60px;
+    gap: 65px;
 }
 
 .formulario form  {
@@ -712,6 +741,7 @@ footer {
 textarea {
     border: 1px solid rgb(126, 126, 126);
     border-radius: 2px;
+    padding: 6px 10px;
     outline: none;
     width: 350px;
     height: 40px;
@@ -725,7 +755,7 @@ textarea:focus {
 }
 
 .formulario .txtAguarde {
-    font-size: 0.7rem;
+    font-size: 0.74rem;
     margin-top: -4px;
     color: rgb(18, 18, 18);
     font-family: 'Inter', sans-serif;
@@ -759,7 +789,8 @@ textarea:focus {
 }
 
 .imgBaixoForm img{
-    width: 125px;
+    width: 120px;
+    margin-top: 5px;
 }
 
 .formulario .botao {
@@ -791,7 +822,8 @@ textarea:focus {
 }
 
 .formulario>img {
-    width: 500px;
+    width: 570px;
+    margin-top: -20px;
     height: auto;
 
 }

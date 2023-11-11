@@ -26,10 +26,13 @@ if (!isset($_SESSION['formFC']) || $_SESSION['formFC'] === 'enviado') {
         <div class="content-FC">
 
             <div class="menu-FC">
-                <div class="btnVoltarIndex">a</div>
-                <div class="irPainelAdm">
-                    <a href="php/loginAdm.php">Painel Adm</a>
+                <div class="btnVoltarIndex">
+                    <a href="index.html"></a>
                 </div>
+                <a href="php/loginAdm.php" class="irPainelAdm">
+                    <img src="img/iconPainelAdmVerde.png" alt="icone painel adm">
+                    <p>Painel ADM</p>
+                </a>
             </div>
 
             <div class="formulario">
@@ -60,7 +63,7 @@ if (!isset($_SESSION['formFC']) || $_SESSION['formFC'] === 'enviado') {
 
                 </form>
                 <div class="barra-central"></div>
-                <img src="img/imagemFC.png" alt="imagem personagem inovafin">
+                <img src="img/imagemFC1.png" alt="imagem personagem inovafin">
             </div>
         </div>
 

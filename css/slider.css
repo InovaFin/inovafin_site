@@ -41,8 +41,8 @@
 }
 
 .manual-btn {
-    border: 2px solid black;
-    padding: 7px;
+    border: 1px solid black;
+    padding: 6px;
     border-radius: 50%;
     cursor: pointer;
     transition: 0.3s;
@@ -53,7 +53,7 @@
 }
 
 .manual-btn:hover {
-    background-color: rgb(51, 231, 108);
+    background-color: #1a7e3d;
 }
 
 #radio1:checked ~ .first {
@@ -73,8 +73,8 @@
 }
 
 .navigation-auto div {
-    border: 2px solid #000000;
-    padding: 7px;
+    border: 1px solid #043014;
+    padding: 6px;
     border-radius: 50%;
     cursor: pointer;
     transition: 0.3s;
@@ -96,7 +96,7 @@
 #radio2:checked ~ .navigation-auto .auto-btn2,
 #radio3:checked ~ .navigation-auto .auto-btn3,
 #radio4:checked ~ .navigation-auto .auto-btn4 {
-    background-color: rgb(51, 231, 108);
+    background-color: #3dd874;
 }
 
 .container-slider {
