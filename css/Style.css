@@ -27,7 +27,7 @@
 header {
     grid-area: header;
     background-color: #075925;
-    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.499);
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.182);
     z-index: 4;
     width: 100%;
     overflow: hidden;
@@ -59,7 +59,7 @@ header {
 
 .nav-link {
     text-decoration: none;
-    font-size: 1.04rem;
+    font-size: 1.05rem;
     padding: 13px 20px;
     color: #FFF;
     font-weight: 600;
@@ -80,7 +80,7 @@ header {
     text-decoration: none;
     color: #FFF;
     font-weight: 600;
-    font-size: 1.04rem;
+    font-size: 1.05rem;
     padding: 13px 20px;
 }
 
@@ -240,7 +240,7 @@ span {
 /*Estilo titulo de recursos*/
 #recursos {
     margin-top: -25px;
-    margin-bottom: 3vw;
+    margin-bottom: 110px;
     position: relative;
     z-index: 0;
     display: flex;
@@ -255,7 +255,7 @@ span {
     background-color: #F7FFFF;
     width: 85%;
     border-radius: 30px;
-    padding: 25px 0 40px 0;
+    padding: 30px 0 50px 0;
 }
 
 .txtRecursos {
@@ -287,67 +287,176 @@ span {
 }
 
 /*Quem Somos*/
-.container-quemSomos {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 4vw;
-    position: relative;
-    z-index: 0;
-    /*border: 1px solid tomato;*/
-}
-
-.quemSomos {
-    width: 75vw;
-    border-radius: 20px;
-    position: relative;
-    /*border: 1px solid tomato;*/
-}
-
-.texto {
+section #quemSomos {
     display: flex;
     justify-content: center;
     align-items: center;
-
-    /*border: 1px solid tomato;*/
+    margin-bottom: 150px;
 }
 
-.texto>p {
-    text-align: left;
-    font-size: 1.2vw;
-    margin-right: 3vw;
-    text-align: justify;
-    padding: 0vw 2vw;
+.container-quemSomos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.texto>img {
-    width: 27vw;
-    height: 17vw;
-    border-radius: 10px;
+.container-quemSomos h1, h2 {
+    font-size: 1.85rem;
+    font-weight: 600;
+    color: #075925;
+    align-self: flex-start;
 }
 
-.conteudo-quemSomos1 {
-    margin-bottom: 3vw;
+.container-quemSomos h2 {
+    align-self: flex-start;
+    font-size: 1.5rem;
 }
 
-.conteudo-quemSomos2>.texto>p {
-    margin-left: 3vw;
-    margin-right: 0;
+.container-quemSomos1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.conteudo-quemSomos>h1 {
-    margin-top: -3vw;
+.content-quemSomos1 {
+    display: flex;
+    align-items: center;
+    gap: 75px;
+}
+
+.content-quemSomos1 p {
+    width: 520px;
+    font-size: 1.1rem;
+    font-weight: 400;
     text-align: center;
-    font: 600 2.2vw arial;
-    font-family: 'Poppins', 'Arial', sans-serif;
-    margin-bottom: 3vw;
-    color: #38754D ;
 }
 
-.conteudo-quemSomos {
-    padding: 3vw;
+.content-quemSomos1 .img-etecLG {
+    position: relative;
 }
 
+.content-quemSomos1 .img-etecLG img {
+    position: relative;
+    width: 316px;
+    border-radius: 17px;
+    z-index: 1;
+    transition: transform 0.23s ease-in-out;
+}
+
+.content-quemSomos1 .img-etecLG img:hover {
+    transform: translateY(-9px) translateX(9px);
+}
+
+.content-quemSomos1 .sombra-img-etecLG {
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+    width: 316px;
+    height: 220px;
+    border: 5px solid #236E3E;
+    border-radius: 17px;
+    z-index: 0;
+}
+
+.container-quemSomos2 {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+}
+
+.container-card-quemSomos {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 85px;
+}    
+
+.container-card-dev {
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+}    
+
+.card-dev {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 180px;
+    height: 240px;
+    padding: 20px;
+    /* background: radial-gradient(60.1% 60.83% at 50% 50%, #1d6837 0%, #04421b 83.98%); */
+    /* background: linear-gradient(to bottom, #24A351, #236E3E); */
+    background-color: #18512c;
+    border-radius: 17px;
+    z-index: 1;
+    transition: transform 0.2s ease-in-out;
+}    
+
+.card-jean .card-dev:hover {
+    transform: translateY(8px) translateX(-8px);
+}
+
+.card-vinicius .card-dev:hover {
+    transform: translateY(8px); 
+}
+
+.card-erick .card-dev:hover {
+    transform: translateY(8px) translateX(8px); 
+}
+
+.card-dev >img {
+    width: 100px;
+    border-radius: 50%;
+    border: 2px solid #F7FFFF;
+}    
+
+.card-dev p {
+
+    font-size: 1.1rem;
+    color: #F7FFFF;
+}    
+
+.icone-redes-card {
+    display: flex;
+    gap: 7px;
+}    
+
+.icone-redes-card img{
+    width: 22px;
+}    
+
+.sombra-card-dev {
+    position: absolute;
+    width: 180px;
+    height: 240px;
+    background-color: #95d2ab;
+    border-radius: 17px;
+    z-index: 0;
+}    
+
+.card-jean .sombra-card-dev {
+    box-shadow: -10px 10px 45px -5px #0202023d;
+    top: 20px;
+    right: 20px;
+}    
+
+.card-erick .sombra-card-dev {
+    box-shadow: 10px 10px 45px -5px #0202023d;
+    top: 20px;
+    left: 20px;
+}    
+
+.card-vinicius .sombra-card-dev {
+    box-shadow: 0px 10px 45px -5px #0202023d;
+    width: 200px;
+    top: 20px;
+}    
 .quadrado4 {
+
     width: 21vw;
     height: 21vw;
     background-color: rgba(45, 147, 74, 0.070);
@@ -372,7 +481,7 @@ span {
 }
 
 
-/* Estilo desenvolvedores*/
+/* Estilo desenvolvedores
 #button>img {
     width: 1.1vw;
 }
@@ -514,7 +623,7 @@ span {
     margin-top: auto;
     display: flex;
     justify-content: flex-end;
-}
+} */
 
 /*perguntas frequentes*/
 .container-Perguntas {
@@ -556,7 +665,7 @@ span {
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
-    border-bottom: 2px solid #043014 ;
+    border-bottom: 2px solid #043014;
     margin-top: 30px;
     color: #38754D;
 
@@ -593,7 +702,7 @@ span {
 }
 
 #setaPerguntas {
-     
+
     transition: transform .3s ease-in-out;
 }
 
@@ -650,4 +759,3 @@ footer {
 .footer-baixo p {
     font-size: 0.9rem;
 }
-
