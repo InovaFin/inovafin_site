@@ -27,7 +27,7 @@
     </style>
 </head>
 
-<body>
+<body class="fundoFaleConosco">
     <?php
     include "protectAdm.php";
     include "conexao.php";
@@ -102,7 +102,7 @@
                 }
             } else {
                 echo "<script>exibirAlerta('Erro', 'Você já respondeu esta mensagem.',
-                'error', '#db3c3c', '/inovafin_site/php/painelAdmResp.php');</script>";
+                'error', '#db3c3c', '/inovafin_site/php/painelAdm.php?mode=respondidas');</script>";
             }
         } else {
             echo "<script>exibirAlerta('Erro', 'O campo resposta está vazio. Por favor, insira uma resposta antes de enviar o e-mail.', 'error', '#db3c3c', '/inovafin_site/php/painelAdmResp.php');</script>";

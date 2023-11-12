@@ -7,14 +7,14 @@
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 1rem;
     box-sizing: border-box;
 }
 
 /*Fale Conosco*/
 .fundoFaleConosco {
-    background: radial-gradient(60.1% 60.83% at 50% 50%, #24A351 0%, #075925 83.98%);
+    background: radial-gradient(70% 65% at 50% 50%, #33c064 0%, #196033 83.98%);
     background-size: cover;
     background-attachment: fixed;
 }
@@ -31,17 +31,16 @@
     display: flex;
     flex-direction: column;
     background-color: #F7FFFF;
-    padding: 30px 50px 30px 65px;
+    padding: 30px 50px;
     border-radius: 13px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.423);
     margin: 0px 20px;
     position: relative;
 }
 
 .tituloFormFC {
-    display: flex;
-    justify-content: center;
-    font-size: 2rem;
+    align-self: center;
+    font-size: 1.85rem;
     font-weight: 600;
     color: #043014;
 }
@@ -51,9 +50,7 @@
     justify-content: space-between;
 }
 
-.btnVoltarIndex a {
-    margin-left: -40px;
-    position: absolute;
+.btnVoltarIndex  {
     width: 25px;
     height: 25px;
     background-image: url('/inovafin_site/img/iconBtnVoltarResp.png');
@@ -70,7 +67,7 @@
 }
 
 .irPainelAdm img {
-    width: 20px;
+    width: 22px;
 }
 
 .irPainelAdm p {
@@ -82,7 +79,6 @@
 
 .formulario {
     display: flex;
-    justify-content: center;
     align-items: center;
     gap: 65px;
 }
@@ -197,15 +193,115 @@ textarea {
 
 }
 
+.container-loginADM {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
 
-.fundoPainelAdm {
-    background: radial-gradient(70% 65% at 50% 50%, #3ac069 0%, #075925 83.98%);
-    background-size: cover;
-    background-attachment: fixed;
+.form-loginADM {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #F7FFFF;
+    padding: 35px 50px;
+    border-radius: 13px;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.423);
+}
+
+.form-loginADM form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-top-loginADM {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.titulo-loginADM {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.titulo-loginADM img {
+    width: 45px;
+}
+
+.titulo-loginADM p {
+    font-size: 1.85rem;
+    font-weight: 600;
+    color: #043014;
+}
+
+.form-loginADM .txt-restrito{
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.form-loginADM .form-campo {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-loginADM .form-campo label {
+    line-height: 1.7;
+    font-weight: 500;
+    font-size: 1.05rem;
+}
+
+.form-loginADM .form-campo input {
+    border: 1px solid rgb(126, 126, 126);
+    border-radius: 2px;
+    padding: 6px 10px;
+    outline: none;
+    width: 350px;
+    height: 40px;
+    background-color: #F7FFFF;
+}
+
+.form-loginADM .form-campo input:focus  {
+    border-bottom: 2.5px solid #1f773f;
+    outline: none;
+}
+
+.baixoForm-loginADM {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.baixoForm-loginADM .botao {
+    background-color: #28B65A;
+    box-shadow: 0px 5px 0px 0px #49db7c;
+    color: white;
+    font-weight: 600;
+    border-radius: 5px;
+    width: 110px;
+    height: 40px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: all ease 0.1s;
+    margin: 0px;
+}
+
+.baixoForm-loginADM .botao:active {
+    transform: translateY(5px);
+    box-shadow: 0px 0px 0px 0px #a29bfe;
+}
+
+.baixoForm-loginADM .botao:focus {
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.742);   
 }
 
 header {
-    background-color: #075925;
+    background-color: #196033;
     box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.499);
     width: 100%;
     padding: 0.8rem;
@@ -215,7 +311,7 @@ header {
 }
 
 .logo {
-    width: 210px;
+    width: 225px;
     text-align: center;
 }
 
@@ -225,8 +321,9 @@ header {
 }
 
 .painelAdm {
-    width: 210px;
+    width: 225px;
     display: flex;
+    gap: 10px;
     align-items: center;
     justify-content: center;
 }
@@ -236,13 +333,13 @@ header {
 }
 
 .painelAdm p {
-    font-size: 1.7rem;
+    font-size: 1.6rem;
+    font-weight: 500;
     color: #FFF;
-    margin-left: 10px;
 }
 
 .btnSair {
-    width: 210px;
+    width: 225px;
     text-align: center;
 }
 
@@ -327,7 +424,7 @@ header {
 }
 
 .container-table {
-    background-color: #FAFFFF;
+    background-color: #F7FFFF;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -411,6 +508,7 @@ th {
     padding: 4px;
     background-color: #f2f2f2;
     border: none;
+    font-weight: 500;
 }
 
 tr:hover {
@@ -499,22 +597,19 @@ th.responder {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
     height: 100%;
 }
-
 
 .content-form-resp form {
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 20px;
 }
 
 .content-form-resp .tituloForm {
-    line-height: 1.4;
+    line-height: 1.7;
     font-weight: 500;
-    font-size: 1.1rem;
+    font-size: 1.05rem;
 }
 
 .content-form-resp p {
@@ -534,12 +629,13 @@ th.responder {
 form .campoForm {
     display: flex;
     align-items: center;
-    max-width: 330px;
-    width: 330px;
+    max-width: 350px;
+    width: 350px;
     height: 40px;
-    border: 2px solid #043014;
+    border: 1px solid rgb(126, 126, 126);
+    border-bottom: 2.5px solid #1f773f;
     border-radius: 2px;
-    padding: 4px 8px;
+    padding: 6px 10px;
     outline: none;
 }
 
@@ -569,6 +665,7 @@ form .campoForm {
 
 .formResp-resposta .campoForm {
     resize: none;
+    background-color: #F7FFFF;
 }
 
 .content-form-resp2 .campoForm {
@@ -594,4 +691,8 @@ button.enviarResp {
 button.enviarResp:active {
     transform: translateY(5px);
     box-shadow: 0px 0px 0px 0px #a29bfe;
+}
+
+button.enviarResp:focus {
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.742);   
 }

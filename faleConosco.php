@@ -26,9 +26,9 @@ if (!isset($_SESSION['formFC']) || $_SESSION['formFC'] === 'enviado') {
         <div class="content-FC">
 
             <div class="menu-FC">
-                <div class="btnVoltarIndex">
-                    <a href="index.html"></a>
-                </div>
+                <a href="index.html">
+                    <div class="btnVoltarIndex"></div>
+                </a>
                 <a href="php/loginAdm.php" class="irPainelAdm">
                     <img src="img/iconPainelAdmVerde.png" alt="icone painel adm">
                     <p>Painel ADM</p>
@@ -55,7 +55,7 @@ if (!isset($_SESSION['formFC']) || $_SESSION['formFC'] === 'enviado') {
                         <textarea name="mensagem" class="txtMsg" maxlength="200"></textarea>
                         <p class="txtAguarde">Aguarde sua resposta!</p>
                     </div>
-                    
+
                     <div class="baixoForm">
                         <div class="imgBaixoForm"><img src="img/InovafinTrans.png" alt=""></div>
                         <input type="submit" name="enviarContato" class="botao">

@@ -70,7 +70,7 @@
 @media screen and (max-width: 930px) {
 
     .home {
-        background: radial-gradient(60.1% 60.83% at 50% 50%, #219349 0%, #075925 83.98%);
+        background: radial-gradient(60.1% 60.83% at 50% 50%,  #33c064 0%, #196033 83.98%);
         padding: 100px 5px 35px 5px;
         flex-direction: column;
         align-items: center;

@@ -27,7 +27,7 @@
     </style>
 </head>
 
-<body>
+<body class="fundoFaleConosco">
 <?php
 if (!isset($_SESSION)) {
     session_start();
@@ -57,7 +57,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['enviarContato'])) {
 
                     if ($stmt->execute()) {
                         echo "<script>exibirAlerta('Sucesso', 'Mensagem enviada com sucesso !!',
-                            'success', '#28B65A', '/inovafin_site/index.html');</script>";
+                            'success', '#28B65A', '/inovafin_site/faleConosco.php');</script>";
                         // Marcar o formulário como enviado
                         $_SESSION['formFC'] = 'enviado';
                     } else {

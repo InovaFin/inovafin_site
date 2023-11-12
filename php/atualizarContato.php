@@ -28,8 +28,7 @@
     </style>
 </head>
 
-<body>
-
+<body class="fundoFaleConosco">
 <?php
 include "protectAdm.php";
 include "conexao.php";

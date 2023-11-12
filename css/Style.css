@@ -26,7 +26,7 @@
 
 header {
     grid-area: header;
-    background-color: #075925;
+    background-color: #196033;
     box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.182);
     z-index: 4;
     width: 100%;
@@ -113,9 +113,13 @@ main {
 .home {
     background: radial-gradient(40% 80% at 26.46% 60.88%,
             /* Posição e tamanho do gradiente radial */
-            #24A351, #075925 76.91%
-            /* Cores do gradiente e ponto de transição  */
+            #33c064, #196033 76.91%
+            /* Cores do gradiente e ponto de transição        #18512c           #24A351, #075925      */
         );
+
+        /*50% 60% at 26.46% 60.88%,
+        #22af54, #18512c 76.91%  */
+
     padding: 150px 0px 0px 0px;
     display: flex;
     justify-content: center;
@@ -267,7 +271,7 @@ span {
 
 .box-txtRecursos>.txtRecursos>h1 {
     font: bold 2.1rem arial;
-    color: #38754D;
+    color: #075925;
 }
 
 .topic-mobile {
@@ -292,6 +296,7 @@ section #quemSomos {
     justify-content: center;
     align-items: center;
     margin-bottom: 150px;
+    position: relative;
 }
 
 .container-quemSomos {
@@ -390,7 +395,7 @@ section #quemSomos {
     padding: 20px;
     /* background: radial-gradient(60.1% 60.83% at 50% 50%, #1d6837 0%, #04421b 83.98%); */
     /* background: linear-gradient(to bottom, #24A351, #236E3E); */
-    background-color: #18512c;
+    background-color: #196033;
     border-radius: 17px;
     z-index: 1;
     transition: transform 0.2s ease-in-out;
@@ -440,20 +445,20 @@ section #quemSomos {
 
 .card-jean .sombra-card-dev {
     box-shadow: -10px 10px 45px -5px #0202023d;
-    top: 20px;
-    right: 20px;
+    top: 17px;
+    right: 17px;
 }    
 
 .card-erick .sombra-card-dev {
     box-shadow: 10px 10px 45px -5px #0202023d;
-    top: 20px;
-    left: 20px;
+    top: 17px;
+    left: 17px;
 }    
 
 .card-vinicius .sombra-card-dev {
     box-shadow: 0px 10px 45px -5px #0202023d;
     width: 200px;
-    top: 20px;
+    top: 17px;
 }    
 .quadrado4 {
 
@@ -471,193 +476,44 @@ section #quemSomos {
 .quadrado5 {
     width: 21vw;
     height: 21vw;
-    background-color: rgba(45, 147, 74, 0.070);
+    background-color: rgba(0, 255, 72, 0.07);
     border-radius: 11%;
-    transform: rotate(11deg);
+    transform: rotate(8deg);
     position: absolute;
-    bottom: 3%;
-    left: -8%;
-    z-index: -1;
+    bottom: 10%;
+    left: 8%;
+    z-index: 0;
 }
-
-
-/* Estilo desenvolvedores
-#button>img {
-    width: 1.1vw;
-}
-
-#modal {
-    z-index: 1;
-    position: absolute;
-    text-align: center;
-    border-radius: 10px;
-    padding: 2vw;
-    background-color: #075925;
-    display: none;
-}
-
-.abreModal {
-    animation-name: abre-modal;
-    animation-duration: .3s;
-    box-shadow: 2px 2px 10px black;
-}
-
-@keyframes abre-modal {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-#button {
-    border: none;
-    background-color: #075925;
-    border-radius: 0.6vw;
-    padding: 0.4vw 1vw;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: background-color 0.5s ease;
-}
-
-#button:hover {
-    background-color: rgba(46, 150, 83, 1);
-    transition: 0.4s;
-}
-
-#button>p {
-    margin-left: 1vw;
-    font-size: 1.2vw;
-    font-weight: 600;
-    color: rgba(255, 255, 255, 1);
-}
-
-.animacaoSetaAbre {
-    animation-name: animacao-abre;
-    animation-duration: 1s;
-    transform: rotate(180deg);
-
-}
-
-@keyframes animacao-abre {
-    from {
-        transform: rotate(0deg)
-    }
-
-    to {
-        transform: rotate(180deg)
-    }
-}
-
-.animacaoSetaFecha {
-    animation-name: animacao-fecha;
-    animation-duration: 1s;
-    transform: rotate(0deg);
-
-}
-
-@keyframes animacao-fecha {
-    from {
-        transform: rotate(180deg)
-    }
-
-    to {
-        transform: rotate(0deg)
-    }
-}
-
-.desenvolvedor {
-    display: flex;
-    align-items: center;
-    width: 40vw;
-    padding: 1vw 2vw;
-    background-color: #EFEFEF;
-    border-radius: 5px;
-    margin-bottom: 1.8vw;
-}
-
-.erick .desenvolvedor {
-    margin: 0;
-}
-
-.fotoDev>p {
-    margin-top: -1.9vw;
-    font-size: 1.2vw;
-    font-weight: 500;
-    color: #ffffff;
-    background-color: #268848;
-    z-index: 1;
-    position: relative;
-    border-radius: 1vw;
-}
-
-.fotoDev>img {
-    width: 7vw;
-}
-
-.textoDev {
-    margin-left: 2vw;
-    text-align: left;
-
-}
-
-.textoDev>p {
-    font-size: 1.1vw;
-}
-
-.textoDev>h1 {
-    font-size: 1.3vw;
-}
-
-.desenvolvedor>.redes>a>img {
-    margin-left: 0.5vw;
-    width: 2vw;
-}
-
-.redes {
-    margin-left: .25vw;
-    margin-top: auto;
-    display: flex;
-    justify-content: flex-end;
-} */
 
 /*perguntas frequentes*/
 .container-Perguntas {
     display: flex;
     flex-direction: column;
+    gap: 35px;
     align-items: center;
     position: relative;
     z-index: 0;
+    margin-bottom: 110px;
 }
 
 .container-Perguntas>h1 {
+    color: #075925;
+    font-size: 1.85rem;
     font-weight: 600;
-    font-size: 2.2vw;
-    margin-bottom: .3vw;
-    color: #38754D;
 }
 
 .container-Perguntas>a {
     justify-content: center;
-    font-weight: 500;
     color: #075925;
-    font-size: 1vw;
-    margin-bottom: 5vw;
-    margin-top: 2vw;
+    font-size: 1rem;
+    text-decoration: none;
 }
 
-.perguntasFrequentes {
-    width: 60vw;
-}
-
-.faq {
+.box-perguntas {
     display: flex;
-    justify-content: center;
-    width: 100%;
+    flex-direction: column;
+    gap: 25px;
+    width: 870px;
 }
 
 .pergunta {
@@ -666,23 +522,21 @@ section #quemSomos {
     align-items: center;
     cursor: pointer;
     border-bottom: 2px solid #043014;
-    margin-top: 30px;
     color: #38754D;
-
 }
 
 .pergunta img {
-    width: 1.1vw;
+    width: 20px;
 }
 
 .pergunta h3 {
-    font-size: 1.3vw;
+    font-size: 1.18rem;
     color: #043014;
 }
 
 .resposta p {
-    padding-top: 1vw;
-    font-size: 1.1vw;
+    margin-top: 15px;
+    font-size: 1.1rem;
     font-weight: 400;
 }
 
@@ -693,7 +547,6 @@ section #quemSomos {
 }
 
 .faq.active .resposta {
-
     max-height: 300px;
 }
 
@@ -702,7 +555,6 @@ section #quemSomos {
 }
 
 #setaPerguntas {
-
     transition: transform .3s ease-in-out;
 }
 
@@ -713,7 +565,7 @@ section #quemSomos {
     border-radius: 11%;
     transform: rotate(85deg);
     position: absolute;
-    bottom: 1%;
+    bottom: 15%;
     right: 8%;
     z-index: -1;
 }

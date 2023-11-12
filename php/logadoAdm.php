@@ -27,8 +27,8 @@
     </style>
 </head>
 
-<body>
-    <?php
+<body class="fundoFaleConosco">
+<?php
     if (!isset($_SESSION)) {
         session_start();
     }
