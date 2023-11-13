@@ -297,6 +297,7 @@ section #quemSomos {
     align-items: center;
     margin-bottom: 150px;
     position: relative;
+    z-index: 1;
 }
 
 .container-quemSomos {
@@ -476,13 +477,13 @@ section #quemSomos {
 .quadrado5 {
     width: 21vw;
     height: 21vw;
-    background-color: rgba(0, 255, 72, 0.07);
+    background-color: rgba(45, 147, 74, 0.070);
     border-radius: 11%;
     transform: rotate(8deg);
     position: absolute;
     bottom: 10%;
     left: 8%;
-    z-index: 0;
+    z-index: -1;
 }
 
 /*perguntas frequentes*/
