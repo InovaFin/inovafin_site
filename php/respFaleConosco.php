@@ -57,15 +57,24 @@
 
             if ($_SESSION['formFC'] === 'nao-enviado') {
 
-                $body = "
-                <p>Prezado(a) $nome,</p>
-                <p><strong>Esta mensagem é referente ao seu contato:</strong></p>
-                <p>$mensagem</p>
-                <p><strong>Resposta:</strong><br>$resposta</p>
-                <hr style='border: 1px solid #ccc;'>
-                <p>Estamos à disposição para fornecer qualquer assistência adicional que você possa necessitar.</p>
-                <p>Atenciosamente, Inovafin.</p>
-            ";
+                $body = '
+                <p style="font-size:1rem; font-family: Calibri, sans-serif;">
+                    Olá, ' . $nome . ' <br>
+                    Agradecemos o seu contato. <br>
+                    ' . $resposta . '
+                </p>
+                <p style="font-size:1rem; font-family: Calibri, sans-serif;">
+                    <i>A InovaFin é um projeto de TCC feito por alunos da escola Etec Lauro Gomes.<br>
+                     Estamos à disposição para quaisquer esclarecimentos.<br>
+                     Atenciosamente, Inovafin.
+                </p></i><br>
+                <hr style="border: 1px solid #ccc;">
+                <p style="font-size:0.9rem; font-family: Calibri, sans-serif;">
+                    <strong>Nome: </strong>' . $nome . '<br>
+                    <strong>Email: </strong>' . $email . '<br>
+                    <strong>Mensagem: </strong>' . $mensagem . '
+                </p>
+            ';
 
                 // Cria uma instância do PHPMailer.
                 $mail = new PHPMailer(true);
