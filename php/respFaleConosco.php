@@ -66,14 +66,16 @@
                 <p style="font-size:1rem; font-family: Calibri, sans-serif;">
                     <i>A InovaFin é um projeto de TCC feito por alunos da escola Etec Lauro Gomes.<br>
                      Estamos à disposição para quaisquer esclarecimentos.<br>
-                     Atenciosamente, Inovafin.
+                     Atenciosamente, InovaFin.
                 </p></i><br>
                 <hr style="border: 1px solid #ccc;">
-                <p style="font-size:0.9rem; font-family: Calibri, sans-serif;">
-                    <strong>Nome: </strong>' . $nome . '<br>
-                    <strong>Email: </strong>' . $email . '<br>
-                    <strong>Mensagem: </strong>' . $mensagem . '
-                </p>
+                <div style="line-height: 1.1;">
+                    <p style="font-size:0.9rem; font-family: Calibri, sans-serif;">
+                        <strong>Nome: </strong>' . $nome . '<br>
+                        <strong>Email: </strong>' . $email . '<br>
+                        <strong>Mensagem: </strong>' . $mensagem . '
+                    </p>
+                </div>
             ';
 
                 // Cria uma instância do PHPMailer.
