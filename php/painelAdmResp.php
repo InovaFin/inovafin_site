@@ -1,3 +1,9 @@
+<?php
+if (!isset($_SESSION)) {
+    session_start();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -33,10 +39,6 @@
     <?php
     include "protectAdm.php";
     include "conexao.php";
-
-    if (!isset($_SESSION)) {
-        session_start();
-    }
 
     if (!isset($_SESSION['formFC']) || $_SESSION['formFC'] === 'enviado') {
         $_SESSION['formFC'] = 'nao-enviado';

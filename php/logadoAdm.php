@@ -1,3 +1,9 @@
+<?php
+if (!isset($_SESSION)) {
+    session_start();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -29,9 +35,6 @@
 
 <body class="fundoFaleConosco">
 <?php
-    if (!isset($_SESSION)) {
-        session_start();
-    }
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST["botao"]) && $_POST["botao"] == "Logar") {
         $usuario = $_POST['usuario_login'];
@@ -46,7 +49,7 @@
             include "conexao.php";
 
             if ($conexao) {
-                $query = "SELECT * FROM TB_CADASTRO_ADM WHERE EMAIL_ADM = ? AND SENHA_ADM = ?";
+                $query = "SELECT * FROM tb_cadastro_adm WHERE EMAIL_ADM = ? AND SENHA_ADM = ?";
                 $stmt = $conexao->prepare($query);
 
                 if ($stmt) {

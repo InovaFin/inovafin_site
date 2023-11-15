@@ -1,3 +1,9 @@
+<?php
+if (!isset($_SESSION)) {
+    session_start();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -40,10 +46,6 @@
 
     // Procura a pasta necessária do PHPmailer
     require 'PHPMailer/vendor/autoload.php';
-
-    if (!isset($_SESSION)) {
-        session_start();
-    }
 
     if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['enviarResp'])) {
 

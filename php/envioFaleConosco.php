@@ -1,3 +1,9 @@
+<?php
+if (!isset($_SESSION)) {
+    session_start();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -29,9 +35,6 @@
 
 <body class="fundoFaleConosco">
 <?php
-if (!isset($_SESSION)) {
-    session_start();
-}
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['enviarContato'])) {
 
@@ -49,7 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['enviarContato'])) {
             include "conexao.php";
 
             if ($conexao) {
-                $query = "INSERT INTO TB_FALECONOSCO (NOME_CONTATO, EMAIL_CONTATO, MSG_CONTATO) VALUES (?, ?, ?)";
+                $query = "INSERT INTO tb_faleconosco (NOME_CONTATO, EMAIL_CONTATO, MSG_CONTATO) VALUES (?, ?, ?)";
                 $stmt = $conexao->prepare($query);
 
                 if ($stmt) {
