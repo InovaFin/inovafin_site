@@ -47,7 +47,7 @@ if (!isset($_SESSION)) {
     if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['responderFC'])) {
         $_SESSION['id_contato'] = $_POST['id_contato'];
 
-        $query = "SELECT * FROM TB_FALECONOSCO WHERE ID_CONTATO = ?";
+        $query = "SELECT * FROM tb_faleconosco WHERE ID_CONTATO = ?";
         $stmt = $conexao->prepare($query);
         $stmt->bind_param("s", $_SESSION['id_contato']);
 
@@ -75,7 +75,7 @@ if (!isset($_SESSION)) {
 
     <header>
         <div class="logo">
-            <a href="/inovafin_site/index.html"><img src="/inovafin_site/img/InovaFin.png" alt="logoInovafin"></a>
+            <a href="/inovafin_site/index.html"><img src="/inovafin_site/img/inovafin.png" alt="logoInovafin"></a>
         </div>
         <div class="painelAdm">
             <img src="/inovafin_site/img/iconPainelAdm.png" alt="">

@@ -73,8 +73,8 @@ if (!isset($_SESSION)) {
                                 $_SESSION['senhaAdm'] = $row['SENHA_ADM'];
                             }
 
-                            header("Location: /inovafin_site/php/painelAdm.php");
-                            exit();                            
+                            echo '<script>window.location.href = "/inovafin_site/php/painelAdm.php";</script>';
+                            exit();                      
 
                         } else {
                             echo "<script>exibirAlerta('Erro', 'Usuário e/ou senha não confere!',

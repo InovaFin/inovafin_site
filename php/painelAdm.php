@@ -16,22 +16,6 @@ if (!isset($_SESSION)) {
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.9.0/dist/sweetalert2.all.min.js"></script>
 	<script src="/inovafin_site/script/alerta.js"></script>
 	<title>Painel ADM - Inovafin</title>
-
-	<style>
-		@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
-
-		* {
-			margin: 0;
-			padding: 0;
-			font-family: 'Poppins', sans-serif;
-		}
-
-		body {
-			background: radial-gradient(70% 65% at 50% 50%, #3ac069 0%, #075925 83.98%);
-			background-size: cover;
-			background-attachment: fixed;
-		}
-	</style>
 </head>
 
 <body class="fundoFaleConosco">
@@ -61,9 +45,9 @@ if (!isset($_SESSION)) {
 	try {
 		// Atualize a consulta SQL com base no modo de exibição selecionado
 		if ($modoExibicao === 'naoRespondidas') {
-			$query = "SELECT * FROM TB_FALECONOSCO WHERE RESP_CONTATO IS NULL OR RESP_CONTATO = ''";
+			$query = "SELECT * FROM tb_faleconosco WHERE RESP_CONTATO IS NULL OR RESP_CONTATO = ''";
 		} else {
-			$query = "SELECT * FROM TB_FALECONOSCO WHERE RESP_CONTATO IS NOT NULL AND RESP_CONTATO != '';";
+			$query = "SELECT * FROM tb_faleconosco WHERE RESP_CONTATO IS NOT NULL AND RESP_CONTATO != '';";
 		}
 
 		$stmt = $conexao->prepare($query);
@@ -90,7 +74,7 @@ if (!isset($_SESSION)) {
 
 	<header>
 		<div class="logo">
-			<a href="/inovafin_site/index.html"><img src="/inovafin_site/img/InovaFin.png" alt="logoInovafin"></a>
+			<a href="/inovafin_site/index.html"><img src="/inovafin_site/img/inovafin.png" alt="logoInovafin"></a>
 		</div>
 		<div class="painelAdm">
 			<img src="/inovafin_site/img/iconPainelAdm.png" alt="">

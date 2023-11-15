@@ -38,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['enviarResp'])) {
     $id_contato = $_SESSION['id_contato'];
     $resposta = $_POST["resposta_contato"];
 
-    $query = "UPDATE TB_FALECONOSCO SET RESP_CONTATO = ? WHERE ID_CONTATO = ?";
+    $query = "UPDATE tb_faleconosco SET RESP_CONTATO = ? WHERE ID_CONTATO = ?";
     
     $stmt = $conexao->prepare($query);
     $stmt->bind_param("ss", $resposta, $id_contato);
