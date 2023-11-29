@@ -304,6 +304,8 @@ section #quemSomos {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    margin: 0 15px;
 }
 
 .container-quemSomos h1, h2 {
@@ -326,6 +328,8 @@ section #quemSomos {
 
 .content-quemSomos1 {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
     gap: 75px;
 }
@@ -342,11 +346,13 @@ section #quemSomos {
 }
 
 .content-quemSomos1 .img-etecLG img {
-    position: relative;
+    position: absolute;
+    top: 17px;
+    right: 17px;
     width: 316px;
     border-radius: 17px;
     z-index: 1;
-    transition: transform 0.23s ease-in-out;
+    transition: transform 0.23s ease-in-out;    
 }
 
 .content-quemSomos1 .img-etecLG img:hover {
@@ -354,11 +360,8 @@ section #quemSomos {
 }
 
 .content-quemSomos1 .sombra-img-etecLG {
-    position: absolute;
-    bottom: 18px;
-    left: 18px;
     width: 316px;
-    height: 220px;
+    height: 213px;
     border: 5px solid #236E3E;
     border-radius: 17px;
     z-index: 0;
