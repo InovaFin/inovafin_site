@@ -91,7 +91,7 @@ if (!isset($_SESSION)) {
     <section class="main-painelAdm">
         <div class="container-adm">
             <div class="container-menuAdm">
-                <p>Bem Vindo <?php echo $_SESSION['nomeAdm'] ?></p>
+                <p>Bem Vindo, <?php echo $_SESSION['nomeAdm'] ?></p>
             </div>
 
             <div class="container-table">
@@ -130,7 +130,7 @@ if (!isset($_SESSION)) {
                         </div>
 
                         <div class="baixoForm">
-                            <div class="imgBaixoForm"><img src="/inovafin_site/img/InovafinTrans.png" alt=""></div>
+                            <div class="imgBaixoForm"><img src="/inovafin_site/img/InovaFinTrans.png" alt=""></div>
                             <button class="enviarResp" type="submit" name="enviarResp">Enviar Resposta</button>
                         </div>
                     </form>

@@ -62,7 +62,7 @@ if (!isset($_SESSION)) {
                 $body = '
                 <p style="font-size:1rem; font-family: Calibri, sans-serif;">
                     Olá, ' . $nome . ' <br>
-                    Agradecemos o seu contato. <br>
+                    Agradecemos o seu contato. <br><br>
                     ' . $resposta . '
                 </p>
                 <p style="font-size:1rem; font-family: Calibri, sans-serif;">
@@ -70,6 +70,9 @@ if (!isset($_SESSION)) {
                      Estamos à disposição para quaisquer esclarecimentos.<br>
                      Atenciosamente, InovaFin.
                 </p></i><br>
+                
+                <img style="width:400px; border-radius:8px;" src="https://inovafin.000webhostapp.com/inovafin_site/img/imgEmail.jpg" alt="InovaFin">
+                
                 <hr style="border: 1px solid #ccc;">
                 <div style="line-height: 1.1;">
                     <p style="font-size:0.9rem; font-family: Calibri, sans-serif;">

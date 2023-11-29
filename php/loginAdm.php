@@ -51,7 +51,7 @@ if (isset($_SESSION["controleAdm"]) && $_SESSION["controleAdm"] == "logado") {
                 </div>
 
                 <div class="baixoForm-loginADM">
-                    <div class="imgBaixoForm"><img src="/inovafin_site/img/InovafinTrans.png" alt=""></div>
+                    <div class="imgBaixoForm"><img src="/inovafin_site/img/InovaFinTrans.png" alt=""></div>
                     <input type="submit" value="Logar" name="botao" class="botao">
                 </div>
 

@@ -90,7 +90,7 @@ if (!isset($_SESSION)) {
 	<section class="main-painelAdm">
 		<div class="container-adm">
 			<div class="container-menuAdm">
-				<p>Bem Vindo <?php echo $_SESSION['nomeAdm'] ?></p>
+				<p>Bem Vindo, <?php echo $_SESSION['nomeAdm'] ?></p>
 				<?php
 				// Verifique o modo de exibição atual e mostre o link apropriado
 				if ($modoExibicao === 'naoRespondidas') {
