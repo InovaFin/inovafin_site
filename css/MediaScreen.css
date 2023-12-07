@@ -115,6 +115,12 @@
 
 @media screen and (max-width: 930px) {
 
+    .quadrado1, .quadrado2,
+    .quadrado3, .quadrado4,
+    .quadrado5, .quadrado6 {
+        display: none;
+    }
+
     .home {
         background: radial-gradient(60.1% 60.83% at 50% 50%,  #33c064 0%, #196033 83.98%);
         padding: 100px 5px 35px 5px;
@@ -269,9 +275,16 @@
     .content-quemSomos1 {
         gap: 50px;
     }
+}
+
+@media screen and (max-width: 896px) {
 
     .container-quemSomos h1,h2 {
         align-self: center;
+    }
+
+    .container-card-quemSomos {
+        gap: 40px;
     }
 
 }
@@ -332,6 +345,42 @@
     .footer-baixo p {
         font-size: 0.7rem;
     }
+
+    .content-quemSomos1 .img-etecLG img {
+        width: 265px;
+    }
+
+    .content-quemSomos1 .sombra-img-etecLG {
+        width: 265px;
+        height: 179px;
+    }
+
+    .container-quemSomos {
+        margin: 0px 5px;
+    }
+
+    .card-dev {
+        width: 145px;
+        height: 205px;
+    }
+    
+    .sombra-card-dev {
+        width: 145px;
+        height: 205px;
+    }    
+
+    .card-vinicius .sombra-card-dev {
+        width: 165px;
+    }
+
+    .icone-redes-card img{
+        width: 20px;
+    }    
+
+    .card-dev >img { 
+        width: 80px;
+    }
+
 }
 
 @media screen and (max-width : 435px) {
@@ -374,6 +423,15 @@
 
     .box-txtRecursos>.txtRecursos>h1 {
         font-size: 1.3rem;
+    }
+
+    .content-quemSomos1 .img-etecLG img {
+        width: 245px;
+    }
+
+    .content-quemSomos1 .sombra-img-etecLG {
+        width: 245px;
+        height: 165px;
     }
 }
 

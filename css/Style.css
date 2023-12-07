@@ -386,7 +386,7 @@ section #quemSomos {
     display: flex;
     justify-content: center;
     position: relative;
-
+    margin: 0 10px;
 }    
 
 .card-dev {
@@ -404,6 +404,15 @@ section #quemSomos {
     border-radius: 17px;
     z-index: 1;
     transition: transform 0.2s ease-in-out;
+}    
+
+.sombra-card-dev {
+    position: absolute;
+    width: 170px;
+    height: 230px;
+    background-color: #95d2ab;
+    border-radius: 17px;
+    z-index: 0;
 }    
 
 .card-jean .card-dev:hover {
@@ -439,14 +448,6 @@ section #quemSomos {
     width: 22px;
 }    
 
-.sombra-card-dev {
-    position: absolute;
-    width: 170px;
-    height: 230px;
-    background-color: #95d2ab;
-    border-radius: 17px;
-    z-index: 0;
-}    
 
 .card-jean .sombra-card-dev {
     box-shadow: -10px 10px 45px -5px #0202023d;
